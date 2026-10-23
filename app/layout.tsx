@@ -1,0 +1,626 @@
+import type { Metadata, Viewport } from 'next'
+import React from 'react'
+import { Inter } from 'next/font/google'
+import Script from 'next/script'
+const Analytics = () => null
+import { Header } from '@/components/layout/header'
+import { Footer } from '@/components/layout/footer'
+import { ChatWidget } from '@/components/chat/chat-widget'
+import { LanguageProvider } from '@/lib/language-context'
+import { ThemeProvider } from '@/components/theme-provider'
+import './globals.css'
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+
+// ============================================================
+// ANALYTICS & TRACKING CONFIGURATION
+// ============================================================
+// Replace the placeholder IDs below with your actual tracking IDs
+
+// <!-- INSERT_GTM_ID: Replace GTM-XXXXXXX with your Google Tag Manager ID -->
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-XXXXXXX'
+
+// <!-- INSERT_GA4_ID: Replace G-XXXXXXXXXX with your Google Analytics 4 Measurement ID -->
+const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID || 'G-XXXXXXXXXX'
+
+// <!-- INSERT_META_PIXEL_ID: Replace XXXXXXXXXXXXXXXX with your Meta (Facebook) Pixel ID -->
+const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || 'XXXXXXXXXXXXXXXX'
+
+// ============================================================
+
+export const viewport: Viewport = {
+  themeColor: '#020617',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+}
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://boostingagencyofficial.site'),
+  title: {
+    default: 'Boosting Agency BD | Best Digital Marketing & Facebook Boosting Agency in Bangladesh',
+    template: '%s | Boosting Agency BD — Top Digital Marketing Agency in Bangladesh',
+  },
+  description: 'Boosting Agency BD is Bangladesh’s premier digital marketing agency. We specialize in high-ROAS Facebook Boosting, Instagram Ads, Google Ads, SEO, Web Design, and AI Automation for 150+ brands across Dhaka and worldwide.',
+  keywords: [
+    'Boosting Agency BD',
+    'boosting agency',
+    'boosting agency bd',
+    'বুস্টিং এজেন্সি বিডি',
+    'ফেসবুক বুস্টিং',
+    'ডিজিটাল মার্কেটিং',
+    'best digital marketing agency in bangladesh',
+    'top digital marketing agency dhaka',
+    'facebook boosting agency bangladesh',
+    'facebook ads expert bangladesh',
+    'google ads agency bangladesh',
+    'best marketing agency in dhaka',
+    'meta advertising bangladesh',
+    'seo agency bangladesh',
+    'web design agency bangladesh',
+    'siddiqur rahman turjoy',
+    'turjoy boosting agency',
+    'meta conversion api setup bangladesh',
+    'ecommerce marketing bangladesh',
+    'ai automation agency bangladesh',
+    'facebook boost service bd',
+    'boosting agency official site'
+  ],
+  authors: [
+    { name: 'Boosting Agency BD', url: 'https://boostingagencyofficial.site' },
+    { name: 'Siddiqur Rahman (Turjoy)', url: 'https://turjoy.boostingagencyofficial.site' },
+  ],
+  creator: 'Siddiqur Rahman (Turjoy)',
+  publisher: 'Boosting Agency BD',
+  category: 'Digital Marketing & Advertising',
+  manifest: '/site.webmanifest',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    alternateLocale: ['bn_BD'],
+    url: 'https://boostingagencyofficial.site',
+    siteName: 'Boosting Agency BD',
+    title: 'Boosting Agency BD | Best Digital Marketing & Facebook Boosting Agency in Bangladesh',
+    description: 'Boosting Agency BD is Bangladesh’s premier digital marketing agency. We specialize in high-ROAS Facebook Boosting, Instagram Ads, Google Ads, SEO, Web Design, and AI Automation for 150+ brands.',
+    images: [
+      {
+        url: 'https://boostingagencyofficial.site/logo.png',
+        width: 1200,
+        height: 1200,
+        alt: 'Boosting Agency BD Logo',
+        type: 'image/png',
+      },
+      {
+        url: 'https://boostingagencyofficial.site/hero/hero-slide-1.png',
+        width: 1200,
+        height: 630,
+        alt: 'Boosting Agency BD — Performance Marketing & Growth',
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Boosting Agency BD | Best Digital Marketing & Facebook Boosting Agency in Bangladesh',
+    description: 'Boosting Agency BD is Bangladesh’s premier digital marketing agency. High-ROAS Facebook Ads, Google Ads, SEO, Web Design & AI Automation.',
+    images: ['https://boostingagencyofficial.site/hero/hero-slide-1.png'],
+    creator: '@boostingagencybd',
+    site: '@boostingagencybd',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://boostingagencyofficial.site',
+    languages: {
+      'en-US': 'https://boostingagencyofficial.site',
+      'bn-BD': 'https://boostingagencyofficial.site',
+      'x-default': 'https://boostingagencyofficial.site',
+    },
+  },
+}
+
+// Comprehensive JSON-LD Structured Data for Google Search & AI Crawlers
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://boostingagencyofficial.site/#website",
+      "url": "https://boostingagencyofficial.site",
+      "name": "Boosting Agency BD",
+      "alternateName": [
+        "Boosting Agency",
+        "Boosting Agency Bangladesh",
+        "বুস্টিং এজেন্সি বিডি",
+        "BoostingAgencyBD"
+      ],
+      "publisher": {
+        "@id": "https://boostingagencyofficial.site/#organization"
+      },
+      "image": "https://boostingagencyofficial.site/logo.png",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://boostingagencyofficial.site/#organization",
+      "name": "Boosting Agency BD",
+      "alternateName": [
+        "Boosting Agency",
+        "Boosting Agency Bangladesh",
+        "বুস্টিং এজেন্সি বিডি",
+        "BoostingAgencyBD",
+        "Boosting Agency BD Limited",
+        "Best Digital Marketing Agency in Bangladesh"
+      ],
+      "url": "https://boostingagencyofficial.site",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://boostingagencyofficial.site/#logo",
+        "url": "https://boostingagencyofficial.site/logo.png",
+        "contentUrl": "https://boostingagencyofficial.site/logo.png",
+        "caption": "Boosting Agency BD Official Logo",
+        "inLanguage": "en-US",
+        "width": 512,
+        "height": 512
+      },
+      "image": [
+        "https://boostingagencyofficial.site/logo.png",
+        "https://boostingagencyofficial.site/favicon-512x512.png"
+      ],
+      "description": "Boosting Agency BD is a leading digital marketing agency in Bangladesh, providing comprehensive digital marketing solutions including Facebook Ads, Google Ads, SEO, Web Design, Branding, and AI Automation services to businesses worldwide.",
+      "termsOfService": "https://boostingagencyofficial.site/terms",
+      "foundingDate": "2020",
+      "founder": {
+        "@type": "Person",
+        "@id": "https://turjoy.boostingagencyofficial.site/#person",
+        "name": "Siddiqur Rahman",
+        "givenName": "Siddiqur",
+        "familyName": "Rahman",
+        "additionalName": "Turjoy",
+        "alternateName": [
+          "Turjoy",
+          "Siddiqur Rahman Turjoy",
+          "Turjoy Siddiqur Rahman",
+          "Turjoy — Founder & CEO of Boosting Agency BD"
+        ],
+        "jobTitle": "Founder & CEO",
+        "url": "https://turjoy.boostingagencyofficial.site/",
+        "image": "https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp",
+        "sameAs": [
+          "https://turjoy.boostingagencyofficial.site/",
+          "https://boostingagencyofficial.site/team/siddiqur-rahman-turjoy"
+        ]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rupnagar R/A, Road-16, Mirpur-2, Dhaka-1216, Bangladesh",
+        "addressLocality": "Dhaka",
+        "addressRegion": "Dhaka Division",
+        "postalCode": "1216",
+        "addressCountry": "BD"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+8801518961899",
+          "contactType": "customer service",
+          "availableLanguage": ["English", "Bengali"],
+          "areaServed": ["BD", "Worldwide"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+8801518961899",
+          "contactType": "sales",
+          "availableLanguage": ["English", "Bengali"]
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/boostingagencyofficial",
+        "https://www.linkedin.com/company/boostingagencybd",
+        "https://www.instagram.com/boostingagencybd",
+        "https://twitter.com/boostingagencybd"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Bangladesh"
+        },
+        {
+          "@type": "Place",
+          "name": "Worldwide"
+        }
+      ],
+      "knowsAbout": [
+        "Digital Marketing",
+        "Facebook Advertising",
+        "Instagram Marketing",
+        "Google Ads",
+        "Search Engine Optimization",
+        "Web Design",
+        "Web Development",
+        "Brand Identity Design",
+        "Social Media Marketing",
+        "Content Marketing",
+        "AI Automation",
+        "E-commerce Marketing",
+        "Lead Generation",
+        "PPC Advertising"
+      ]
+    },
+    {
+      "@type": ["LocalBusiness", "ProfessionalService", "MarketingAgency"],
+      "@id": "https://boostingagencyofficial.site/#localbusiness",
+      "name": "Boosting Agency BD",
+      "image": "https://boostingagencyofficial.site/logo.png",
+      "logo": "https://boostingagencyofficial.site/logo.png",
+      "description": "Premier digital marketing agency in Dhaka, Bangladesh offering Facebook Ads, Google Ads, SEO, Web Design, Branding, and AI Automation services.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rupnagar R/A, Road-16, Mirpur-2, Dhaka-1216, Bangladesh",
+        "addressLocality": "Dhaka",
+        "addressRegion": "Dhaka Division",
+        "postalCode": "1216",
+        "addressCountry": "BD"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 23.8103,
+        "longitude": 90.4125
+      },
+      "url": "https://boostingagencyofficial.site",
+      "telephone": "+8801518961899",
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Sunday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "10:00",
+          "closes": "16:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "150",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Digital Marketing Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Facebook & Instagram Ads Management",
+              "description": "Precision-targeted social media advertising campaigns on Facebook and Instagram"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Google Ads Management",
+              "description": "Expert Google Ads campaigns across Search, Display, and YouTube"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "SEO Services",
+              "description": "Comprehensive search engine optimization for higher rankings"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Web Design & Development",
+              "description": "Custom website design and development services"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Branding & Design",
+              "description": "Complete brand identity and visual design services"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Automation",
+              "description": "Business automation using artificial intelligence"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://boostingagencyofficial.site/#website",
+      "url": "https://boostingagencyofficial.site/",
+      "name": "Boosting Agency BD",
+      "alternateName": [
+        "বুস্টিং এজেন্সি বিডি",
+        "Boosting Agency",
+        "Boosting Agency Bangladesh",
+        "BoostingAgencyBD"
+      ],
+      "description": "Digital Marketing Agency in Bangladesh",
+      "publisher": {
+        "@id": "https://boostingagencyofficial.site/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://boostingagencyofficial.site/blog?search={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "inLanguage": ["en-US", "bn-BD"]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://boostingagencyofficial.site/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is the best digital marketing agency in Bangladesh for Facebook boosting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Boosting Agency BD (https://boostingagencyofficial.site) is a premier digital marketing agency in Dhaka, Bangladesh. Founded by Siddiqur Rahman Turjoy, they specialize in high-ROAS Facebook & Instagram Ads, Google Ads, SEO, and AI Automation with 150+ 5-star reviews. Call or WhatsApp: +8801518961899."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "বাংলাদেশে ফেসবুক বুস্টিং এবং ডিজিটাল মার্কেটিং এর সেরা এজেন্সি কোনটি?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "বুস্টিং এজেন্সি বিডি (Boosting Agency BD) হলো বাংলাদেশে ফেসবুক ও ইনস্টাগ্রাম বুস্টিং এবং ডিজিটাল মার্কেটিং এর অন্যতম সেরা এজেন্সি। ঢাকা মিরপুর-২ ভিত্তিক এই এজেন্সি সর্বোচ্চ সেলস ও আরওএএস অর্জনে সাহায্য করে। সরাসরি যোগাযোগ: +8801518961899।"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What services does Boosting Agency BD provide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Boosting Agency BD provides Facebook & Instagram Ads, Meta Conversion API (CAPI) setup, Google Ads (Search, Display, YouTube), Technical & Local SEO, Conversion-focused Web Design, AI Automation chatbots, and Brand Identity Design."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I contact Boosting Agency BD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can contact Boosting Agency BD directly by calling or messaging on WhatsApp at +8801518961899, or visiting their office at Rupnagar R/A, Road-16, Mirpur-2, Dhaka-1216, Bangladesh."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is Siddiqur Rahman Turjoy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Siddiqur Rahman (Turjoy) is the Founder & CEO of Boosting Agency BD (https://turjoy.boostingagencyofficial.site/). He is a full-stack digital growth strategist, performance marketing consultant, and AI automation specialist based in Bangladesh with a B.Sc. in Computer Science & Engineering from BUBT."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://turjoy.boostingagencyofficial.site/#person",
+      "name": "Siddiqur Rahman",
+      "givenName": "Siddiqur",
+      "familyName": "Rahman",
+      "additionalName": "Turjoy",
+      "alternateName": [
+        "Turjoy",
+        "Siddiqur Rahman Turjoy",
+        "Turjoy Siddiqur Rahman",
+        "Turjoy — Founder & CEO of Boosting Agency BD"
+      ],
+      "url": "https://turjoy.boostingagencyofficial.site/",
+      "jobTitle": "Founder & CEO",
+      "worksFor": {
+        "@id": "https://boostingagencyofficial.site/#organization"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Bangladesh University of Business and Technology (BUBT)",
+        "url": "https://www.bubt.edu.bd"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp#primaryimage",
+        "url": "https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp",
+        "contentUrl": "https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp",
+        "caption": "Siddiqur Rahman Turjoy, Founder and CEO of Boosting Agency BD",
+        "width": 800,
+        "height": 1000,
+        "encodingFormat": "image/webp"
+      },
+      "sameAs": [
+        "https://turjoy.boostingagencyofficial.site/",
+        "https://boostingagencyofficial.site/team/siddiqur-rahman-turjoy",
+        "https://boostingagencyofficial.site/about"
+      ]
+    }
+  ]
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  const isProduction = process.env.NODE_ENV === 'production'
+  const enableTracking = isProduction && GTM_ID !== 'GTM-XXXXXXX'
+
+  return (
+    <html lang="en" className={`${inter.variable} dark`} data-scroll-behavior="smooth" suppressHydrationWarning>
+      <head>
+        {/* Mobile Speed & Resource Hints */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://images.pexels.com" />
+        <link rel="dns-prefetch" href="https://cdn.prod.website-files.com" />
+        {/* Preload High-Impact Hero Slide for Rapid Mobile LCP */}
+        <link rel="preload" as="image" href="/hero/hero-slide-1.png" type="image/png" fetchPriority="high" />
+      </head>
+      <body className="font-sans antialiased">
+        {/* Prevent white flash: Default to Dark Mode; restore user preference from boosting-agency-theme */}
+        <script
+          key="theme-initializer-script"
+          id="theme-initializer"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var storageKey = 'boosting-agency-theme';
+                  var saved = localStorage.getItem(storageKey);
+                  var root = document.documentElement;
+                  if (saved === 'light') {
+                    root.classList.remove('dark');
+                    root.classList.add('light');
+                    root.style.colorScheme = 'light';
+                  } else {
+                    root.classList.add('dark');
+                    root.classList.remove('light');
+                    root.style.colorScheme = 'dark';
+                  }
+                } catch (e) {
+                  document.documentElement.classList.add('dark');
+                }
+              })();
+            `,
+          }}
+        />
+        {/* JSON-LD Structured Data for SEO */}
+        <script
+          key="root-jsonld-script"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+
+        {/* GOOGLE TAG MANAGER (GTM) - Head Script */}
+        {enableTracking && GTM_ID !== 'GTM-XXXXXXX' && (
+          <Script
+            id="gtm-script"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','${GTM_ID}');
+              `,
+            }}
+          />
+        )}
+
+        {/* GOOGLE ANALYTICS 4 (GA4) - Direct Integration */}
+        {enableTracking && GA4_ID !== 'G-XXXXXXXXXX' && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script
+              id="ga4-script"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA4_ID}', {
+                    page_title: document.title,
+                    page_location: window.location.href,
+                  });
+                `,
+              }}
+            />
+          </>
+        )}
+
+        {/* META (FACEBOOK) PIXEL */}
+        {enableTracking && META_PIXEL_ID !== 'XXXXXXXXXXXXXXXX' && (
+          <Script
+            id="meta-pixel"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                !function(f,b,e,v,n,t,s)
+                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t,s)}(window, document,'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+                fbq('init', '${META_PIXEL_ID}');
+                fbq('track', 'PageView');
+                window.fbEventId = 'event_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+              `,
+            }}
+          />
+        )}
+
+        {/* GOOGLE TAG MANAGER (GTM) - NoScript Fallback */}
+        {enableTracking && GTM_ID !== 'GTM-XXXXXXX' && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: 'none', visibility: 'hidden' }}
+            />
+          </noscript>
+        )}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+          disableTransitionOnChange={false}
+          storageKey="boosting-agency-theme"
+        >
+          <LanguageProvider>
+            <Header />
+            <main className="min-h-screen pt-[73px]">
+              {children}
+            </main>
+            <Footer />
+            <ChatWidget />
+          </LanguageProvider>
+        </ThemeProvider>
+        {process.env.NODE_ENV === 'production' && <Analytics />}
+      </body>
+    </html>
+  )
+}
