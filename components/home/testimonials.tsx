@@ -106,24 +106,26 @@ export function Testimonials() {
   }
 
   return (
-    <section className="py-14 lg:py-20 gradient-dark text-primary-foreground overflow-hidden relative">
+    <section id="testimonials" className="py-14 lg:py-20 gradient-dark text-primary-foreground overflow-hidden relative">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <ScrollReveal className="mx-auto max-w-3xl text-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-400/10 text-cyan-400 text-xs font-semibold mb-3 border border-cyan-400/20">
             <ShieldCheck className="h-3.5 w-3.5" />
             <span>
-              {isEnglish ? "49 Verified Client Reviews" : "৪৯টি যাচাইকৃত ক্লায়েন্ট রিভিউ"}
+              {isEnglish
+                ? "49 Official Client Pages & Project Summaries"
+                : "৪৯টি অফিশিয়াল ক্লায়েন্ট পেজ ও প্রজেক্ট সামারি"}
             </span>
           </div>
 
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl text-balance">
-            {isEnglish ? "What Our Clients Say" : "ক্লায়েন্টদের প্রতিক্রিয়া ও রিভিউ"}
+            {isEnglish ? "Client Testimonials & Portfolio Highlights" : "ক্লায়েন্টদের প্রতিক্রিয়া ও পোর্টফোলিও হাইলাইট"}
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
             {isEnglish
-              ? "Real feedback matters. Explore the businesses we work with and their publicly available feedback."
-              : "বাস্তব ফলাফলই আমাদের পরিচয়। যেসব ব্যবসার সাথে আমরা কাজ করি তাদের অফিসিয়াল পেজ এবং পাবলিক ফিডব্যাক এক্সপ্লোর করুন।"}
+              ? "Explore the businesses we support across Bangladesh, complete with direct links to their official Facebook pages and websites. Project engagement notes are shown alongside each verified business link."
+              : "বাংলাদেশ জুড়ে যেসব ব্যবসার সাথে আমরা কাজ করি তাদের অফিশিয়াল ফেসবুক পেজ ও ওয়েবসাইটের ডিরেক্ট লিংকসহ আমাদের কাজের সংক্ষিপ্ত বিবরণ এক্সপ্লোর করুন।"}
           </p>
 
           {/* Category Filter Pills & Mode Switcher */}
@@ -244,8 +246,13 @@ export function Testimonials() {
                   </div>
 
                   {/* Review Text */}
-                  <p className="text-slate-200 text-xs sm:text-sm leading-relaxed mb-5 font-normal italic">
+                  <p className="text-slate-200 text-xs sm:text-sm leading-relaxed mb-3 font-normal italic">
                     &ldquo;{isEnglish ? client.review : (client.reviewBn || client.review)}&rdquo;
+                  </p>
+                  <p className="text-[10px] text-slate-400 mb-4">
+                    {isEnglish
+                      ? "Verified official page link · Quote flagged for written sign-off review"
+                      : "যাচাইকৃত অফিশিয়াল পেজ লিংক · লিখিত অনুমোদন পর্যালোচনার অধীন"}
                   </p>
                 </div>
 
@@ -325,8 +332,13 @@ export function Testimonials() {
                     </Badge>
                   </div>
 
-                  <p className="text-slate-200 text-xs sm:text-sm leading-relaxed mb-5 italic">
+                  <p className="text-slate-200 text-xs sm:text-sm leading-relaxed mb-3 italic">
                     &ldquo;{isEnglish ? client.review : (client.reviewBn || client.review)}&rdquo;
+                  </p>
+                  <p className="text-[10px] text-slate-400 mb-4">
+                    {isEnglish
+                      ? "Verified official page link · Quote flagged for written sign-off review"
+                      : "যাচাইকৃত অফিশিয়াল পেজ লিংক · লিখিত অনুমোদন পর্যালোচনার অধীন"}
                   </p>
                 </div>
 

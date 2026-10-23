@@ -3,6 +3,8 @@ import { getTeamMember, TEAM_MEMBERS } from "@/data/team"
 import { MemberProfileView } from "@/components/team/member-profile-view"
 import type { Metadata } from "next"
 
+export const dynamicParams = false
+
 export function generateStaticParams() {
   return TEAM_MEMBERS.map((member) => ({
     id: member.id,
@@ -26,9 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     ? "Official professional profile of Siddiqur Rahman Turjoy, Founder & CEO of Boosting Agency BD. Full-stack digital growth strategist, performance marketing consultant, and AI automation specialist based in Bangladesh."
     : member.description
 
-  const canonicalUrl = isFounder
-    ? "https://turjoy.boostingagencyofficial.site/"
-    : `https://boostingagencyofficial.site/team/${member.id}`
+  const canonicalUrl = `https://boostingagencyofficial.site/team/${member.id}`
 
   const imageUrl = isFounder
     ? "https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp"
@@ -237,12 +237,43 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
     "image": member.defaultImages[0]?.url ? `https://boostingagencyofficial.site${member.defaultImages[0].url}` : undefined,
   }
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://boostingagencyofficial.site/",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Team",
+        "item": "https://boostingagencyofficial.site/team",
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": member.name,
+        "item": `https://boostingagencyofficial.site/team/${member.id}`,
+      },
+    ],
+  }
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(personStructuredData),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
       <MemberProfileView member={member} />

@@ -5,6 +5,7 @@ import Script from 'next/script'
 const Analytics = () => null
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
+import { FloatingBubbles } from '@/components/layout/floating-bubbles'
 import { ChatWidget } from '@/components/chat/chat-widget'
 import { LanguageProvider } from '@/lib/language-context'
 import { ThemeProvider } from '@/components/theme-provider'
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     default: 'Boosting Agency BD | Best Digital Marketing & Facebook Boosting Agency in Bangladesh',
     template: '%s | Boosting Agency BD — Top Digital Marketing Agency in Bangladesh',
   },
-  description: 'Boosting Agency BD is Bangladesh’s premier digital marketing agency. We specialize in high-ROAS Facebook Boosting, Instagram Ads, Google Ads, SEO, Web Design, and AI Automation for 150+ brands across Dhaka and worldwide.',
+  description: 'Boosting Agency BD is Bangladesh’s premier digital marketing agency. We specialize in high-ROAS Facebook Boosting, Instagram Ads, Google Ads, SEO, Web Design, and AI Automation backed by 49+ verified client pages and 44 real Meta Ads campaign screenshots.',
   keywords: [
     'Boosting Agency BD',
     'boosting agency',
@@ -85,7 +86,7 @@ export const metadata: Metadata = {
     url: 'https://boostingagencyofficial.site',
     siteName: 'Boosting Agency BD',
     title: 'Boosting Agency BD | Best Digital Marketing & Facebook Boosting Agency in Bangladesh',
-    description: 'Boosting Agency BD is Bangladesh’s premier digital marketing agency. We specialize in high-ROAS Facebook Boosting, Instagram Ads, Google Ads, SEO, Web Design, and AI Automation for 150+ brands.',
+    description: 'Boosting Agency BD is Bangladesh’s premier digital marketing agency specializing in high-ROAS Facebook Boosting, Instagram Ads, Google Ads, SEO, Web Design, and AI Automation.',
     images: [
       {
         url: 'https://boostingagencyofficial.site/logo.png',
@@ -139,7 +140,7 @@ const jsonLd = {
     {
       "@type": "WebSite",
       "@id": "https://boostingagencyofficial.site/#website",
-      "url": "https://boostingagencyofficial.site",
+      "url": "https://boostingagencyofficial.site/",
       "name": "Boosting Agency BD",
       "alternateName": [
         "Boosting Agency",
@@ -147,11 +148,20 @@ const jsonLd = {
         "বুস্টিং এজেন্সি বিডি",
         "BoostingAgencyBD"
       ],
+      "description": "Digital Marketing Agency in Bangladesh specializing in Meta Ads, Google Ads, SEO, Web Design, and AI Automation.",
       "publisher": {
         "@id": "https://boostingagencyofficial.site/#organization"
       },
       "image": "https://boostingagencyofficial.site/logo.png",
-      "inLanguage": "en-US"
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://boostingagencyofficial.site/blog?search={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "inLanguage": ["en-US", "bn-BD"]
     },
     {
       "@type": "Organization",
@@ -161,9 +171,7 @@ const jsonLd = {
         "Boosting Agency",
         "Boosting Agency Bangladesh",
         "বুস্টিং এজেন্সি বিডি",
-        "BoostingAgencyBD",
-        "Boosting Agency BD Limited",
-        "Best Digital Marketing Agency in Bangladesh"
+        "BoostingAgencyBD"
       ],
       "url": "https://boostingagencyofficial.site",
       "logo": {
@@ -180,29 +188,11 @@ const jsonLd = {
         "https://boostingagencyofficial.site/logo.png",
         "https://boostingagencyofficial.site/favicon-512x512.png"
       ],
-      "description": "Boosting Agency BD is a leading digital marketing agency in Bangladesh, providing comprehensive digital marketing solutions including Facebook Ads, Google Ads, SEO, Web Design, Branding, and AI Automation services to businesses worldwide.",
+      "description": "Boosting Agency BD is a digital marketing agency in Dhaka, Bangladesh providing Facebook & Instagram Ads, Google Ads, SEO, Web Design, Branding, and AI Automation services.",
       "termsOfService": "https://boostingagencyofficial.site/terms",
       "foundingDate": "2020",
       "founder": {
-        "@type": "Person",
-        "@id": "https://turjoy.boostingagencyofficial.site/#person",
-        "name": "Siddiqur Rahman",
-        "givenName": "Siddiqur",
-        "familyName": "Rahman",
-        "additionalName": "Turjoy",
-        "alternateName": [
-          "Turjoy",
-          "Siddiqur Rahman Turjoy",
-          "Turjoy Siddiqur Rahman",
-          "Turjoy — Founder & CEO of Boosting Agency BD"
-        ],
-        "jobTitle": "Founder & CEO",
-        "url": "https://turjoy.boostingagencyofficial.site/",
-        "image": "https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp",
-        "sameAs": [
-          "https://turjoy.boostingagencyofficial.site/",
-          "https://boostingagencyofficial.site/team/siddiqur-rahman-turjoy"
-        ]
+        "@id": "https://turjoy.boostingagencyofficial.site/#person"
       },
       "address": {
         "@type": "PostalAddress",
@@ -266,7 +256,7 @@ const jsonLd = {
       "name": "Boosting Agency BD",
       "image": "https://boostingagencyofficial.site/logo.png",
       "logo": "https://boostingagencyofficial.site/logo.png",
-      "description": "Premier digital marketing agency in Dhaka, Bangladesh offering Facebook Ads, Google Ads, SEO, Web Design, Branding, and AI Automation services.",
+      "description": "Digital marketing agency in Dhaka, Bangladesh offering Facebook Ads, Google Ads, SEO, Web Design, Branding, and AI Automation services.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Rupnagar R/A, Road-16, Mirpur-2, Dhaka-1216, Bangladesh",
@@ -286,24 +276,11 @@ const jsonLd = {
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Sunday"],
+          "dayOfWeek": ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
           "opens": "09:00",
           "closes": "18:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "10:00",
-          "closes": "16:00"
         }
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "150",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Digital Marketing Services",
@@ -358,77 +335,6 @@ const jsonLd = {
           }
         ]
       }
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://boostingagencyofficial.site/#website",
-      "url": "https://boostingagencyofficial.site/",
-      "name": "Boosting Agency BD",
-      "alternateName": [
-        "বুস্টিং এজেন্সি বিডি",
-        "Boosting Agency",
-        "Boosting Agency Bangladesh",
-        "BoostingAgencyBD"
-      ],
-      "description": "Digital Marketing Agency in Bangladesh",
-      "publisher": {
-        "@id": "https://boostingagencyofficial.site/#organization"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://boostingagencyofficial.site/blog?search={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      },
-      "inLanguage": ["en-US", "bn-BD"]
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://boostingagencyofficial.site/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Who is the best digital marketing agency in Bangladesh for Facebook boosting?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Boosting Agency BD (https://boostingagencyofficial.site) is a premier digital marketing agency in Dhaka, Bangladesh. Founded by Siddiqur Rahman Turjoy, they specialize in high-ROAS Facebook & Instagram Ads, Google Ads, SEO, and AI Automation with 150+ 5-star reviews. Call or WhatsApp: +8801518961899."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "বাংলাদেশে ফেসবুক বুস্টিং এবং ডিজিটাল মার্কেটিং এর সেরা এজেন্সি কোনটি?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "বুস্টিং এজেন্সি বিডি (Boosting Agency BD) হলো বাংলাদেশে ফেসবুক ও ইনস্টাগ্রাম বুস্টিং এবং ডিজিটাল মার্কেটিং এর অন্যতম সেরা এজেন্সি। ঢাকা মিরপুর-২ ভিত্তিক এই এজেন্সি সর্বোচ্চ সেলস ও আরওএএস অর্জনে সাহায্য করে। সরাসরি যোগাযোগ: +8801518961899।"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What services does Boosting Agency BD provide?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Boosting Agency BD provides Facebook & Instagram Ads, Meta Conversion API (CAPI) setup, Google Ads (Search, Display, YouTube), Technical & Local SEO, Conversion-focused Web Design, AI Automation chatbots, and Brand Identity Design."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How can I contact Boosting Agency BD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You can contact Boosting Agency BD directly by calling or messaging on WhatsApp at +8801518961899, or visiting their office at Rupnagar R/A, Road-16, Mirpur-2, Dhaka-1216, Bangladesh."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Who is Siddiqur Rahman Turjoy?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Siddiqur Rahman (Turjoy) is the Founder & CEO of Boosting Agency BD (https://turjoy.boostingagencyofficial.site/). He is a full-stack digital growth strategist, performance marketing consultant, and AI automation specialist based in Bangladesh with a B.Sc. in Computer Science & Engineering from BUBT."
-          }
-        }
-      ]
     },
     {
       "@type": "Person",
@@ -611,6 +517,7 @@ export default function RootLayout({
           storageKey="boosting-agency-theme"
         >
           <LanguageProvider>
+            <FloatingBubbles />
             <Header />
             <main className="min-h-screen pt-[73px]">
               {children}

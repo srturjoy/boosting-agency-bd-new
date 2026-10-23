@@ -239,7 +239,11 @@ export function TeamCarousel() {
                 {getPhotoUrl(member) ? (
                   <img
                     src={getPhotoUrl(member)}
-                    alt={isEnglish ? member.name : (member.nameBn || member.name)}
+                    alt={`${isEnglish ? member.name : (member.nameBn || member.name)} — ${isEnglish ? member.role : (member.roleBn || member.role)} at Boosting Agency BD`}
+                    width={800}
+                    height={600}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 ) : (
@@ -309,7 +313,11 @@ export function TeamCarousel() {
                 <div className="aspect-[4/3] relative overflow-hidden bg-slate-900">
                   <img
                     src={getPhotoUrl(member)}
-                    alt={isEnglish ? member.name : (member.nameBn || member.name)}
+                    alt={`${isEnglish ? member.name : (member.nameBn || member.name)} — ${isEnglish ? member.role : (member.roleBn || member.role)} at Boosting Agency BD`}
+                    width={800}
+                    height={600}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none" />

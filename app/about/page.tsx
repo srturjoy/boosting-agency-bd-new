@@ -206,7 +206,7 @@ export default function AboutPage() {
       </section>
 
       {/* Executive Leadership & Team Section */}
-      <section className="py-14 lg:py-20 bg-secondary/30 overflow-hidden">
+      <section id="team" className="py-14 lg:py-20 bg-secondary/30 overflow-hidden">
         {/* CEO & Founder Spotlight on TOP as requested */}
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-10">

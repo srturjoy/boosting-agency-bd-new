@@ -4,45 +4,19 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <!-- ======================================================== -->
-  <!-- 1. PRIMARY CANONICAL PROFILES (FOUNDER & CEO)             -->
-  <!-- ======================================================== -->
-  <url>
-    <loc>https://turjoy.boostingagencyofficial.site/</loc>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp</image:loc>
-      <image:title>Siddiqur Rahman Turjoy — Founder &amp; CEO of Boosting Agency BD</image:title>
-      <image:caption>Siddiqur Rahman Turjoy, Full-Stack Digital Growth Professional, AI Automation Specialist and Founder of Boosting Agency BD</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://boostingagencyofficial.site/team/siddiqur-rahman-turjoy</loc>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-    <image:image>
-      <image:loc>https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp</image:loc>
-      <image:title>Siddiqur Rahman Turjoy — Executive Leadership Profile</image:title>
-      <image:caption>Siddiqur Rahman Turjoy, Founder &amp; CEO — Performance Marketing, Branding, AI Automation &amp; MarTech</image:caption>
-    </image:image>
-  </url>
-
-  <!-- ======================================================== -->
-  <!-- 2. CORE AGENCY PAGES                                     -->
+  <!-- 1. CORE AGENCY PAGES                                     -->
   <!-- ======================================================== -->
   <url>
     <loc>https://boostingagencyofficial.site/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://boostingagencyofficial.site/" />
     <xhtml:link rel="alternate" hreflang="bn" href="https://boostingagencyofficial.site/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boostingagencyofficial.site/" />
     <image:image>
       <image:loc>https://boostingagencyofficial.site/logo.png</image:loc>
-      <image:title>Boosting Agency BD — Best Digital Marketing Agency in Bangladesh</image:title>
+      <image:title>Boosting Agency BD — Digital Marketing Agency in Bangladesh</image:title>
       <image:caption>Boosting Agency BD Official Brand Identity</image:caption>
     </image:image>
     <image:image>
@@ -50,100 +24,379 @@
       <image:title>Meta Ads &amp; Creative AI Optimization — Boosting Agency BD</image:title>
       <image:caption>High ROAS Facebook &amp; Instagram Advertising Strategies</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/hero/hero-slide-2.png</image:loc>
+      <image:title>Laser Targeted Audience Boosting — Boosting Agency BD</image:title>
+      <image:caption>Data-Driven Meta &amp; Google Audience Targeting in Bangladesh</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/hero/hero-slide-3.png</image:loc>
+      <image:title>High-ROI Performance Marketing — Boosting Agency BD</image:title>
+      <image:caption>Full-Funnel Performance Marketing &amp; Conversion Scaling</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/hero/hero-slide-4.png</image:loc>
+      <image:title>Conversion Tracking &amp; Ad Creatives — Boosting Agency BD</image:title>
+      <image:caption>Server-Side CAPI, Meta Pixel &amp; GA4 Tracking Architecture</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/hero/hero-slide-5.png</image:loc>
+      <image:title>E-Commerce Digital Revenue Scale — Boosting Agency BD</image:title>
+      <image:caption>Website Purchase &amp; Message Lead Campaigns for Bangladeshi Brands</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_592261293_122206722236514031_4358856224825328988_n_jpg_64830.jpg</image:loc>
+      <image:title>Promotional Offer Messaging Campaign — 226 Messages at $0.02 — Boosting Agency BD</image:title>
+      <image:caption>100% Real Meta Ads Account Screenshot — 226 Messaging Conversations Started for $4.00 total ad spend ($0.02 per message)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_650757177_122222877572514031_7591552409511033891_n_jpg_123754.jpg</image:loc>
+      <image:title>Unique Point Sales Campaign (CAPI + Pixel) — 542 Purchases at $1.86 — Boosting Agency BD</image:title>
+      <image:caption>100% Real Meta Ads Account Screenshot — 542 Website Purchases at $1.86 per purchase ($1,010.25 spent)</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://boostingagencyofficial.site/about</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp</image:loc>
-      <image:title>Boosting Agency BD — Founder &amp; CEO Spotlight</image:title>
+      <image:title>Siddiqur Rahman Turjoy — Founder &amp; CEO of Boosting Agency BD</image:title>
       <image:caption>Siddiqur Rahman Turjoy, Founder &amp; CEO of Boosting Agency BD</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://boostingagencyofficial.site/services</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://cdn.prod.website-files.com/655e0fa544c67c1ee5ce01c7/655e0fa544c67c1ee5ce0f19_a-guide-to-facebook-and-instagram-ads-for-musicians-header.webp</image:loc>
-      <image:title>Facebook &amp; Instagram Ads Management</image:title>
+      <image:title>Facebook &amp; Instagram Ads Management — Boosting Agency BD</image:title>
       <image:caption>Precision Meta Ads and Retargeting Services in Bangladesh</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://images.unsplash.com/photo-1553484771-371a605b060b?w=800&amp;h=500&amp;fit=crop</image:loc>
-      <image:title>Google Ads Management &amp; Search Engine Marketing</image:title>
+      <image:title>Google Ads Management &amp; Search Engine Marketing — Boosting Agency BD</image:title>
       <image:caption>High Conversion Google Search, Display, and YouTube Video Campaigns</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://boostingagencyofficial.site/portfolio</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
+    <!-- 24 Verified Message Lead Campaign Screenshots -->
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&amp;h=500&amp;fit=crop</image:loc>
-      <image:title>Verified Client Portfolio &amp; Case Studies</image:title>
-      <image:caption>Over 49+ Verified Client Projects and Proven Marketing ROAS</image:caption>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_592261293_122206722236514031_4358856224825328988_n_jpg_64830.jpg</image:loc>
+      <image:title>Promotional Offer Messaging Campaign — 226 Messages at $0.02 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 226 Messaging Conversations Started at $0.02 per message ($4.00 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_591629386_122206722914514031_214039811972614365_n_jpg_64836.jpg</image:loc>
+      <image:title>New Engagement Messaging Lead Campaign — 911 Messages at $0.05 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 911 Messaging Conversations Started at $0.05 per message ($49.94 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_592258780_122206723376514031_949721135675756771_n_jpg_73978.jpg</image:loc>
+      <image:title>High-Efficiency $35 Budget Messaging Campaign — 1,359 Messages at $0.02 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 1,359 Messaging Conversations Started at $0.02 per message ($28.96 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_469059355_122130042656514031_369102855538254387_n_jpg_63750.jpg</image:loc>
+      <image:title>Rishat Ridi Leather — Messaging Campaign — 2,946 Messages at $0.03 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 2,946 Messaging Conversations Started at $0.03 per message ($102.33 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_514027894_122175761390514031_1004080647476241184_n_jpg_34292.jpg</image:loc>
+      <image:title>High-Volume Retail Inbox Lead Campaign — 2,946 Messages at $0.03 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 2,946 Messaging Conversations Started at $0.03 per message ($102.33 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_516531500_122177199812514031_6905019251829299086_n_jpg_141864.jpg</image:loc>
+      <image:title>Rishat Leather — 47-Campaign Account Summary — 14,791+ Messages — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 47 campaigns showing 3,727 messages at $0.02 and 1,047,066 reach ($1,266.76 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_517278887_122177854142514031_8042573549680543604_n_jpg_128733.jpg</image:loc>
+      <image:title>Multi-Client Active Messaging &amp; Engagement Suite — 405 Messages — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 12 active campaigns generating 405 inbox leads and 52,947 post engagements</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_518354575_122179825526514031_8241287023402131388_n_jpg_116660.jpg</image:loc>
+      <image:title>Multi-Campaign Messaging &amp; Reach Dashboard — 730+ Messages — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: $1,838.09 total spend, 1,800,992 reach, and $0.03–$0.16 cost per message</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_599962407_122209675322514031_7704999519092585729_n_jpg_96553.jpg</image:loc>
+      <image:title>Ultra-Low Cost $20 Messaging Campaign — 1,445 Messages at $0.0138 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 1,445 Messaging Conversations Started from $20.00 spend ($0.0138 per message)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_600416344_122209675166514031_1986049422276954564_n_jpg_97395.jpg</image:loc>
+      <image:title>$40 Lifetime Budget Messaging Campaign — 624 Messages at $0.0641 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 624 Messaging Conversations Started on a $40.00 budget ($0.0641 per message)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_600664670_122209832786514031_2278875621983301162_n_jpg_92230.jpg</image:loc>
+      <image:title>Rapid Inbox Lead Generation Campaign — 1,445 Messages at $0.0138 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 1,445 Messaging Conversations Started for $20.00 spent ($0.0138 per conversation)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_602334305_122209832576514031_3361030893700368438_n_jpg_131719.jpg</image:loc>
+      <image:title>Money89 10$ — Micro-Budget Lead Campaign — 512 Messages at $0.0195 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 512 Messaging Conversations Started from $9.99 spent ($0.0195 per message)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_603012010_122210986682514031_7572243519308252920_n_jpg_129167.jpg</image:loc>
+      <image:title>Active Menswear &amp; Apparel Messaging Campaign — 1,065 Messages at $0.0618 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 1,065 Messaging Conversations Started at $0.0618 per lead ($65.84 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_603787489_122210986730514031_6014978866424503527_n_jpg_137529.jpg</image:loc>
+      <image:title>High-Volume $100 Budget Messaging Campaign — 3,161 Messages at $0.0192 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 3,161 Messaging Conversations Started for $60.76 spent ($0.0192 per message)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_603849026_122210986592514031_5792985738735537371_n_jpg_118072.jpg</image:loc>
+      <image:title>Gadget Messaging Campaign — 2,161 Messages at $0.0606 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 2,161 Messaging Conversations Started at $0.0606 per conversation ($130.86 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_604618064_122210986904514031_3110132742273449186_n_jpg_94489.jpg</image:loc>
+      <image:title>Scaled $75 Budget Messaging Lead Campaign — 1,215 Messages at $0.0573 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 1,215 Messaging Conversations Started at $0.0573 per message ($69.56 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_605473441_122210986550514031_4176941776262603287_n_jpg_129121.jpg</image:loc>
+      <image:title>Mamabazar24 Messaging Campaign — 2,293 Messages at $0.0757 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 2,293 Messaging Conversations Started at $0.0757 per message ($173.65 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_605708655_122210986862514031_2726238510088191091_n_jpg_92230.jpg</image:loc>
+      <image:title>Direct Response $20 Messaging Campaign — 1,445 Messages at $0.0138 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 1,445 Messaging Conversations Started on a $20.00 budget ($0.0138 per message)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_606389664_122210986634514031_6570477245486508953_n_jpg_126250.jpg</image:loc>
+      <image:title>Jamboo Light Metal — High-Volume Lead Campaign — 4,035 Messages at $0.0592 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 4,035 Messaging Conversations Started at $0.0592 per message ($238.76 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_625371417_122216943386514031_6641575878736972195_n_jpg_63833.jpg</image:loc>
+      <image:title>Rishat Newlo 25 — Leather Messaging Campaign — 2,118 Messages at $0.04 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 2,118 Messaging Conversations Started at $0.04 per message ($86.63 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_626030571_122216943278514031_4092817830625850002_n_jpg_66879.jpg</image:loc>
+      <image:title>Rishat Ridi — Footwear Lead Campaign — 723 Messages at $0.05 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 723 Messaging Conversations Started at $0.05 per message ($32.83 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_627189227_122216943248514031_8284434465264696406_n_jpg_67201.jpg</image:loc>
+      <image:title>Rishat Newlo 25 — Seasonal Footwear Campaign — 2,118 Messages at $0.04 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 2,118 Messaging Conversations Started at $0.04 per lead ($86.63 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_628053711_122216943314514031_4860961609898335480_n_jpg_64125.jpg</image:loc>
+      <image:title>Rishat Ridi Leather — Direct Inbox Campaign — 2,946 Messages at $0.03 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 2,946 Messaging Conversations Started at $0.03 per conversation ($102.33 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/message-lead-campaigns/message-lead-campaigns_628189254_122216943344514031_827828437086750959_n_jpg_64300.jpg</image:loc>
+      <image:title>Rishat Rp — High-Intent Messaging Campaign — 2,549 Messages at $0.03 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 2,549 Messaging Conversations Started at $0.03 per message ($86.76 spent)</image:caption>
+    </image:image>
+    <!-- 20 Verified Website Purchase Campaign Screenshots -->
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_650757177_122222877572514031_7591552409511033891_n_jpg_123754.jpg</image:loc>
+      <image:title>Unique Point Sales Campaign (CAPI + Pixel) — 542 Purchases at $1.86 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 542 Website Purchases at $1.86 per purchase ($1,010.25 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_656818636_122224696070514031_3280436921714703977_n_jpg_92548.jpg</image:loc>
+      <image:title>Single-Day Flash Scaling Sales Campaign — 114 Purchases at $0.91 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 114 Website Purchases in a single day at $0.91 per purchase ($103.50 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_657293649_122224698050514031_3224995908435152501_n_jpg_43694.jpg</image:loc>
+      <image:title>E-Commerce Direct Checkout Campaign — 45 Purchases at $1.64 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 45 Website Purchases at $1.64 per purchase ($73.97 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_657333974_122224696808514031_1817429351967677198_n_jpg_53000.jpg</image:loc>
+      <image:title>Low-CPA Micro-Budget Purchase Campaign — 9 Purchases at $0.56 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 9 Website Purchases at $0.56 per purchase ($5.07 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_657391903_122224697672514031_8715767215055026999_n_jpg_67748.jpg</image:loc>
+      <image:title>Multi-Ad-Set Website Sales Campaign — 87 Purchases at $1.70 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 87 Website Purchases at $1.70 per purchase ($147.85 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_657391903_122224697672514031_8715767215055026999_n__1__jpg_6774.jpg</image:loc>
+      <image:title>High-Volume Daily Checkout Campaign — 87 Purchases at $1.70 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 87 Website Purchases at $1.70 cost per purchase ($147.85 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_658445757_122224698416514031_7438331536548449762_n_jpg_64239.jpg</image:loc>
+      <image:title>New Sales Ad Set — Benchmark-Beating CPA — 59 Purchases at $1.27 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 59 Website Purchases at $1.27 per purchase ($74.98 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_703896729_122232124814514031_2008624678293446595_n_jpg_93322.jpg</image:loc>
+      <image:title>Unique Point Video Sales — Daily Snapshot — 12 Purchases at $1.27 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 12 Website Purchases at $1.27 per purchase ($15.20 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_705238146_122232125144514031_2742035857755383947_n_jpg_97895.jpg</image:loc>
+      <image:title>Unique Point Video Sales — 7-Day Scaling — 190 Purchases at $2.17 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 190 Website Purchases in 7 days at $2.17 per purchase ($412.90 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_747334073_1488332569733528_9141966056937279092_n_jpg_151518.jpg</image:loc>
+      <image:title>MSAStorebd — Multi-Campaign Sales Overview — 467+ Purchases — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 432 Website Purchases at $0.37 and 32 Purchases at $0.47 ($175.32+ spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_748597799_28020160680921890_7813687782749355665_n_jpg_68978.jpg</image:loc>
+      <image:title>lan 24 — High-Performing Purchase Campaign — 432 Purchases at $0.37 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 432 Website Purchases at $0.37 per purchase ($160.35 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_748829606_3186493041543045_2122049881093404436_n_jpg_83567.jpg</image:loc>
+      <image:title>New Sales 22 — 63% Lower CPA Purchase Campaign — 32 Purchases at $0.47 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 32 Website Purchases at $0.47 per purchase ($14.97 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_748969736_1370757955014127_8930111228125870161_n_jpg_50324.jpg</image:loc>
+      <image:title>New Sales Copy — Fast Split-Test Campaign — 3 Purchases at $0.92 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 3 Website Purchases at $0.92 per purchase ($2.76 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_749132986_2415265302332227_4783399223205638241_n_jpg_130423.jpg</image:loc>
+      <image:title>46-Campaign E-Commerce Account Summary — 175+ Purchases — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 143 Website Purchases at $0.04 per purchase and 1,393,321 impressions ($599.14 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_749197955_1065357709779922_1570792922458747889_n_jpg_67482.jpg</image:loc>
+      <image:title>Unique Point Sales — Daily Conversion Run — 15 Purchases at $1.22 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 15 Website Purchases at $1.22 per purchase ($18.23 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_749315025_2076533886271372_2353768655858490844_n_jpg_63318.jpg</image:loc>
+      <image:title>New Sales Copy 2 — Conversion Ad Set — 9 Purchases at $1.58 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 9 Website Purchases at $1.58 per purchase ($14.21 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_749329689_1679237933373742_8510395576206573493_n_jpg_61882.jpg</image:loc>
+      <image:title>New Sales Copy 3 — Compact Conversion Run — 5 Purchases at $1.37 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 5 Website Purchases at $1.37 per purchase ($6.85 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_750020724_3536172703224686_8682389938618938520_n_jpg_78497.jpg</image:loc>
+      <image:title>3 in 1 Landing — Ultra-Low CPA Purchase Campaign — 143 Purchases at $0.04 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 143 Website Purchases from $6.20 ad spend ($0.04 per purchase)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_751021704_2392641221259354_2647093322391690081_n_jpg_68327.jpg</image:loc>
+      <image:title>New Sales Copy — 2-Ad-Set Conversion Campaign — 20 Purchases at $1.79 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 20 Website Purchases at $1.79 per purchase ($35.76 spent)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_842143274_1442158361193580_3784843313342543215_n_jpg_98398.jpg</image:loc>
+      <image:title>New Sales LE — Scaled E-Commerce Campaign — 114 Purchases at $1.51 — Boosting Agency BD</image:title>
+      <image:caption>Real Meta Ads Manager Screenshot: 114 Website Purchases at $1.51 per purchase ($172.49 spent)</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://boostingagencyofficial.site/team</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <image:image>
       <image:loc>https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp</image:loc>
-      <image:title>Executive Team &amp; Digital Marketing Specialists</image:title>
-      <image:caption>Boosting Agency BD Core Team &amp; Growth Engineers</image:caption>
+      <image:title>Siddiqur Rahman Turjoy — Founder &amp; CEO — Boosting Agency BD</image:title>
+      <image:caption>Siddiqur Rahman Turjoy, Founder &amp; CEO of Boosting Agency BD</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/team/joynal-abedin-joy.webp</image:loc>
+      <image:title>Joynal Abedin (Joy) — Senior Media Buyer — Boosting Agency BD</image:title>
+      <image:caption>Joynal Abedin (Joy), Senior Media Buyer at Boosting Agency BD</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/team/mohidul-islam-sojib.webp</image:loc>
+      <image:title>Mohidul Islam (Sojib) — Senior Performance Marketer — Boosting Agency BD</image:title>
+      <image:caption>Mohidul Islam (Sojib), Senior Performance Marketer at Boosting Agency BD</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/team/abir-islam-joy.webp</image:loc>
+      <image:title>Abir Islam (Joy) — Creative Director &amp; UI/UX Designer — Boosting Agency BD</image:title>
+      <image:caption>Abir Islam (Joy), Creative Director &amp; UI/UX Designer at Boosting Agency BD</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/team/azom.webp</image:loc>
+      <image:title>Md. Azom — Full-Stack Developer &amp; Tracking Engineer — Boosting Agency BD</image:title>
+      <image:caption>Md. Azom, Full-Stack Developer &amp; Tracking Engineer at Boosting Agency BD</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://boostingagencyofficial.site/blog</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&amp;h=675&amp;fit=crop</image:loc>
-      <image:title>Digital Marketing &amp; AI Insights Blog</image:title>
+      <image:title>Digital Marketing &amp; AI Insights Blog — Boosting Agency BD</image:title>
       <image:caption>Latest Meta Ads Updates, Google Algorithm Changes, and SEO Guides</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://boostingagencyofficial.site/contact</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://boostingagencyofficial.site/privacy</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
     <loc>https://boostingagencyofficial.site/terms</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <!-- ======================================================== -->
-  <!-- 3. TEAM MEMBER PROFILES                                  -->
+  <!-- 2. TEAM MEMBER PROFILES                                  -->
   <!-- ======================================================== -->
   <url>
+    <loc>https://boostingagencyofficial.site/team/siddiqur-rahman-turjoy</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp</image:loc>
+      <image:title>Siddiqur Rahman Turjoy — Founder &amp; CEO of Boosting Agency BD</image:title>
+      <image:caption>Siddiqur Rahman Turjoy, Founder &amp; CEO — Performance Marketing, Branding, AI Automation &amp; MarTech</image:caption>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://boostingagencyofficial.site/team/joynal-abedin-joy</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -155,7 +408,7 @@
 
   <url>
     <loc>https://boostingagencyofficial.site/team/mohidul-islam-sojib</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -167,7 +420,7 @@
 
   <url>
     <loc>https://boostingagencyofficial.site/team/abir-islam-joy</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -179,7 +432,7 @@
 
   <url>
     <loc>https://boostingagencyofficial.site/team/azom</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -190,11 +443,11 @@
   </url>
 
   <!-- ======================================================== -->
-  <!-- 4. ALL 11 BLOG POSTS & INDUSTRY GUIDES                   -->
+  <!-- 3. ALL 11 BLOG POSTS & INDUSTRY GUIDES                   -->
   <!-- ======================================================== -->
   <url>
     <loc>https://boostingagencyofficial.site/blog/meta-ads-ai-update-2026-smarter-audience-targeting-creative-optimization</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -206,7 +459,7 @@
 
   <url>
     <loc>https://boostingagencyofficial.site/blog/google-ads-october-2026-update-turn-social-content-into-youtube-ads</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -218,7 +471,7 @@
 
   <url>
     <loc>https://boostingagencyofficial.site/blog/google-demand-gen-update-september-2026-youtube-shorts-gmail</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -230,7 +483,7 @@
 
   <url>
     <loc>https://boostingagencyofficial.site/blog/google-ai-max-update-2026-new-search-ads-reporting</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -242,7 +495,7 @@
 
   <url>
     <loc>https://boostingagencyofficial.site/blog/complete-guide-to-facebook-ads-in-2024</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -254,7 +507,7 @@
 
   <url>
     <loc>https://boostingagencyofficial.site/blog/10-seo-trends-that-will-dominate-2024</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -266,7 +519,7 @@
 
   <url>
     <loc>https://boostingagencyofficial.site/blog/how-ai-is-transforming-digital-marketing</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -278,7 +531,7 @@
 
   <url>
     <loc>https://boostingagencyofficial.site/blog/google-ads-vs-facebook-ads-which-is-better</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -290,7 +543,7 @@
 
   <url>
     <loc>https://boostingagencyofficial.site/blog/content-marketing-strategy-step-by-step-guide</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -302,7 +555,7 @@
 
   <url>
     <loc>https://boostingagencyofficial.site/blog/mastering-instagram-marketing-tips-and-tricks</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -314,7 +567,7 @@
 
   <url>
     <loc>https://boostingagencyofficial.site/blog/ecommerce-marketing-strategies-that-actually-work</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>

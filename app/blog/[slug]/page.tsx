@@ -132,6 +132,22 @@ export default async function BlogPostPage({ params }: Props) {
     ],
   }
 
+  const faqSchema =
+    post.faqs && post.faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": post.faqs.map((faq) => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer,
+            },
+          })),
+        }
+      : null
+
   // Related other posts (prioritizing fresh news posts)
   const otherPosts = allBlogPosts.filter((p) => p.slug !== post.slug).slice(0, 3)
 
@@ -148,6 +164,13 @@ export default async function BlogPostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      {faqSchema && (
+        <script
+          key="faq-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
       <div className="mx-auto max-w-4xl px-5 sm:px-6 lg:px-8">
         {/* Navigation Breadcrumb / Back button */}

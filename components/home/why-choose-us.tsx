@@ -1,39 +1,63 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { motion } from "framer-motion"
-import { CheckCircle2, Users, Award, Clock, Target } from "lucide-react"
+import {
+  CheckCircle2,
+  Target,
+  Compass,
+  BarChart3,
+  Layers,
+  Activity,
+  MessageSquare,
+  ArrowRight,
+} from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 import { ScrollReveal, fadeInUp, slideInLeft, slideInRight, staggerContainer } from "@/components/ui/motion"
 
 const features = [
   {
-    name: "Data-Driven Approach",
-    nameBn: "ডেটা-চালিত পদ্ধতি",
-    description: "Every decision is backed by analytics and real performance data.",
-    descriptionBn: "প্রতিটি সিদ্ধান্ত অ্যানালিটিক্স এবং প্রকৃত পারফরম্যান্স ডেটা দ্বারা সমর্থিত।",
+    name: "Data-Driven Marketing",
+    nameBn: "ডেটা-চালিত মার্কেটিং",
+    description: "Campaign decisions guided by real performance metrics and audience behavior.",
+    descriptionBn: "প্রকৃত পারফরম্যান্স মেট্রিক্স এবং অডিয়েন্স ডেটার ভিত্তিতে প্রতিটি ক্যাম্পেইন সিদ্ধান্ত।",
     icon: Target,
   },
   {
-    name: "Experienced Team",
-    nameBn: "অভিজ্ঞ টিম",
-    description: "Our team has 10+ years of combined digital marketing experience.",
-    descriptionBn: "আমাদের টিমের ১০+ বছরের সম্মিলিত ডিজিটাল মার্কেটিং অভিজ্ঞতা রয়েছে।",
-    icon: Users,
+    name: "Customized Strategies",
+    nameBn: "কাস্টমাইজড কৌশল",
+    description: "Tailored marketing plans aligned with your industry, goals, and budget.",
+    descriptionBn: "আপনার ব্যবসার ধরন, লক্ষ্য এবং বাজেট অনুযায়ী কাস্টমাইজড মার্কেটিং পরিকল্পনা।",
+    icon: Compass,
   },
   {
-    name: "Proven Results",
-    nameBn: "প্রমাণিত ফলাফল",
-    description: "We have a track record of delivering exceptional ROI for our clients.",
-    descriptionBn: "আমাদের ক্লায়েন্টদের জন্য অসাধারণ ROI প্রদানের ট্র্যাক রেকর্ড রয়েছে।",
-    icon: Award,
+    name: "Transparent Reporting",
+    nameBn: "স্বচ্ছ রিপোর্টিং",
+    description: "Clear visibility into ad spend, verified results, and cost per outcome.",
+    descriptionBn: "অ্যাড স্পেন্ড, প্রাপ্ত রেজাল্ট এবং কস্ট-পার-রেজাল্টের স্পষ্ট ও স্বচ্ছ হিসাব।",
+    icon: BarChart3,
   },
   {
-    name: "24/7 Support",
-    nameBn: "২৪/৭ সাপোর্ট",
-    description: "Get dedicated support whenever you need it, day or night.",
-    descriptionBn: "দিন বা রাত যখনই প্রয়োজন, ডেডিকেটেড সাপোর্ট পান।",
-    icon: Clock,
+    name: "Multi-Platform Capabilities",
+    nameBn: "মাল্টি-প্ল্যাটফর্ম সক্ষমতা",
+    description: "Integrated execution across Meta Ads, Google Ads, SEO, Web, and Automation.",
+    descriptionBn: "মেটা অ্যাডস, গুগল অ্যাডস, এসইও, ওয়েব ডেভেলপমেন্ট ও অটোমেশনের সমন্বিত সেবা।",
+    icon: Layers,
+  },
+  {
+    name: "Tracking & Analytics Expertise",
+    nameBn: "ট্র্যাকিং ও অ্যানালিটিক্স দক্ষতা",
+    description: "Reliable Meta Pixel, Conversion API (CAPI), GA4, and Tag Manager setup.",
+    descriptionBn: "মেটা পিক্সেল, কনভার্সন এপিআই (CAPI), GA4 এবং ট্যাগ ম্যানেজারের নিখুঁত সেটআপ।",
+    icon: Activity,
+  },
+  {
+    name: "Dedicated Client Communication",
+    nameBn: "নিবেদিত ক্লায়েন্ট কমিউনিকেশন",
+    description: "Responsive communication via WhatsApp, phone, and scheduled strategy reviews.",
+    descriptionBn: "হোয়াটসঅ্যাপ, ফোন এবং নিয়মিত স্ট্র্যাটেজি রিভিউয়ের মাধ্যমে দ্রুত যোগাযোগ।",
+    icon: MessageSquare,
   },
 ]
 
@@ -51,7 +75,7 @@ export function WhyChooseUs() {
   const isEnglish = language === "en"
 
   return (
-    <section className="py-14 lg:py-20 overflow-hidden">
+    <section id="why-choose-us" className="py-14 lg:py-20 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 items-center">
           <ScrollReveal variants={slideInLeft}>
@@ -68,9 +92,9 @@ export function WhyChooseUs() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.05 }}
               variants={staggerContainer}
-              className="mt-10 grid grid-cols-2 gap-3.5 sm:gap-6"
+              className="mt-10 grid grid-cols-2 gap-3.5 sm:gap-5"
             >
-              {features.map((feature, index) => (
+              {features.map((feature) => (
                 <motion.div 
                   key={feature.name} 
                   variants={fadeInUp}
@@ -90,6 +114,24 @@ export function WhyChooseUs() {
                 </motion.div>
               ))}
             </motion.div>
+
+            <div className="mt-8 flex flex-wrap items-center gap-4 text-xs sm:text-sm font-semibold">
+              <Link
+                href="/services"
+                className="inline-flex items-center text-primary dark:text-cyan-400 hover:text-cyan-500 transition-colors"
+              >
+                <span>{isEnglish ? "Explore Our Services" : "আমাদের সেবাসমূহ দেখুন"}</span>
+                <ArrowRight className="ml-1.5 h-4 w-4" />
+              </Link>
+              <span className="text-border">•</span>
+              <Link
+                href="/portfolio"
+                className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <span>{isEnglish ? "View Verified Campaign Portfolio" : "ক্যাম্পেইন পোর্টফোলিও দেখুন"}</span>
+                <ArrowRight className="ml-1.5 h-4 w-4" />
+              </Link>
+            </div>
           </ScrollReveal>
           
           <ScrollReveal variants={slideInRight} className="relative">

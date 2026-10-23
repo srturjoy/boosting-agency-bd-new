@@ -10,6 +10,64 @@ import { FounderCeoSpotlight } from "@/components/about/founder-ceo-spotlight"
 export const metadata = {
   title: "Meet Our Team & Growth Experts | Boosting Agency BD",
   description: "Meet the executive leadership and performance marketing specialists driving scalable business growth at Boosting Agency BD.",
+  alternates: {
+    canonical: "https://boostingagencyofficial.site/team",
+  },
+  openGraph: {
+    title: "Meet Our Team & Growth Experts | Boosting Agency BD",
+    description: "Meet the executive leadership and performance marketing specialists at Boosting Agency BD.",
+    url: "https://boostingagencyofficial.site/team",
+    siteName: "Boosting Agency BD",
+    type: "website",
+    images: [
+      {
+        url: "https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp",
+        width: 800,
+        height: 1000,
+        alt: "Boosting Agency BD Executive Leadership & Specialist Team",
+        type: "image/webp",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Meet Our Team & Growth Experts | Boosting Agency BD",
+    description: "Meet the executive leadership and performance marketing specialists at Boosting Agency BD.",
+    images: ["https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp"],
+  },
+}
+
+const teamBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://boostingagencyofficial.site/team#webpage",
+      url: "https://boostingagencyofficial.site/team",
+      name: "Meet Our Team & Growth Experts | Boosting Agency BD",
+      description: "Meet the executive leadership and performance marketing specialists driving scalable business growth at Boosting Agency BD.",
+      isPartOf: { "@id": "https://boostingagencyofficial.site/#website" },
+      about: { "@id": "https://boostingagencyofficial.site/#organization" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://boostingagencyofficial.site/team#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://boostingagencyofficial.site/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Team",
+          item: "https://boostingagencyofficial.site/team",
+        },
+      ],
+    },
+  ],
 }
 
 export default function TeamPage() {
@@ -17,6 +75,10 @@ export default function TeamPage() {
 
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(teamBreadcrumbSchema) }}
+      />
       {/* Hero Section */}
       <section className="py-12 lg:py-16 bg-gradient-to-b from-secondary/40 via-background to-background text-center relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
@@ -60,7 +122,11 @@ export default function TeamPage() {
                 <div className="aspect-[4/3] relative overflow-hidden bg-slate-900">
                   <img
                     src={member.defaultImages[0]?.url || `/images/team/${member.id}.webp`}
-                    alt={member.name}
+                    alt={`${member.name} — ${member.role} at Boosting Agency BD`}
+                    width={800}
+                    height={600}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />

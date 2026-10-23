@@ -5,8 +5,12 @@
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
 
-# Ensure /api/hero-images is served as application/json
+# Ensure /api/hero-images and /api/site-knowledge are served as application/json
 /api/hero-images
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=3600, s-maxage=86400
+
+/api/site-knowledge
   Content-Type: application/json; charset=utf-8
   Cache-Control: public, max-age=3600, s-maxage=86400
 
@@ -15,15 +19,25 @@
   Cache-Control: public, max-age=31536000, immutable
 
 /hero/*
+  Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=31536000, immutable
 
 /images/*
   Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=31536000, immutable
 
+/images/campaigns/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=31536000, immutable
+
 /*.webp
   Access-Control-Allow-Origin: *
   Content-Type: image/webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpg
+  Access-Control-Allow-Origin: *
+  Content-Type: image/jpeg
   Cache-Control: public, max-age=31536000, immutable
 
 /*.png
@@ -48,5 +62,9 @@
   Cache-Control: public, max-age=3600
 
 /robots.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+/llms.txt
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=3600

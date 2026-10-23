@@ -60,8 +60,8 @@ export function HeroImageCarousel({ isHovering = false }: HeroImageCarouselProps
             data.customImages.map((url: string, idx: number) => ({
               id: `hero-slide-${idx + 1}`,
               url,
-              title: `Hero Slide ${idx + 1}`,
-              badge: "High Quality",
+              title: OFFICIAL_HERO_IMAGES[idx]?.title || `Hero Slide ${idx + 1}`,
+              badge: OFFICIAL_HERO_IMAGES[idx]?.badge || "High Quality",
             }))
           )
         }
@@ -104,7 +104,11 @@ export function HeroImageCarousel({ isHovering = false }: HeroImageCarouselProps
           {/* Pure, crisp, high-definition image rendering */}
           <img
             src={currentImage.url}
-            alt={currentImage.title || "Boosting Agency BD"}
+            alt={currentImage.title ? `${currentImage.title} — Boosting Agency BD` : "Boosting Agency BD"}
+            width={1254}
+            height={1254}
+            decoding="async"
+            fetchPriority={currentIndex === 0 ? "high" : "auto"}
             className="w-full h-full object-cover object-center select-none"
             style={{
               imageRendering: "-webkit-optimize-contrast",

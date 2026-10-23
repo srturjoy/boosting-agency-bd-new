@@ -21,12 +21,17 @@ Allow: /sitemap.xml
 Allow: /site-knowledge.json
 Allow: /site-summary.json
 Allow: /images/
+Allow: /images/campaigns/
+Allow: /images/campaigns/message-lead-campaigns/
+Allow: /images/campaigns/website-purchase-campaigns/
 Allow: /images/team/siddiqur-rahman-turjoy.webp
 Allow: /team/
 Allow: /team/siddiqur-rahman-turjoy
 Allow: /about
+Allow: /portfolio
 Allow: /favicon.ico
 Allow: /logo.png
 Allow: /api/site-knowledge
 
 Sitemap: https://boostingagencyofficial.site/sitemap.xml
+
