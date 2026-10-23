@@ -216,43 +216,43 @@ export function IndustriesWeServe() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.05 }}
           variants={staggerContainer}
-          className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6"
+          className="mt-8 sm:mt-12 grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6"
         >
           {industries.map((industry) => (
             <motion.div key={industry.id} variants={fadeInUp}>
-              <Card className="group h-full rounded-2xl sm:rounded-3xl border border-border/70 hover:border-cyan-500/60 bg-card/95 backdrop-blur-sm card-3d hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 flex flex-col justify-between overflow-hidden">
-                <CardContent className="p-5 sm:p-6 flex flex-col h-full justify-between gap-4">
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3.5">
-                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl gradient-primary text-white shadow-sm group-hover:scale-105 transition-transform duration-300">
-                        <industry.icon className="h-5 w-5" />
+              <Card className="group h-full rounded-xl sm:rounded-3xl border border-border/70 hover:border-cyan-500/60 bg-card/95 backdrop-blur-sm card-3d hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+                <CardContent className="p-3 sm:p-6 flex flex-col h-full justify-between gap-2.5 sm:gap-4">
+                  <div className="space-y-2 sm:space-y-3">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3.5">
+                      <div className="flex h-8 w-8 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-lg sm:rounded-xl gradient-primary text-white shadow-sm group-hover:scale-105 transition-transform duration-300">
+                        <industry.icon className="h-4 w-4 sm:h-5 sm:w-5" />
                       </div>
-                      <h3 className="text-base sm:text-lg font-bold text-foreground group-hover:text-cyan-500 transition-colors leading-snug">
+                      <h3 className="text-xs sm:text-lg font-bold text-foreground group-hover:text-cyan-500 transition-colors leading-snug line-clamp-2">
                         {isEnglish ? industry.name : industry.nameBn}
                       </h3>
                     </div>
 
-                    <p className="text-xs sm:text-sm text-muted-foreground dark:text-slate-300 leading-relaxed">
+                    <p className="text-[11px] sm:text-sm text-muted-foreground dark:text-slate-300 leading-snug sm:leading-relaxed line-clamp-3 sm:line-clamp-none">
                       {isEnglish ? industry.description : industry.descriptionBn}
                     </p>
 
-                    <p className="text-[11px] sm:text-xs font-medium text-cyan-600 dark:text-cyan-400 pt-1">
+                    <p className="text-[10px] sm:text-xs font-medium text-cyan-600 dark:text-cyan-400 pt-0.5 sm:pt-1 line-clamp-1 sm:line-clamp-none">
                       {isEnglish ? industry.evidence : industry.evidenceBn}
                     </p>
                   </div>
 
-                  <div className="pt-3.5 border-t border-border/60 flex flex-wrap items-center justify-between gap-2 text-xs font-semibold">
+                  <div className="pt-2 sm:pt-3.5 border-t border-border/60 flex flex-wrap items-center justify-between gap-1 sm:gap-2 text-[10px] sm:text-xs font-semibold">
                     <Link
                       href={industry.primaryHref}
-                      className="inline-flex items-center text-primary dark:text-cyan-400 hover:text-cyan-500 transition-colors group/link"
+                      className="inline-flex items-center text-primary dark:text-cyan-400 hover:text-cyan-500 transition-colors group/link truncate"
                     >
-                      <span>{isEnglish ? industry.primaryLabel : industry.primaryLabelBn}</span>
-                      <ArrowRight className="ml-1 h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />
+                      <span className="truncate">{isEnglish ? industry.primaryLabel : industry.primaryLabelBn}</span>
+                      <ArrowRight className="ml-1 h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0 transition-transform group-hover/link:translate-x-1" />
                     </Link>
 
                     <Link
                       href={industry.secondaryHref}
-                      className="text-muted-foreground hover:text-foreground transition-colors"
+                      className="hidden sm:inline-block text-muted-foreground hover:text-foreground transition-colors truncate"
                     >
                       {isEnglish ? industry.secondaryLabel : industry.secondaryLabelBn}
                     </Link>

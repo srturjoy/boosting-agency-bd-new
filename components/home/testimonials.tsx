@@ -213,43 +213,43 @@ export function Testimonials() {
         </ScrollReveal>
       </div>
 
-      {/* RENDER VIEW 1: CONTINUOUS MARQUEE CAROUSEL */}
+      {/* RENDER VIEW 1: CONTINUOUS MARQUEE CAROUSEL (2 Cards Side-by-Side on Mobile) */}
       {viewMode === "carousel" ? (
         <div
           ref={scrollRef}
-          className="mt-14 flex gap-6 overflow-x-hidden px-6"
+          className="mt-8 sm:mt-14 flex gap-3 sm:gap-6 overflow-x-hidden px-3 sm:px-6"
           style={{ scrollBehavior: "auto" }}
         >
           {duplicatedReviews.map((client, index) => (
             <Card
               key={`${client.id}-${index}`}
-              className="flex-shrink-0 w-[310px] sm:w-[350px] bg-slate-900/90 border border-slate-700/80 backdrop-blur-md hover:bg-slate-900 hover:border-cyan-400/70 card-3d rounded-3xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 relative overflow-hidden flex flex-col justify-between group"
+              className="flex-shrink-0 w-[calc(50vw-18px)] min-w-[155px] max-w-[195px] sm:max-w-none sm:w-[350px] bg-slate-900/90 border border-slate-700/80 backdrop-blur-md hover:bg-slate-900 hover:border-cyan-400/70 card-3d rounded-xl sm:rounded-3xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 relative overflow-hidden flex flex-col justify-between group"
             >
               {/* Corner Glow */}
               <div className="absolute top-0 right-0 w-28 h-28 bg-cyan-400/10 rounded-full blur-2xl pointer-events-none group-hover:bg-cyan-400/20 transition-colors" />
 
-              <CardContent className="p-6 relative flex flex-col h-full justify-between">
+              <CardContent className="p-3 sm:p-6 relative flex flex-col h-full justify-between">
                 <div>
                   {/* Top Bar: 5 Golden Stars & Category Badge */}
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex gap-1 items-center">
+                  <div className="flex items-center justify-between mb-2 sm:mb-4 gap-1">
+                    <div className="flex gap-0.5 sm:gap-1 items-center">
                       {[...Array(client.rating || 5)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400 drop-shadow-xs" />
+                        <Star key={i} className="h-3 w-3 sm:h-4 sm:w-4 fill-amber-400 text-amber-400 drop-shadow-xs" />
                       ))}
                     </div>
                     <Badge
                       variant="secondary"
-                      className="text-[10px] font-semibold bg-slate-800 text-cyan-300 border-slate-700 px-2 py-0.5 rounded-lg"
+                      className="text-[8px] sm:text-[10px] font-semibold bg-slate-800 text-cyan-300 border-slate-700 px-1.5 sm:px-2 py-0.5 rounded-md sm:rounded-lg truncate max-w-[70px] sm:max-w-none"
                     >
                       {client.category}
                     </Badge>
                   </div>
 
                   {/* Review Text */}
-                  <p className="text-slate-200 text-xs sm:text-sm leading-relaxed mb-3 font-normal italic">
+                  <p className="text-slate-200 text-[10px] sm:text-sm leading-snug sm:leading-relaxed mb-1.5 sm:mb-3 font-normal italic line-clamp-3 sm:line-clamp-none">
                     &ldquo;{isEnglish ? client.review : (client.reviewBn || client.review)}&rdquo;
                   </p>
-                  <p className="text-[10px] text-slate-400 mb-4">
+                  <p className="hidden sm:block text-[10px] text-slate-400 mb-4">
                     {isEnglish
                       ? "Verified official page link · Quote flagged for written sign-off review"
                       : "যাচাইকৃত অফিশিয়াল পেজ লিংক · লিখিত অনুমোদন পর্যালোচনার অধীন"}
@@ -258,16 +258,16 @@ export function Testimonials() {
 
                 {/* Reviewer / Client Identity */}
                 <div>
-                  <div className="border-t border-slate-800 pt-4 flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-3 min-w-0">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl gradient-primary text-white text-xs font-bold shadow-md shadow-cyan-500/20 shrink-0">
+                  <div className="border-t border-slate-800 pt-2 sm:pt-4 flex items-center justify-between gap-1.5 sm:gap-3">
+                    <div className="flex items-center gap-1.5 sm:gap-3 min-w-0">
+                      <div className="flex h-7 w-7 sm:h-10 sm:w-10 items-center justify-center rounded-lg sm:rounded-xl gradient-primary text-white text-[10px] sm:text-xs font-bold shadow-md shadow-cyan-500/20 shrink-0">
                         {getInitials(client.name)}
                       </div>
                       <div className="min-w-0">
-                        <p className="font-bold text-white text-xs sm:text-sm truncate">
+                        <p className="font-bold text-white text-[11px] sm:text-sm truncate">
                           {isEnglish ? client.name : (client.nameBn || client.name)}
                         </p>
-                        <p className="text-cyan-300 text-[11px] font-medium truncate">
+                        <p className="text-cyan-300 text-[9px] sm:text-[11px] font-medium truncate">
                           {isEnglish ? client.reviewerRole : (client.reviewerRoleBn || client.reviewerRole)}
                         </p>
                       </div>
@@ -275,19 +275,18 @@ export function Testimonials() {
                   </div>
 
                   {/* Action Link to Official Facebook Page */}
-                  <div className="mt-3 pt-3 border-t border-slate-800/60 flex items-center justify-between gap-2">
+                  <div className="mt-2 sm:mt-3 pt-2 sm:pt-3 border-t border-slate-800/60 flex items-center justify-between gap-1">
                     <a
                       href={client.facebookUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-cyan-300 hover:text-white transition-colors"
+                      className="inline-flex items-center gap-1 text-[9px] sm:text-[11px] font-semibold text-cyan-300 hover:text-white transition-colors truncate"
                       aria-label={`Visit Facebook page of ${client.name}`}
                     >
-                      <svg className="h-3 w-3 fill-current" viewBox="0 0 24 24">
+                      <svg className="h-2.5 w-2.5 sm:h-3 sm:w-3 fill-current shrink-0" viewBox="0 0 24 24">
                         <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                       </svg>
-                      <span>Facebook Page</span>
-                      <ExternalLink className="h-2.5 w-2.5" />
+                      <span className="truncate">Facebook</span>
                     </a>
 
                     {client.websiteUrl && (
@@ -295,11 +294,11 @@ export function Testimonials() {
                         href={client.websiteUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-[11px] font-semibold text-cyan-400 hover:text-white transition-colors"
+                        className="inline-flex items-center gap-0.5 text-[9px] sm:text-[11px] font-semibold text-cyan-400 hover:text-white transition-colors shrink-0"
                         aria-label={`Visit official website of ${client.name}`}
                       >
-                        <Globe className="h-3 w-3" />
-                        <span>Website</span>
+                        <Globe className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
+                        <span className="hidden xs:inline">Web</span>
                       </a>
                     )}
                   </div>
@@ -310,32 +309,32 @@ export function Testimonials() {
         </div>
       ) : (
         /* RENDER VIEW 2: RESPONSIVE GRID (ALL 49 REVIEWS) */
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-14">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 mt-8 sm:mt-14">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
             {filteredReviews.slice(0, gridLimit).map((client) => (
               <Card
                 key={client.id}
-                className="bg-slate-900/90 border border-slate-700/80 backdrop-blur-md hover:border-cyan-400/70 card-3d rounded-3xl p-6 flex flex-col justify-between group transition-all duration-300"
+                className="bg-slate-900/90 border border-slate-700/80 backdrop-blur-md hover:border-cyan-400/70 card-3d rounded-xl sm:rounded-3xl p-3 sm:p-6 flex flex-col justify-between group transition-all duration-300"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex gap-1 items-center">
+                  <div className="flex items-center justify-between mb-2 sm:mb-4 gap-1">
+                    <div className="flex gap-0.5 sm:gap-1 items-center">
                       {[...Array(client.rating || 5)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+                        <Star key={i} className="h-3 w-3 sm:h-4 sm:w-4 fill-amber-400 text-amber-400" />
                       ))}
                     </div>
                     <Badge
                       variant="secondary"
-                      className="text-[10px] font-semibold bg-slate-800 text-cyan-300 border-slate-700 px-2 py-0.5 rounded-lg"
+                      className="text-[8px] sm:text-[10px] font-semibold bg-slate-800 text-cyan-300 border-slate-700 px-1.5 sm:px-2 py-0.5 rounded-md sm:rounded-lg truncate max-w-[70px] sm:max-w-none"
                     >
                       {client.category}
                     </Badge>
                   </div>
 
-                  <p className="text-slate-200 text-xs sm:text-sm leading-relaxed mb-3 italic">
+                  <p className="text-slate-200 text-[10px] sm:text-sm leading-snug sm:leading-relaxed mb-1.5 sm:mb-3 italic line-clamp-3 sm:line-clamp-none">
                     &ldquo;{isEnglish ? client.review : (client.reviewBn || client.review)}&rdquo;
                   </p>
-                  <p className="text-[10px] text-slate-400 mb-4">
+                  <p className="hidden sm:block text-[10px] text-slate-400 mb-4">
                     {isEnglish
                       ? "Verified official page link · Quote flagged for written sign-off review"
                       : "যাচাইকৃত অফিশিয়াল পেজ লিংক · লিখিত অনুমোদন পর্যালোচনার অধীন"}
@@ -343,34 +342,34 @@ export function Testimonials() {
                 </div>
 
                 <div>
-                  <div className="border-t border-slate-800 pt-4 flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-3 min-w-0">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl gradient-primary text-white text-xs font-bold shadow-md shrink-0">
+                  <div className="border-t border-slate-800 pt-2 sm:pt-4 flex items-center justify-between gap-1.5 sm:gap-3">
+                    <div className="flex items-center gap-1.5 sm:gap-3 min-w-0">
+                      <div className="flex h-7 w-7 sm:h-10 sm:w-10 items-center justify-center rounded-lg sm:rounded-xl gradient-primary text-white text-[10px] sm:text-xs font-bold shadow-md shrink-0">
                         {getInitials(client.name)}
                       </div>
                       <div className="min-w-0">
-                        <p className="font-bold text-white text-xs sm:text-sm truncate">
+                        <p className="font-bold text-white text-[11px] sm:text-sm truncate">
                           {isEnglish ? client.name : (client.nameBn || client.name)}
                         </p>
-                        <p className="text-cyan-300 text-[11px] font-medium truncate">
+                        <p className="text-cyan-300 text-[9px] sm:text-[11px] font-medium truncate">
                           {isEnglish ? client.reviewerRole : (client.reviewerRoleBn || client.reviewerRole)}
                         </p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="mt-3 pt-3 border-t border-slate-800/60 flex items-center justify-between gap-2">
+                  <div className="mt-2 sm:mt-3 pt-2 sm:pt-3 border-t border-slate-800/60 flex items-center justify-between gap-1">
                     <a
                       href={client.facebookUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-cyan-300 hover:text-white transition-colors"
+                      className="inline-flex items-center gap-1 text-[9px] sm:text-[11px] font-semibold text-cyan-300 hover:text-white transition-colors truncate"
                     >
-                      <svg className="h-3 w-3 fill-current" viewBox="0 0 24 24">
+                      <svg className="h-2.5 w-2.5 sm:h-3 sm:w-3 fill-current shrink-0" viewBox="0 0 24 24">
                         <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                       </svg>
-                      <span>Facebook</span>
-                      <ExternalLink className="h-2.5 w-2.5" />
+                      <span className="truncate">Facebook</span>
+                      <ExternalLink className="h-2 w-2 sm:h-2.5 sm:w-2.5 shrink-0" />
                     </a>
 
                     {client.websiteUrl && (
@@ -378,10 +377,10 @@ export function Testimonials() {
                         href={client.websiteUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-[11px] font-semibold text-cyan-400 hover:text-white transition-colors"
+                        className="inline-flex items-center gap-0.5 text-[9px] sm:text-[11px] font-semibold text-cyan-400 hover:text-white transition-colors shrink-0"
                       >
-                        <Globe className="h-3 w-3" />
-                        <span>Website</span>
+                        <Globe className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
+                        <span className="hidden xs:inline">Web</span>
                       </a>
                     )}
                   </div>
