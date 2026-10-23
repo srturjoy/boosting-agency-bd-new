@@ -3,7 +3,7 @@
 **Digital Marketing, Paid Media & AI Automation Agency**  
 Website: https://boostingagencyofficial.site/  
 WhatsApp & Hotline: +880 1518 961899  
-Office: Rupnagar R/A, Road-16, Mirpur-2, Dhaka-1216, Bangladesh
+Office: Mirpur, Dhaka-1216, Bangladesh
 
 ---
 

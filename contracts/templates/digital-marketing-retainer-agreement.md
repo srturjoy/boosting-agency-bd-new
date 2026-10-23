@@ -1,7 +1,7 @@
 # Master Digital Marketing Retainer Agreement
 
 **Agreement Ref:** BABD-RETAINER-TEMPLATE  
-**Service Provider:** Boosting Agency BD (Mirpur-2, Dhaka-1216, Bangladesh)  
+**Service Provider:** Boosting Agency BD (Mirpur, Dhaka-1216, Bangladesh)  
 **Hotline / WhatsApp:** +880 1518 961899  
 
 ---

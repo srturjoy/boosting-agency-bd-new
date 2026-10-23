@@ -196,7 +196,7 @@ const jsonLd = {
       },
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Rupnagar R/A, Road-16, Mirpur-2, Dhaka-1216, Bangladesh",
+        "streetAddress": "Mirpur, Dhaka-1216, Bangladesh",
         "addressLocality": "Dhaka",
         "addressRegion": "Dhaka Division",
         "postalCode": "1216",
@@ -259,7 +259,7 @@ const jsonLd = {
       "description": "Digital marketing agency in Dhaka, Bangladesh offering Facebook Ads, Google Ads, SEO, Web Design, Branding, and AI Automation services.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Rupnagar R/A, Road-16, Mirpur-2, Dhaka-1216, Bangladesh",
+        "streetAddress": "Mirpur, Dhaka-1216, Bangladesh",
         "addressLocality": "Dhaka",
         "addressRegion": "Dhaka Division",
         "postalCode": "1216",

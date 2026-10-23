@@ -4,7 +4,7 @@ import React from "react"
 export const metadata: Metadata = {
   title: "Contact Us & Book a Free Consultation | Boosting Agency BD",
   description:
-    "Contact Boosting Agency BD in Mirpur-2, Dhaka, Bangladesh. Call or message on WhatsApp at +880 1518 961899 for Facebook Ads, Google Ads, SEO, and Web Development consultations.",
+    "Contact Boosting Agency BD in Mirpur, Dhaka-1216, Bangladesh. Call or message on WhatsApp at +880 1518 961899 for Facebook Ads, Google Ads, SEO, and Web Development consultations.",
   alternates: {
     canonical: "https://boostingagencyofficial.site/contact",
   },
@@ -43,7 +43,7 @@ const contactPageSchema = {
       url: "https://boostingagencyofficial.site/contact",
       name: "Contact Us & Book a Free Consultation | Boosting Agency BD",
       description:
-        "Contact Boosting Agency BD in Mirpur-2, Dhaka, Bangladesh. Call or message on WhatsApp at +880 1518 961899 for Facebook Ads, Google Ads, SEO, and Web Development consultations.",
+        "Contact Boosting Agency BD in Mirpur, Dhaka-1216, Bangladesh. Call or message on WhatsApp at +880 1518 961899 for Facebook Ads, Google Ads, SEO, and Web Development consultations.",
       isPartOf: {
         "@id": "https://boostingagencyofficial.site/#website",
       },

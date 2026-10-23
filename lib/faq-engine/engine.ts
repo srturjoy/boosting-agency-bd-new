@@ -49,8 +49,8 @@ export function processUserQuery(
     const clarificationAnswer: SearchAnswer = {
       title_en: "Which service would you like to inquire about?",
       title_bn: "আপনি কোন সার্ভিস বা বাজেট সম্পর্কে জানতে চান?",
-      text_en: "Could you please specify which service or pricing details you are inquiring about?\n\n• **Meta Advertising:** Managed ads at ৳145/USD (Minimum $20 budget = ৳2,900).\n• **Dollar Top-up Only:** Account funding at ৳135/USD.\n• **Tracking & Pixel:** Setup starting from ৳500 to ৳5,000.\n• **Office & Contact:** Mirpur-2, Dhaka (WhatsApp: 01518961899).",
-      text_bn: "দয়া করে নির্দিষ্ট করে জানান আপনি কোন সার্ভিস বা খরচের বিবরণ জানতে চাচ্ছেন?\n\n• **মেটা বিজ্ঞাপন:** ম্যানেজড অ্যাডস প্রতি ডলার ১৪৫ টাকা (সর্বনিম্ন $২০ বা ২,৯০০ টাকা বাজেট)।\n• **ডলার টপ-আপ অনলি:** একাউন্ট ব্যালেন্স প্রতি ডলার ১৩৫ টাকা।\n• **পিক্সেল ও ট্র্যাকিং:** সেটআপ ৫০০ থেকে ৫,০০০ টাকা (যাচাইসাপেক্ষ)।\n• **অফিস ও যোগাযোগ:** মিরপুর-২, ঢাকা (হোয়াটসঅ্যাপ: ০১৫১৮৯৬১৮৯৯)।",
+      text_en: "Could you please specify which service or pricing details you are inquiring about?\n\n• **Meta Advertising:** Managed ads at ৳145/USD (Minimum $20 budget = ৳2,900).\n• **Dollar Top-up Only:** Account funding at ৳135/USD.\n• **Tracking & Pixel:** Setup starting from ৳500 to ৳5,000.\n• **Office & Contact:** Mirpur, Dhaka-1216, Bangladesh (WhatsApp: 01518961899).",
+      text_bn: "দয়া করে নির্দিষ্ট করে জানান আপনি কোন সার্ভিস বা খরচের বিবরণ জানতে চাচ্ছেন?\n\n• **মেটা বিজ্ঞাপন:** ম্যানেজড অ্যাডস প্রতি ডলার ১৪৫ টাকা (সর্বনিম্ন $২০ বা ২,৯০০ টাকা বাজেট)।\n• **ডলার টপ-আপ অনলি:** একাউন্ট ব্যালেন্স প্রতি ডলার ১৩৫ টাকা।\n• **পিক্সেল ও ট্র্যাকিং:** সেটআপ ৫০০ থেকে ৫,০০০ টাকা (যাচাইসাপেক্ষ)।\n• **অফিস ও যোগাযোগ:** মিরপুর, ঢাকা-১২১৬, বাংলাদেশ (হোয়াটসঅ্যাপ: ০১৫১৮৯৬১৮৯৯)।",
       confidence: 100,
       matchedCategory: "Clarification",
       actions: [

@@ -45,13 +45,13 @@ export const termsAndConditionsData: TermSection[] = [
       "Ad Spend Advance: Media ad budgets for Meta, Google, or TikTok must be paid in full prior to launch. We do not advance ad credit or run debt-based ad spend.",
       "Agency Retainer: Monthly management fees (standard ৳10,000/month or agreed package cost) must be paid at the start of each service cycle.",
       "Commercial USD Service Rate: Boosting Agency BD's dollar conversion rate (৳145/USD for managed campaigns, ৳135/USD for top-up only, ৳155/USD for special categories) is a dedicated commercial service rate covering payment gateway costs, dual-currency international card endorsement, and ad account maintenance. It is NOT the raw interbank currency exchange rate.",
-      "Payment Channels: We accept bKash Merchant/Personal, Nagad, Rocket, Direct Bank Transfer (City Bank, BRAC Bank, Dutch-Bangla Bank), and Cash at our Mirpur-2 office."
+      "Payment Channels: We accept bKash Merchant/Personal, Nagad, Rocket, Direct Bank Transfer (City Bank, BRAC Bank, Dutch-Bangla Bank), and Cash at our Mirpur office."
     ],
     points_bn: [
       "অ্যাড স্পেন্ড অগ্রিম পরিশোধ: মেটা, গুগল বা টিকটক বিজ্ঞাপনের প্ল্যাটফর্ম বাজেট ক্যাম্পেইন চালুর পূর্বেই শতভাগ পরিশোধ করতে হবে। বাকি বা বাকিতে বিজ্ঞাপন চালানো হয় না।",
       "এজেন্সি রিটেইনার ফি: মাসিক ম্যানেজমেন্ট ফি (স্ট্যান্ডার্ড ১০,০০০ টাকা/মাস বা চুক্তিকৃত প্যাকেজ ফি) প্রতি সার্ভিস মেয়াদের শুরুতে পরিশোধ করতে হবে।",
       "কমার্শিয়াল ডলার সার্ভিস রেট: বুস্টিং এজেন্সি বিডি-র ডলার রেট (ম্যানেজড ক্যাম্পেইনে ১৪৫ টাকা/ডলার, টপ-আপ অনলিতে ১৩৫ টাকা/ডলার, বিশেষ ক্যাটাগরিতে ১৫৫ টাকা/ডলার) একটি বাণিজ্যিক সার্ভিস রেট। এতে ডুয়াল কারেন্সি অ্যান্ডোর্সমেন্ট, কার্ড রক্ষণাবেক্ষণ ও গেটওয়ে চার্জ যুক্ত থাকে; এটি কেন্দ্রীয় ব্যাংকের সাধারণ ইন্টারব্যাংক রেট নয়।",
-      "পেমেন্ট মাধ্যম: বিকাশ (মার্চেন্ট/পার্সোনাল), নগদ, রকেট, ব্যাংক ট্রান্সফার (সিটি ব্যাংক, ব্র্যাক ব্যাংক, ডাচ-বাংলা ব্যাংক) এবং মিরপুর-২ অফিসে সরাসরি ক্যাশ গ্রহণযোগ্য।"
+      "পেমেন্ট মাধ্যম: বিকাশ (মার্চেন্ট/পার্সোনাল), নগদ, রকেট, ব্যাংক ট্রান্সফার (সিটি ব্যাংক, ব্র্যাক ব্যাংক, ডাচ-বাংলা ব্যাংক) এবং মিরপুর অফিসে সরাসরি ক্যাশ গ্রহণযোগ্য।"
     ]
   },
   {
@@ -190,13 +190,13 @@ export const termsAndConditionsData: TermSection[] = [
       "Termination Notice: Either party may terminate a monthly ongoing retainer by providing a 7-day written notice via official WhatsApp.",
       "Jurisdiction: These terms and policies are construed under the laws of Bangladesh. Any unresolved disputes fall under the jurisdiction of competent courts in Dhaka, Bangladesh.",
       "Official Grievance Contact: For any billing, privacy, or policy inquiries, please contact Boosting Agency BD directly via WhatsApp (+880 1518 961899) or Hotline (+880 1518 961899).",
-      "Physical Office: Rupnagor R/A, Road-16, Mirpur-2, Dhaka-1216, Bangladesh."
+      "Physical Office: Mirpur, Dhaka-1216, Bangladesh."
     ],
     points_bn: [
       "চুক্তি বাতিল নোটিশ: মাসিক রিটেইনার সার্ভিসের ক্ষেত্রে যে কোনো পক্ষ অফিশিয়াল হোয়াটসঅ্যাপে ৭ দিনের লিখিত নোটিশ দিয়ে সেবা সমাপ্ত করতে পারেন।",
       "আইনি এখতিয়ার: এই শর্তাবলী বাংলাদেশের প্রচলিত আইন অনুযায়ী ব্যাখ্যা করা হবে এবং যে কোনো আইনি বিষয়ের সমাধান ঢাকা আদালতের আওতাধীন থাকবে।",
       "অফিশিয়াল যোগাযোগের ঠিকানা: পলিসি বা বিলিং সংক্রান্ত যে কোনো তথ্যের জন্য বুস্টিং এজেন্সি বিডি-র অফিশিয়াল হোয়াটসঅ্যাপ (+৮৮০ ১৫১৮ ৯৬১৮৯৯) বা হটলাইনে যোগাযোগ করুন।",
-      "অফিসের ঠিকানা: রূপনগর আ/এ, রোড-১৬, মিরপুর-২, ঢাকা-১২১৬, বাংলাদেশ।"
+      "অফিসের ঠিকানা: মিরপুর, ঢাকা-১২১৬, বাংলাদেশ।"
     ]
   }
 ]

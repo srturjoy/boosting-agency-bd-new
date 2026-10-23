@@ -102,8 +102,8 @@ export function queryKnowledgeBase(query: string, currentLang: "en" | "bn" = "bn
     return {
       title_en: "Official Office Location & Contact",
       title_bn: "অফিসের ঠিকানা ও যোগাযোগের মাধ্যম",
-      text_en: `📍 **Office Address:** ${contactData.address_en}\n\n📞 **Phone:** ${contactData.phone}\n💬 **WhatsApp:** ${contactData.phone_raw}\n⏰ **Office Hours:** ${contactData.hours_en}\n\nYou are welcome to visit our office in Mirpur-2 for in-person consultations. Please message us on WhatsApp in advance!`,
-      text_bn: `📍 **অফিস ঠিকানা:** ${contactData.address_bn}\n\n📞 **ফোন:** ${contactData.phone}\n💬 **হোয়াটসঅ্যাপ:** ${contactData.phone_raw}\n⏰ **কাজের সময়:** ${contactData.hours_bn}\n\nমিরপুর-২ রূপনগর আবাসিক এলাকায় আমাদের অফিসে সরাসরি এসেও কথা বলতে পারেন। সাক্ষাতের আগে দয়া করে হোয়াটসঅ্যাপে যোগাযোগ করে আসুন।`,
+      text_en: `📍 **Office Address:** ${contactData.address_en}\n\n📞 **Phone:** ${contactData.phone}\n💬 **WhatsApp:** ${contactData.phone_raw}\n⏰ **Office Hours:** ${contactData.hours_en}\n\nYou are welcome to visit our office in Mirpur, Dhaka-1216 for in-person consultations. Please message us on WhatsApp in advance!`,
+      text_bn: `📍 **অফিস ঠিকানা:** ${contactData.address_bn}\n\n📞 **ফোন:** ${contactData.phone}\n💬 **হোয়াটসঅ্যাপ:** ${contactData.phone_raw}\n⏰ **কাজের সময়:** ${contactData.hours_bn}\n\nমিরপুর, ঢাকা-১২১৬ আমাদের অফিসে সরাসরি এসেও কথা বলতে পারেন। সাক্ষাতের আগে দয়া করে হোয়াটসঅ্যাপে যোগাযোগ করে আসুন।`,
       confidence: 95,
       matchedCategory: "Contact",
       actions: [

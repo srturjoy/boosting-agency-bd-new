@@ -371,8 +371,8 @@ export default function TermsAndConditionsPage() {
                   <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-cyan-400" />
                   <span>
                     {isEnglish
-                      ? "Rupnagor R/A, Road-16, Mirpur-2, Dhaka-1216, Bangladesh"
-                      : "রূপনগর আ/এ, রোড-১৬, মিরপুর-২, ঢাকা-১২১৬, বাংলাদেশ"}
+                      ? "Mirpur, Dhaka-1216, Bangladesh"
+                      : "মিরপুর, ঢাকা-১২১৬, বাংলাদেশ"}
                   </span>
                 </div>
                 <div className="flex items-center gap-2">

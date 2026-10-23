@@ -115,7 +115,7 @@ export function Footer() {
               <li>
                 <div className="flex items-start gap-3 text-sm text-slate-300">
                   <MapPin className="h-4 w-4 mt-0.5 shrink-0 text-cyan-400" />
-                  <span>{isEnglish ? "Rupnagor R/A, Road-16, Mirpur-2, Dhaka-1216, Bangladesh" : "রূপনগর আ/এ, রোড-১৬, মিরপুর-২, ঢাকা-১২১৬, বাংলাদেশ"}</span>
+                  <span>{isEnglish ? "Mirpur, Dhaka-1216, Bangladesh" : "মিরপুর, ঢাকা-১২১৬, বাংলাদেশ"}</span>
                 </div>
               </li>
             </ul>

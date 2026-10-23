@@ -267,9 +267,9 @@ export function classifyAndResolveMessage(
       }
     } else if (activeTopic === "contact_and_office") {
       if (/কখন|সময়|open|time|খোলা|কয়টা/i.test(trimmed)) {
-        resolvedQuery = `office hours 10 am to 8 pm mirpur 2 rupnagor contact time ${query}`
+        resolvedQuery = `office hours 9 am to 6 pm mirpur dhaka 1216 contact time ${query}`
       } else {
-        resolvedQuery = `office address mirpur rupnagor dhaka contact ${query}`
+        resolvedQuery = `office address mirpur dhaka 1216 bangladesh contact ${query}`
       }
     } else if (activeTopic === "tracking_analytics") {
       if (/খরচ|কত|দাম|cost|price/i.test(trimmed)) {
