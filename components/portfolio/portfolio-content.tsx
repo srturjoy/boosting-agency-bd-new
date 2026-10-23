@@ -32,6 +32,7 @@ import {
 } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 import { CLIENTS, CLIENT_CATEGORIES, ClientRecord } from "@/data/clients"
+import { getCampaignBackupUrl } from "./campaign-image-registry"
 
 interface RealCampaignItem {
   id: string
@@ -1272,6 +1273,12 @@ function BulkUploadCampaignSection({
                 height={500}
                 loading="lazy"
                 decoding="async"
+                onError={(e) => {
+                  const backup = getCampaignBackupUrl(item.imageUrl)
+                  if (backup && e.currentTarget.src !== backup) {
+                    e.currentTarget.src = backup
+                  }
+                }}
                 className="h-full w-full object-contain rounded-lg transition-transform duration-300 group-hover:scale-[1.02]"
               />
               <meta itemProp="name" content={item.title} />
@@ -1473,6 +1480,12 @@ function BulkUploadCampaignSection({
                     <img
                       src={selectedCampaign.imageUrl}
                       alt={`${selectedCampaign.title} — ${selectedCampaign.results} at ${selectedCampaign.costPerResult}`}
+                      onError={(e) => {
+                        const backup = getCampaignBackupUrl(selectedCampaign.imageUrl)
+                        if (backup && e.currentTarget.src !== backup) {
+                          e.currentTarget.src = backup
+                        }
+                      }}
                       className={`mx-auto rounded-lg ${
                         isFullZoom ? "max-w-none w-auto" : "max-h-[44vh] w-auto object-contain"
                       }`}

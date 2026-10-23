@@ -67,6 +67,8 @@ project-root/
 │   └── utils.ts                # Tailwind clsx/twMerge utility (cn)
 │
 ├── scripts/                    # Maintenance, asset verification & schema validation
+│   ├── prepare-campaign-assets.mjs # Pre/post-build real screenshot asset sync
+│   ├── campaign-images-map.json    # Exact 44-screenshot persistent backup mapping
 │   ├── verify-assets.mjs       # Static asset verification tool
 │   ├── verify-tracking-schemas.mjs # Tracking schema validator
 │   └── README.md               # Operational scripts index

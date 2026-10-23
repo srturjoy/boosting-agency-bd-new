@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000 -H 0.0.0.0",
-    "build": "next build",
-    "pages:build": "next build",
+    "prebuild": "node scripts/prepare-campaign-assets.mjs",
+    "build": "node scripts/prepare-campaign-assets.mjs && next build && node scripts/prepare-campaign-assets.mjs",
+    "pages:build": "node scripts/prepare-campaign-assets.mjs && next build && node scripts/prepare-campaign-assets.mjs",
     "start": "next start",
     "lint": "tsc --noEmit"
   },
