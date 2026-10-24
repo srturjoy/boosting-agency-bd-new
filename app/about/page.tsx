@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight, Target, Eye, Lightbulb, Users, Award } from "lucide-react"
 import { TeamCarousel } from "@/components/about/team-carousel"
 import { FounderCeoSpotlight } from "@/components/about/founder-ceo-spotlight"
+import { TEAM_MEMBERS } from "@/data/team"
 import { useLanguage } from "@/lib/language-context"
 
 export default function AboutPage() {
@@ -65,13 +66,44 @@ export default function AboutPage() {
             "Turjoy Siddiqur Rahman"
           ],
           "jobTitle": "Founder & CEO",
-          "url": "https://turjoy.boostingagencyofficial.site/",
-          "image": "https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp",
+          "url": "https://boostingagencyofficial.site/team/siddiqur-rahman-turjoy",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp",
+            "contentUrl": "https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp",
+            "name": "Siddiqur Rahman Turjoy — Founder & CEO of Boosting Agency BD",
+            "caption": "Siddiqur Rahman Turjoy, Founder & CEO of Boosting Agency BD"
+          },
           "sameAs": [
             "https://turjoy.boostingagencyofficial.site/",
             "https://boostingagencyofficial.site/team/siddiqur-rahman-turjoy"
           ]
-        }
+        },
+        "employee": TEAM_MEMBERS.map((member) => {
+          const profileUrl = `https://boostingagencyofficial.site/team/${member.id}`
+          const imgPath = member.defaultImages[0]?.url || `/images/team/${member.id}.webp`
+          const imageUrl = imgPath.startsWith("http") ? imgPath : `https://boostingagencyofficial.site${imgPath}`
+          return {
+            "@type": "Person",
+            "@id": member.id === "siddiqur-rahman-turjoy" ? "https://turjoy.boostingagencyofficial.site/#person" : `${profileUrl}#person`,
+            "name": member.name,
+            "alternateName": [
+              member.name.replace(/[\(\)]/g, "").trim(),
+              ...(member.nameBn ? [member.nameBn] : [])
+            ],
+            "jobTitle": member.role,
+            "url": profileUrl,
+            "image": {
+              "@type": "ImageObject",
+              "@id": `${imageUrl}#primaryimage`,
+              "url": imageUrl,
+              "contentUrl": imageUrl,
+              "name": `${member.name} — ${member.role} at Boosting Agency BD`,
+              "caption": `${member.name}, ${member.role} at Boosting Agency BD`
+            },
+            "sameAs": [profileUrl]
+          }
+        })
       }
     ]
   }

@@ -10,6 +10,7 @@ import { ChatInput } from "./chat-input"
 import { ChatMessage, ConversationContext } from "@/lib/faq-engine/types"
 import { getInitialGreeting, processUserQuery } from "@/lib/faq-engine/engine"
 import { createInitialContext } from "@/lib/faq-engine/conversation-manager"
+import { sanitizeInput, checkRateLimit } from "@/lib/security"
 
 const STORAGE_KEY_MESSAGES = "boosting_faq_messages"
 const STORAGE_KEY_CONTEXT = "boosting_faq_context"
@@ -118,7 +119,15 @@ export function ChatWidget() {
   }, [isOpen])
 
   const handleSendMessage = useCallback(
-    (text: string) => {
+    (rawText: string) => {
+      const text = sanitizeInput(rawText, 500)
+      if (!text) return
+
+      const rateCheck = checkRateLimit("chat_message_send", 15, 30_000)
+      if (!rateCheck.allowed) {
+        return
+      }
+
       const userMsg: ChatMessage = {
         id: `user-${Date.now()}`,
         sender: "user",

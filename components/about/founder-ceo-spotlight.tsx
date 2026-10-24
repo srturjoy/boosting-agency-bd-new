@@ -34,7 +34,13 @@ export function FounderCeoSpotlight() {
 
   return (
     <div className="mx-auto max-w-7xl px-6 lg:px-8 mb-16">
-      <Card className="rounded-3xl border border-cyan-500/40 bg-gradient-to-br from-card via-card to-secondary/40 shadow-2xl overflow-hidden relative group">
+      <Card
+        itemScope
+        itemType="https://schema.org/Person"
+        className="rounded-3xl border border-cyan-500/40 bg-gradient-to-br from-card via-card to-secondary/40 shadow-2xl overflow-hidden relative group"
+      >
+        <meta itemProp="url" content="https://boostingagencyofficial.site/team/siddiqur-rahman-turjoy" />
+        <meta itemProp="worksFor" content="Boosting Agency BD" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/15 rounded-full blur-3xl pointer-events-none" />
 
@@ -45,6 +51,8 @@ export function FounderCeoSpotlight() {
               <img
                 src={photoUrl}
                 alt="Siddiqur Rahman Turjoy, Founder and CEO of Boosting Agency BD"
+                title="Siddiqur Rahman Turjoy — Founder & CEO | Boosting Agency BD"
+                itemProp="image"
                 width={800}
                 height={1000}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -84,12 +92,12 @@ export function FounderCeoSpotlight() {
               </div>
 
               <div>
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">
+                <h2 itemProp="name" className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">
                   {isEnglish 
                     ? (founder.preferredName ? `${founder.name} (${founder.preferredName})` : founder.name)
                     : (founder.preferredNameBn ? `${founder.nameBn || founder.name} (${founder.preferredNameBn})` : (founder.nameBn || founder.name))}
                 </h2>
-                <p className="text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-500 mt-1">
+                <p itemProp="jobTitle" className="text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-500 mt-1">
                   {isEnglish ? founder.role : (founder.roleBn || founder.role)}
                 </p>
                 <p className="text-xs sm:text-sm text-foreground dark:text-slate-200 font-semibold leading-relaxed mt-1.5">

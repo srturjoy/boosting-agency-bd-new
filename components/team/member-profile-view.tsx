@@ -139,7 +139,13 @@ export function MemberProfileView({ member }: MemberProfileViewProps) {
       </div>
 
       {/* Main Profile Content Container */}
-      <main className="mx-auto max-w-7xl px-6 lg:px-8 py-10 lg:py-16">
+      <main
+        itemScope
+        itemType="https://schema.org/Person"
+        className="mx-auto max-w-7xl px-6 lg:px-8 py-10 lg:py-16"
+      >
+        <meta itemProp="url" content={`https://boostingagencyofficial.site/team/${member.id}`} />
+        <meta itemProp="worksFor" content="Boosting Agency BD" />
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
           
           {/* LEFT COLUMN: Photo, Quick Contact & Credentials Cards (5 cols) */}
@@ -150,7 +156,9 @@ export function MemberProfileView({ member }: MemberProfileViewProps) {
                 {activeImage ? (
                   <img
                     src={activeImage.url}
-                    alt={isFounder ? "Siddiqur Rahman Turjoy, Founder and CEO of Boosting Agency BD" : member.name}
+                    alt={isFounder ? "Siddiqur Rahman Turjoy, Founder and CEO of Boosting Agency BD" : `${member.name} — ${member.role} at Boosting Agency BD`}
+                    title={`${member.name} — ${member.role} | Boosting Agency BD`}
+                    itemProp="image"
                     width={800}
                     height={1000}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -314,13 +322,13 @@ export function MemberProfileView({ member }: MemberProfileViewProps) {
               </div>
 
               <div>
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-foreground tracking-tight">
+                <h1 itemProp="name" className="text-3xl sm:text-4xl lg:text-5xl font-black text-foreground tracking-tight">
                   {isEnglish 
                     ? (member.preferredName ? `${member.name} (${member.preferredName})` : member.name)
                     : (member.preferredNameBn ? `${member.nameBn || member.name} (${member.preferredNameBn})` : (member.nameBn || member.name))}
                 </h1>
 
-                <p className="text-lg sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-500 mt-1">
+                <p itemProp="jobTitle" className="text-lg sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-500 mt-1">
                   {isEnglish ? member.role : (member.roleBn || member.role)}
                 </p>
 
@@ -344,7 +352,7 @@ export function MemberProfileView({ member }: MemberProfileViewProps) {
                 <h3 className="text-xs font-bold uppercase tracking-wider text-primary">
                   {isEnglish ? "Professional Biography & Overview" : "পেশাদার পরিচিতি ও সারসংক্ষেপ"}
                 </h3>
-                <p className="text-xs sm:text-sm text-muted-foreground dark:text-slate-300 leading-relaxed whitespace-pre-line">
+                <p itemProp="description" className="text-xs sm:text-sm text-muted-foreground dark:text-slate-300 leading-relaxed whitespace-pre-line">
                   {isEnglish ? member.bio : (member.bioBn || member.bio)}
                 </p>
               </div>
@@ -776,8 +784,12 @@ export function MemberProfileView({ member }: MemberProfileViewProps) {
               return (
                 <Card
                   key={other.id}
+                  itemScope
+                  itemType="https://schema.org/Person"
                   className="rounded-3xl border-border/70 hover:border-cyan-500/80 transition-all duration-300 card-3d hover:shadow-2xl hover:shadow-cyan-500/20 bg-card overflow-hidden relative group cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-cyan-500/50 flex flex-col justify-between"
                 >
+                  <meta itemProp="url" content={`https://boostingagencyofficial.site/team/${other.id}`} />
+                  <meta itemProp="worksFor" content="Boosting Agency BD" />
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                     <div className="absolute -top-10 -right-10 w-32 h-32 bg-cyan-500/15 rounded-full blur-2xl" />
                   </div>
@@ -787,6 +799,8 @@ export function MemberProfileView({ member }: MemberProfileViewProps) {
                     <img
                       src={photoUrl}
                       alt={`${isEnglish ? other.name : (other.nameBn || other.name)} — ${isEnglish ? other.role : (other.roleBn || other.role)} at Boosting Agency BD`}
+                      title={`${other.name} — ${other.role} | Boosting Agency BD`}
+                      itemProp="image"
                       width={800}
                       height={600}
                       loading="lazy"
@@ -799,17 +813,17 @@ export function MemberProfileView({ member }: MemberProfileViewProps) {
                   <CardContent className="p-5 relative flex flex-col flex-grow justify-between">
                     <div>
                       {/* Name */}
-                      <h3 className="text-base font-bold text-foreground group-hover:text-cyan-500 transition-colors">
+                      <h3 itemProp="name" className="text-base font-bold text-foreground group-hover:text-cyan-500 transition-colors">
                         {isEnglish ? other.name : (other.nameBn || other.name)}
                       </h3>
 
                       {/* Role */}
-                      <p className="text-xs font-semibold text-cyan-600 dark:text-cyan-400 mt-1">
+                      <p itemProp="jobTitle" className="text-xs font-semibold text-cyan-600 dark:text-cyan-400 mt-1">
                         {isEnglish ? other.role : (other.roleBn || other.role)}
                       </p>
                       
                       {/* Card Description */}
-                      <p className="text-xs text-muted-foreground leading-relaxed mt-2 line-clamp-2">
+                      <p itemProp="description" className="text-xs text-muted-foreground leading-relaxed mt-2 line-clamp-2">
                         {isEnglish ? other.description : (other.descriptionBn || other.description)}
                       </p>
 

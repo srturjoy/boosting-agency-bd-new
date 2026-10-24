@@ -14,7 +14,7 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
   const { language, setLanguage, t } = useLanguage()
-  const { theme, setTheme, resolvedTheme } = useTheme()
+  const { theme, setTheme, setManualTheme, resolvedTheme } = useTheme()
 
   useEffect(() => {
     setMounted(true)
@@ -81,7 +81,12 @@ export function Header() {
 
   const toggleTheme = () => {
     const current = resolvedTheme || theme || "dark"
-    setTheme(current === "dark" ? "light" : "dark")
+    const next = current === "dark" ? "light" : "dark"
+    if (setManualTheme) {
+      setManualTheme(next)
+    } else {
+      setTheme(next)
+    }
   }
 
   const themeLabel = isDark

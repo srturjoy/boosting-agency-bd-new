@@ -9,7 +9,17 @@ import { FounderCeoSpotlight } from "@/components/about/founder-ceo-spotlight"
 
 export const metadata = {
   title: "Meet Our Team & Growth Experts | Boosting Agency BD",
-  description: "Meet the executive leadership and performance marketing specialists driving scalable business growth at Boosting Agency BD.",
+  description: "Meet the executive leadership and performance marketing specialists driving scalable business growth at Boosting Agency BD: Siddiqur Rahman Turjoy, Joynal Abedin (Joy), Mohidul Islam Sojib, Abir Islam Joy, and Azom.",
+  keywords: [
+    "Boosting Agency BD team",
+    "Siddiqur Rahman Turjoy",
+    "Joynal Abedin Joy",
+    "Joynal Abedin",
+    "Mohidul Islam Sojib",
+    "Abir Islam Joy",
+    "Azom Boosting Agency BD",
+    "Digital Marketing Experts Bangladesh",
+  ],
   alternates: {
     canonical: "https://boostingagencyofficial.site/team",
   },
@@ -19,21 +29,26 @@ export const metadata = {
     url: "https://boostingagencyofficial.site/team",
     siteName: "Boosting Agency BD",
     type: "website",
-    images: [
-      {
-        url: "https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp",
+    images: TEAM_MEMBERS.map((member) => {
+      const imgPath = member.defaultImages[0]?.url || `/images/team/${member.id}.webp`
+      const fullImgUrl = imgPath.startsWith("http") ? imgPath : `https://boostingagencyofficial.site${imgPath}`
+      return {
+        url: fullImgUrl,
         width: 800,
         height: 1000,
-        alt: "Boosting Agency BD Executive Leadership & Specialist Team",
+        alt: `${member.name} — ${member.role} at Boosting Agency BD`,
         type: "image/webp",
-      },
-    ],
+      }
+    }),
   },
   twitter: {
     card: "summary_large_image",
     title: "Meet Our Team & Growth Experts | Boosting Agency BD",
     description: "Meet the executive leadership and performance marketing specialists at Boosting Agency BD.",
-    images: ["https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp"],
+    images: TEAM_MEMBERS.map((member) => {
+      const imgPath = member.defaultImages[0]?.url || `/images/team/${member.id}.webp`
+      return imgPath.startsWith("http") ? imgPath : `https://boostingagencyofficial.site${imgPath}`
+    }),
   },
 }
 
@@ -48,6 +63,53 @@ const teamBreadcrumbSchema = {
       description: "Meet the executive leadership and performance marketing specialists driving scalable business growth at Boosting Agency BD.",
       isPartOf: { "@id": "https://boostingagencyofficial.site/#website" },
       about: { "@id": "https://boostingagencyofficial.site/#organization" },
+      mainEntity: {
+        "@type": "ItemList",
+        "@id": "https://boostingagencyofficial.site/team#teamlist",
+        name: "Boosting Agency BD Leadership & Specialist Team",
+        numberOfItems: TEAM_MEMBERS.length,
+        itemListElement: TEAM_MEMBERS.map((member, index) => {
+          const profileUrl = `https://boostingagencyofficial.site/team/${member.id}`
+          const imgPath = member.defaultImages[0]?.url || `/images/team/${member.id}.webp`
+          const imageUrl = imgPath.startsWith("http") ? imgPath : `https://boostingagencyofficial.site${imgPath}`
+          const personId = member.id === "siddiqur-rahman-turjoy"
+            ? "https://turjoy.boostingagencyofficial.site/#person"
+            : `${profileUrl}#person`
+
+          return {
+            "@type": "ListItem",
+            position: index + 1,
+            url: profileUrl,
+            item: {
+              "@type": "Person",
+              "@id": personId,
+              name: member.name,
+              alternateName: [
+                member.name.replace(/[\(\)]/g, "").trim(),
+                ...(member.nameBn ? [member.nameBn] : []),
+              ],
+              jobTitle: member.role,
+              description: member.description,
+              url: profileUrl,
+              worksFor: {
+                "@id": "https://boostingagencyofficial.site/#organization",
+              },
+              image: {
+                "@type": "ImageObject",
+                "@id": `${imageUrl}#primaryimage`,
+                url: imageUrl,
+                contentUrl: imageUrl,
+                name: `${member.name} — ${member.role} at Boosting Agency BD`,
+                caption: `${member.name}, ${member.role} at Boosting Agency BD`,
+                width: 800,
+                height: 1000,
+                encodingFormat: "image/webp",
+              },
+              sameAs: [profileUrl],
+            },
+          }
+        }),
+      },
     },
     {
       "@type": "BreadcrumbList",
@@ -116,13 +178,19 @@ export default function TeamPage() {
             {specialistMembers.map((member) => (
               <Card
                 key={member.id}
+                itemScope
+                itemType="https://schema.org/Person"
                 className="group rounded-3xl border border-border/80 hover:border-cyan-500/70 transition-all duration-300 card-3d hover:shadow-2xl hover:shadow-cyan-500/15 bg-card flex flex-col justify-between overflow-hidden relative"
               >
+                <meta itemProp="url" content={`https://boostingagencyofficial.site/team/${member.id}`} />
+                <meta itemProp="worksFor" content="Boosting Agency BD" />
                 {/* Photo Thumbnail */}
                 <div className="aspect-[4/3] relative overflow-hidden bg-slate-900">
                   <img
                     src={member.defaultImages[0]?.url || `/images/team/${member.id}.webp`}
                     alt={`${member.name} — ${member.role} at Boosting Agency BD`}
+                    title={`${member.name} — ${member.role} | Boosting Agency BD`}
+                    itemProp="image"
                     width={800}
                     height={600}
                     loading="lazy"
@@ -132,10 +200,10 @@ export default function TeamPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
                   
                   <div className="absolute bottom-4 left-4 right-4">
-                    <p className="text-xs font-medium text-cyan-300 mb-0.5">
+                    <p itemProp="jobTitle" className="text-xs font-medium text-cyan-300 mb-0.5">
                       {member.role}
                     </p>
-                    <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+                    <h3 itemProp="name" className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
                       {member.name}
                     </h3>
                   </div>
@@ -143,7 +211,7 @@ export default function TeamPage() {
 
                 <CardContent className="p-6 flex flex-col flex-grow justify-between space-y-4">
                   <div className="space-y-3">
-                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                    <p itemProp="description" className="text-xs sm:text-sm text-muted-foreground leading-relaxed line-clamp-3">
                       {member.description}
                     </p>
 

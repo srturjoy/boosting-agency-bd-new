@@ -216,6 +216,8 @@ export function TeamCarousel() {
           {duplicatedTeam.map((member, index) => (
             <Card 
               key={`${member.id}-${index}`} 
+              itemScope
+              itemType="https://schema.org/Person"
               onPointerDown={handlePointerDown}
               onPointerUp={(e) => handlePointerUp(member.id, e)}
               onClick={() => handleNavigateMember(member.id)}
@@ -230,6 +232,8 @@ export function TeamCarousel() {
               aria-label={`View dedicated page of ${isEnglish ? member.name : (member.nameBn || member.name)}`}
               className="flex-shrink-0 w-[290px] sm:w-[320px] rounded-3xl border-border/70 hover:border-cyan-500/80 transition-all duration-300 card-3d hover:shadow-2xl hover:shadow-cyan-500/20 bg-card overflow-hidden relative group cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-cyan-500/50 flex flex-col justify-between"
             >
+              <meta itemProp="url" content={`https://boostingagencyofficial.site/team/${member.id}`} />
+              <meta itemProp="worksFor" content="Boosting Agency BD" />
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-cyan-500/15 rounded-full blur-2xl" />
               </div>
@@ -240,6 +244,8 @@ export function TeamCarousel() {
                   <img
                     src={getPhotoUrl(member)}
                     alt={`${isEnglish ? member.name : (member.nameBn || member.name)} — ${isEnglish ? member.role : (member.roleBn || member.role)} at Boosting Agency BD`}
+                    title={`${member.name} — ${member.role} | Boosting Agency BD`}
+                    itemProp="image"
                     width={800}
                     height={600}
                     loading="lazy"
@@ -257,17 +263,17 @@ export function TeamCarousel() {
               <CardContent className="p-5 relative flex flex-col flex-grow justify-between">
                 <div>
                   {/* Name */}
-                  <h3 className="text-lg font-bold text-foreground group-hover:text-cyan-500 transition-colors">
+                  <h3 itemProp="name" className="text-lg font-bold text-foreground group-hover:text-cyan-500 transition-colors">
                     {isEnglish ? member.name : (member.nameBn || member.name)}
                   </h3>
 
                   {/* Role */}
-                  <p className="text-xs font-semibold text-cyan-600 dark:text-cyan-400 mt-1">
+                  <p itemProp="jobTitle" className="text-xs font-semibold text-cyan-600 dark:text-cyan-400 mt-1">
                     {isEnglish ? member.role : (member.roleBn || member.role)}
                   </p>
                   
                   {/* Card Description */}
-                  <p className="text-xs text-muted-foreground leading-relaxed mt-2.5 line-clamp-2">
+                  <p itemProp="description" className="text-xs text-muted-foreground leading-relaxed mt-2.5 line-clamp-2">
                     {isEnglish ? member.description : (member.descriptionBn || member.description)}
                   </p>
 
@@ -279,8 +285,14 @@ export function TeamCarousel() {
 
                 {/* Clean View Profile Indicator */}
                 <div className="pt-3 border-t border-border/50 flex items-center justify-between text-xs font-semibold text-cyan-600 dark:text-cyan-400 group-hover:text-cyan-500 transition-colors">
-                  <span>{isEnglish ? "View Profile & Details" : "বিস্তারিত প্রোফাইল দেখুন"}</span>
-                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  <Link
+                    href={`/team/${member.id}`}
+                    onClick={(e) => e.stopPropagation()}
+                    className="flex items-center justify-between w-full"
+                  >
+                    <span>{isEnglish ? "View Profile & Details" : "বিস্তারিত প্রোফাইল দেখুন"}</span>
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  </Link>
                 </div>
               </CardContent>
             </Card>
@@ -293,6 +305,8 @@ export function TeamCarousel() {
             {SPECIALIST_MEMBERS.map((member) => (
               <Card 
                 key={member.id} 
+                itemScope
+                itemType="https://schema.org/Person"
                 onClick={() => handleNavigateMember(member.id)}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" || e.key === " ") {
@@ -305,6 +319,8 @@ export function TeamCarousel() {
                 aria-label={`View dedicated page of ${isEnglish ? member.name : (member.nameBn || member.name)}`}
                 className="rounded-3xl border-border/70 hover:border-cyan-500/80 transition-all duration-300 card-3d hover:shadow-2xl hover:shadow-cyan-500/20 bg-card overflow-hidden relative group cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-cyan-500/50 flex flex-col justify-between"
               >
+                <meta itemProp="url" content={`https://boostingagencyofficial.site/team/${member.id}`} />
+                <meta itemProp="worksFor" content="Boosting Agency BD" />
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                   <div className="absolute -top-10 -right-10 w-32 h-32 bg-cyan-500/15 rounded-full blur-2xl" />
                 </div>
@@ -314,6 +330,8 @@ export function TeamCarousel() {
                   <img
                     src={getPhotoUrl(member)}
                     alt={`${isEnglish ? member.name : (member.nameBn || member.name)} — ${isEnglish ? member.role : (member.roleBn || member.role)} at Boosting Agency BD`}
+                    title={`${member.name} — ${member.role} | Boosting Agency BD`}
+                    itemProp="image"
                     width={800}
                     height={600}
                     loading="lazy"
@@ -326,17 +344,17 @@ export function TeamCarousel() {
                 <CardContent className="p-5 relative flex flex-col flex-grow justify-between">
                   <div>
                     {/* Name */}
-                    <h3 className="text-base font-bold text-foreground group-hover:text-cyan-500 transition-colors">
+                    <h3 itemProp="name" className="text-base font-bold text-foreground group-hover:text-cyan-500 transition-colors">
                       {isEnglish ? member.name : (member.nameBn || member.name)}
                     </h3>
 
                     {/* Role */}
-                    <p className="text-xs font-semibold text-cyan-600 dark:text-cyan-400 mt-1">
+                    <p itemProp="jobTitle" className="text-xs font-semibold text-cyan-600 dark:text-cyan-400 mt-1">
                       {isEnglish ? member.role : (member.roleBn || member.role)}
                     </p>
                     
                     {/* Card Description */}
-                    <p className="text-xs text-muted-foreground leading-relaxed mt-2 line-clamp-2">
+                    <p itemProp="description" className="text-xs text-muted-foreground leading-relaxed mt-2 line-clamp-2">
                       {isEnglish ? member.description : (member.descriptionBn || member.description)}
                     </p>
 
@@ -348,8 +366,14 @@ export function TeamCarousel() {
 
                   {/* Clean View Profile Indicator */}
                   <div className="pt-3 border-t border-border/50 flex items-center justify-between text-xs font-semibold text-cyan-600 dark:text-cyan-400 group-hover:text-cyan-500 transition-colors">
-                    <span>{isEnglish ? "View Profile" : "প্রোফাইল দেখুন"}</span>
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                    <Link
+                      href={`/team/${member.id}`}
+                      onClick={(e) => e.stopPropagation()}
+                      className="flex items-center justify-between w-full"
+                    >
+                      <span>{isEnglish ? "View Profile" : "প্রোফাইল দেখুন"}</span>
+                      <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                    </Link>
                   </div>
                 </CardContent>
               </Card>

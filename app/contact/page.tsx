@@ -8,11 +8,14 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Phone, MessageSquare, MapPin, Clock, Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
+import { Phone, MessageSquare, MapPin, Clock, Facebook, Instagram, Linkedin, Twitter, ShieldCheck } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
+import { sanitizeInput, isValidEmail, isValidPhone, checkRateLimit, safeExternalOpen } from "@/lib/security"
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [securityError, setSecurityError] = useState<string | null>(null)
+  const [honeypot, setHoneypot] = useState("")
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -77,34 +80,91 @@ export default function ContactPage() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target
+    setSecurityError(null)
     setFormData(prev => ({ ...prev, [id]: value }))
   }
 
   const handleSelectChange = (field: string, value: string) => {
+    setSecurityError(null)
     setFormData(prev => ({ ...prev, [field]: value }))
   }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setSecurityError(null)
+
+    // 1. Anti-bot honeypot check (bots fill hidden fields)
+    if (honeypot.trim().length > 0) {
+      return
+    }
+
+    // 2. Rate limiting against form flooding
+    const rateCheck = checkRateLimit("contact_form_submit", 4, 60_000)
+    if (!rateCheck.allowed) {
+      setSecurityError(
+        isEnglish
+          ? `Too many requests. Please wait ${rateCheck.retryAfterSeconds} seconds before trying again.`
+          : `অনেকগুলো রিকোয়েস্ট পাঠানো হয়েছে। অনুগ্রহ করে ${rateCheck.retryAfterSeconds} সেকেন্ড অপেক্ষা করুন।`
+      )
+      return
+    }
+
+    // 3. Sanitize all inputs against XSS/injection
+    const cleanFirstName = sanitizeInput(formData.firstName, 80)
+    const cleanLastName = sanitizeInput(formData.lastName, 80)
+    const cleanEmail = sanitizeInput(formData.email, 150)
+    const cleanPhone = sanitizeInput(formData.phone, 25)
+    const cleanCompany = sanitizeInput(formData.company, 120)
+    const cleanService = sanitizeInput(formData.service, 100)
+    const cleanBudget = sanitizeInput(formData.budget, 80)
+    const cleanMessage = sanitizeInput(formData.message, 1500)
+
+    if (!cleanFirstName || !cleanLastName || !cleanMessage) {
+      setSecurityError(
+        isEnglish
+          ? "Please fill in all required fields with valid text."
+          : "অনুগ্রহ করে সকল আবশ্যক ঘর সঠিক তথ্য দিয়ে পূরণ করুন।"
+      )
+      return
+    }
+
+    if (!isValidEmail(cleanEmail)) {
+      setSecurityError(
+        isEnglish
+          ? "Please enter a valid email address."
+          : "অনুগ্রহ করে একটি সঠিক ইমেইল ঠিকানা দিন।"
+      )
+      return
+    }
+
+    if (cleanPhone && !isValidPhone(cleanPhone)) {
+      setSecurityError(
+        isEnglish
+          ? "Please enter a valid phone number."
+          : "অনুগ্রহ করে একটি সঠিক ফোন নম্বর দিন।"
+      )
+      return
+    }
+
     setIsSubmitting(true)
     
     const whatsappMessage = `
 *${isEnglish ? "New Contact Form Submission" : "নতুন যোগাযোগ ফর্ম জমা"}*
 
-*${isEnglish ? "Name" : "নাম"}:* ${formData.firstName} ${formData.lastName}
-*${isEnglish ? "Email" : "ইমেইল"}:* ${formData.email}
-*${isEnglish ? "Phone" : "ফোন"}:* ${formData.phone || (isEnglish ? "Not provided" : "দেওয়া হয়নি")}
-*${isEnglish ? "Company" : "কোম্পানি"}:* ${formData.company || (isEnglish ? "Not provided" : "দেওয়া হয়নি")}
-*${isEnglish ? "Service Interested" : "আগ্রহী সেবা"}:* ${formData.service || (isEnglish ? "Not specified" : "নির্দিষ্ট করা হয়নি")}
-*${isEnglish ? "Budget" : "বাজেট"}:* ${formData.budget || (isEnglish ? "Not specified" : "নির্দিষ্ট করা হয়নি")}
+*${isEnglish ? "Name" : "নাম"}:* ${cleanFirstName} ${cleanLastName}
+*${isEnglish ? "Email" : "ইমেইল"}:* ${cleanEmail}
+*${isEnglish ? "Phone" : "ফোন"}:* ${cleanPhone || (isEnglish ? "Not provided" : "দেওয়া হয়নি")}
+*${isEnglish ? "Company" : "কোম্পানি"}:* ${cleanCompany || (isEnglish ? "Not provided" : "দেওয়া হয়নি")}
+*${isEnglish ? "Service Interested" : "আগ্রহী সেবা"}:* ${cleanService || (isEnglish ? "Not specified" : "নির্দিষ্ট করা হয়নি")}
+*${isEnglish ? "Budget" : "বাজেট"}:* ${cleanBudget || (isEnglish ? "Not specified" : "নির্দিষ্ট করা হয়নি")}
 
 *${isEnglish ? "Message" : "বার্তা"}:*
-${formData.message}
+${cleanMessage}
     `.trim()
     
     const encodedMessage = encodeURIComponent(whatsappMessage)
-    await new Promise((resolve) => setTimeout(resolve, 500))
-    window.open(`https://wa.me/8801518961899?text=${encodedMessage}`, "_blank")
+    await new Promise((resolve) => setTimeout(resolve, 400))
+    safeExternalOpen(`https://wa.me/8801518961899?text=${encodedMessage}`)
     setIsSubmitting(false)
   }
 
@@ -222,7 +282,25 @@ ${formData.message}
                   <CardDescription>{t("formDescription")}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+                    {/* Hidden Honeypot Anti-Bot Field */}
+                    <div className="hidden" aria-hidden="true">
+                      <label htmlFor="website_url">Website</label>
+                      <input
+                        id="website_url"
+                        name="website_url"
+                        type="text"
+                        tabIndex={-1}
+                        autoComplete="off"
+                        value={honeypot}
+                        onChange={(e) => setHoneypot(e.target.value)}
+                      />
+                    </div>
+                    {securityError && (
+                      <div className="rounded-xl border border-destructive/40 bg-destructive/10 px-4 py-3 text-sm font-medium text-destructive">
+                        {securityError}
+                      </div>
+                    )}
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                       <div className="space-y-2">
                         <Label htmlFor="firstName">{t("firstName")} *</Label>
@@ -230,6 +308,8 @@ ${formData.message}
                           id="firstName" 
                           placeholder={isEnglish ? "John" : "জন"} 
                           required 
+                          maxLength={80}
+                          autoComplete="given-name"
                           value={formData.firstName}
                           onChange={handleInputChange}
                         />
@@ -240,6 +320,8 @@ ${formData.message}
                           id="lastName" 
                           placeholder={isEnglish ? "Doe" : "ডো"} 
                           required 
+                          maxLength={80}
+                          autoComplete="family-name"
                           value={formData.lastName}
                           onChange={handleInputChange}
                         />
@@ -253,6 +335,8 @@ ${formData.message}
                           type="email" 
                           placeholder="john@example.com" 
                           required 
+                          maxLength={150}
+                          autoComplete="email"
                           value={formData.email}
                           onChange={handleInputChange}
                         />
@@ -263,6 +347,8 @@ ${formData.message}
                           id="phone" 
                           type="tel" 
                           placeholder="+880 1XXX XXXXXX" 
+                          maxLength={25}
+                          autoComplete="tel"
                           value={formData.phone}
                           onChange={handleInputChange}
                         />
@@ -274,6 +360,8 @@ ${formData.message}
                         <Input 
                           id="company" 
                           placeholder={isEnglish ? "Your Company" : "আপনার কোম্পানি"} 
+                          maxLength={120}
+                          autoComplete="organization"
                           value={formData.company}
                           onChange={handleInputChange}
                         />
@@ -323,9 +411,18 @@ ${formData.message}
                         placeholder={t("messagePlaceholder")}
                         rows={5}
                         required
+                        maxLength={1500}
                         value={formData.message}
                         onChange={handleInputChange}
                       />
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                      <ShieldCheck className="h-4 w-4 text-emerald-500 shrink-0" />
+                      <span>
+                        {isEnglish
+                          ? "Protected by End-to-End Input Sanitization & Anti-Spam Security"
+                          : "এন্ড-টু-এন্ড ইনপুট স্যানিটাইজেশন এবং অ্যান্টি-স্প্যাম সিকিউরিটি দ্বারা সুরক্ষিত"}
+                      </span>
                     </div>
                     <Button
                       type="submit"

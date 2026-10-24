@@ -9,6 +9,7 @@ import { FloatingBubbles } from '@/components/layout/floating-bubbles'
 import { ChatWidget } from '@/components/chat/chat-widget'
 import { LanguageProvider } from '@/lib/language-context'
 import { ThemeProvider } from '@/components/theme-provider'
+import { SecurityShield } from '@/components/security/security-shield'
 import './globals.css'
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -194,6 +195,23 @@ const jsonLd = {
       "founder": {
         "@id": "https://turjoy.boostingagencyofficial.site/#person"
       },
+      "employee": [
+        {
+          "@id": "https://turjoy.boostingagencyofficial.site/#person"
+        },
+        {
+          "@id": "https://boostingagencyofficial.site/team/joynal-abedin-joy#person"
+        },
+        {
+          "@id": "https://boostingagencyofficial.site/team/mohidul-islam-sojib#person"
+        },
+        {
+          "@id": "https://boostingagencyofficial.site/team/abir-islam-joy#person"
+        },
+        {
+          "@id": "https://boostingagencyofficial.site/team/azom#person"
+        }
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Mirpur, Dhaka-1216, Bangladesh",
@@ -347,9 +365,10 @@ const jsonLd = {
         "Turjoy",
         "Siddiqur Rahman Turjoy",
         "Turjoy Siddiqur Rahman",
+        "সিদ্দিকুর রহমান (তুর্য)",
         "Turjoy — Founder & CEO of Boosting Agency BD"
       ],
-      "url": "https://turjoy.boostingagencyofficial.site/",
+      "url": "https://boostingagencyofficial.site/team/siddiqur-rahman-turjoy",
       "jobTitle": "Founder & CEO",
       "worksFor": {
         "@id": "https://boostingagencyofficial.site/#organization"
@@ -364,6 +383,7 @@ const jsonLd = {
         "@id": "https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp#primaryimage",
         "url": "https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp",
         "contentUrl": "https://boostingagencyofficial.site/images/team/siddiqur-rahman-turjoy.webp",
+        "name": "Siddiqur Rahman Turjoy — Founder & CEO of Boosting Agency BD",
         "caption": "Siddiqur Rahman Turjoy, Founder and CEO of Boosting Agency BD",
         "width": 800,
         "height": 1000,
@@ -373,6 +393,132 @@ const jsonLd = {
         "https://turjoy.boostingagencyofficial.site/",
         "https://boostingagencyofficial.site/team/siddiqur-rahman-turjoy",
         "https://boostingagencyofficial.site/about"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://boostingagencyofficial.site/team/joynal-abedin-joy#person",
+      "name": "Joynal Abedin (Joy)",
+      "givenName": "Joynal",
+      "familyName": "Abedin",
+      "additionalName": "Joy",
+      "alternateName": [
+        "Joynal Abedin",
+        "Joynal Abedin Joy",
+        "জয়নাল আবেদীন (জয়)"
+      ],
+      "url": "https://boostingagencyofficial.site/team/joynal-abedin-joy",
+      "jobTitle": "Marketing Technology & Creative Lead",
+      "worksFor": {
+        "@id": "https://boostingagencyofficial.site/#organization"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://boostingagencyofficial.site/images/team/joynal-abedin-joy.webp#primaryimage",
+        "url": "https://boostingagencyofficial.site/images/team/joynal-abedin-joy.webp",
+        "contentUrl": "https://boostingagencyofficial.site/images/team/joynal-abedin-joy.webp",
+        "name": "Joynal Abedin (Joy) — Marketing Technology & Creative Lead at Boosting Agency BD",
+        "caption": "Joynal Abedin (Joy), Marketing Technology & Creative Lead at Boosting Agency BD",
+        "width": 800,
+        "height": 1000,
+        "encodingFormat": "image/webp"
+      },
+      "sameAs": [
+        "https://boostingagencyofficial.site/team/joynal-abedin-joy"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://boostingagencyofficial.site/team/mohidul-islam-sojib#person",
+      "name": "Mohidul Islam Sojib",
+      "givenName": "Mohidul",
+      "familyName": "Islam",
+      "additionalName": "Sojib",
+      "alternateName": [
+        "Mohidul Islam (Sojib)",
+        "Mohidul Islam",
+        "মহিদুল ইসলাম সজীব"
+      ],
+      "url": "https://boostingagencyofficial.site/team/mohidul-islam-sojib",
+      "jobTitle": "Head of Performance Marketing & Strategy",
+      "worksFor": {
+        "@id": "https://boostingagencyofficial.site/#organization"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://boostingagencyofficial.site/images/team/mohidul-islam-sojib.webp#primaryimage",
+        "url": "https://boostingagencyofficial.site/images/team/mohidul-islam-sojib.webp",
+        "contentUrl": "https://boostingagencyofficial.site/images/team/mohidul-islam-sojib.webp",
+        "name": "Mohidul Islam Sojib — Head of Performance Marketing & Strategy at Boosting Agency BD",
+        "caption": "Mohidul Islam Sojib, Head of Performance Marketing & Strategy at Boosting Agency BD",
+        "width": 800,
+        "height": 1000,
+        "encodingFormat": "image/webp"
+      },
+      "sameAs": [
+        "https://boostingagencyofficial.site/team/mohidul-islam-sojib"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://boostingagencyofficial.site/team/abir-islam-joy#person",
+      "name": "Abir Islam Joy",
+      "givenName": "Abir",
+      "familyName": "Islam",
+      "additionalName": "Joy",
+      "alternateName": [
+        "Abir Islam (Joy)",
+        "Abir Islam",
+        "আবির ইসলাম জয়"
+      ],
+      "url": "https://boostingagencyofficial.site/team/abir-islam-joy",
+      "jobTitle": "Creative Media Buyer & Growth Strategist",
+      "worksFor": {
+        "@id": "https://boostingagencyofficial.site/#organization"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://boostingagencyofficial.site/images/team/abir-islam-joy.webp#primaryimage",
+        "url": "https://boostingagencyofficial.site/images/team/abir-islam-joy.webp",
+        "contentUrl": "https://boostingagencyofficial.site/images/team/abir-islam-joy.webp",
+        "name": "Abir Islam Joy — Creative Media Buyer & Growth Strategist at Boosting Agency BD",
+        "caption": "Abir Islam Joy, Creative Media Buyer & Growth Strategist at Boosting Agency BD",
+        "width": 800,
+        "height": 1000,
+        "encodingFormat": "image/webp"
+      },
+      "sameAs": [
+        "https://boostingagencyofficial.site/team/abir-islam-joy"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://boostingagencyofficial.site/team/azom#person",
+      "name": "Azom",
+      "givenName": "Azom",
+      "alternateName": [
+        "Md. Azom",
+        "আজম",
+        "Azom — Boosting Agency BD"
+      ],
+      "url": "https://boostingagencyofficial.site/team/azom",
+      "jobTitle": "Performance Marketing & eCommerce Specialist",
+      "worksFor": {
+        "@id": "https://boostingagencyofficial.site/#organization"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://boostingagencyofficial.site/images/team/azom.webp#primaryimage",
+        "url": "https://boostingagencyofficial.site/images/team/azom.webp",
+        "contentUrl": "https://boostingagencyofficial.site/images/team/azom.webp",
+        "name": "Azom — Performance Marketing & eCommerce Specialist at Boosting Agency BD",
+        "caption": "Azom, Performance Marketing & eCommerce Specialist at Boosting Agency BD",
+        "width": 800,
+        "height": 1000,
+        "encodingFormat": "image/webp"
+      },
+      "sameAs": [
+        "https://boostingagencyofficial.site/team/azom"
       ]
     }
   ]
@@ -399,7 +545,7 @@ export default function RootLayout({
         <link rel="preload" as="image" href="/hero/hero-slide-1.png" type="image/png" fetchPriority="high" />
       </head>
       <body className="font-sans antialiased">
-        {/* Prevent white flash: Default to Dark Mode; restore user preference from boosting-agency-theme */}
+        {/* Bangladesh Standard Time (Asia/Dhaka, UTC+6) Auto Theme: 5:00 PM - 7:00 AM Dark, 7:00 AM - 5:00 PM Light */}
         <script
           key="theme-initializer-script"
           id="theme-initializer"
@@ -408,9 +554,27 @@ export default function RootLayout({
               (function() {
                 try {
                   var storageKey = 'boosting-agency-theme';
-                  var saved = localStorage.getItem(storageKey);
+                  var manualPeriodKey = 'boosting-agency-theme-manual-period';
+                  var nowUtcMs = Date.now();
+                  var bdNow = new Date(nowUtcMs + 6 * 3600 * 1000);
+                  var bdHour = bdNow.getUTCHours();
+                  var isNight = (bdHour >= 17 || bdHour < 7);
+                  var scheduledTheme = isNight ? 'dark' : 'light';
+                  var anchorDate = bdHour < 7 ? new Date(nowUtcMs - 3600 * 1000) : bdNow;
+                  var y = anchorDate.getUTCFullYear();
+                  var m = String(anchorDate.getUTCMonth() + 1).padStart(2, '0');
+                  var d = String(anchorDate.getUTCDate()).padStart(2, '0');
+                  var periodKey = y + '-' + m + '-' + d + '-' + (isNight ? 'night' : 'day');
+                  var savedManualPeriod = localStorage.getItem(manualPeriodKey);
+                  var savedTheme = localStorage.getItem(storageKey);
+                  var activeTheme = scheduledTheme;
+                  if (savedManualPeriod === periodKey && (savedTheme === 'light' || savedTheme === 'dark')) {
+                    activeTheme = savedTheme;
+                  } else {
+                    localStorage.setItem(storageKey, scheduledTheme);
+                  }
                   var root = document.documentElement;
-                  if (saved === 'light') {
+                  if (activeTheme === 'light') {
                     root.classList.remove('dark');
                     root.classList.add('light');
                     root.style.colorScheme = 'light';
@@ -511,12 +675,12 @@ export default function RootLayout({
         )}
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
           enableSystem={false}
           disableTransitionOnChange={false}
           storageKey="boosting-agency-theme"
         >
           <LanguageProvider>
+            <SecurityShield />
             <FloatingBubbles />
             <Header />
             <main className="min-h-screen pt-[73px]">

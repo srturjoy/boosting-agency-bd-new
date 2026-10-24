@@ -90,21 +90,21 @@ export function OurProcess() {
   const isEnglish = language === "en"
 
   return (
-    <section id="our-process" className="py-14 lg:py-20 bg-secondary/30 relative overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="our-process" className="py-10 sm:py-14 lg:py-20 bg-secondary/30 relative overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="mx-auto max-w-3xl text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 text-xs font-semibold mb-3 border border-cyan-500/20">
+          <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 text-[11px] sm:text-xs font-semibold mb-2.5 sm:mb-3 border border-cyan-500/20">
             <Layers className="h-3.5 w-3.5" />
             <span>{isEnglish ? "Our Process" : "আমাদের কাজের প্রক্রিয়া"}</span>
           </div>
 
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+          <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-foreground text-balance leading-tight">
             {isEnglish
               ? "How We Plan, Execute & Optimize Your Campaigns"
               : "যেভাবে আমরা আপনার মার্কেটিং ক্যাম্পেইন পরিকল্পনা ও পরিচালনা করি"}
           </h2>
 
-          <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+          <p className="mt-2.5 sm:mt-4 text-xs sm:text-lg text-muted-foreground leading-relaxed">
             {isEnglish
               ? "A structured, transparent five-step workflow designed to align your marketing investment with measurable business objectives."
               : "আপনার ব্যবসার লক্ষ্যমাত্রার সাথে সামঞ্জস্য রেখে স্বচ্ছ ও সুশৃঙ্খল ৫-ধাপের কর্মপদ্ধতি।"}
@@ -116,38 +116,38 @@ export function OurProcess() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.05 }}
           variants={staggerContainer}
-          className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5"
+          className="mt-7 sm:mt-12 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-5"
         >
           {processSteps.map((step) => (
             <motion.div key={step.number} variants={fadeInUp} className="h-full">
-              <Card className="group h-full rounded-2xl sm:rounded-3xl border border-border/70 hover:border-cyan-500/60 bg-card/95 backdrop-blur-sm card-3d hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 flex flex-col justify-between">
-                <CardContent className="p-5 sm:p-6 flex flex-col h-full justify-between gap-4">
-                  <div className="space-y-3.5">
+              <Card className="group h-full rounded-xl sm:rounded-3xl border border-border/70 hover:border-cyan-500/60 bg-card/95 backdrop-blur-sm card-3d hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+                <CardContent className="p-3 sm:p-6 flex flex-col h-full justify-between gap-2.5 sm:gap-4">
+                  <div className="space-y-2 sm:space-y-3.5">
                     <div className="flex items-center justify-between gap-2">
-                      <span className="text-xs font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-lg bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/20 tabular-nums">
+                      <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-wider px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md sm:rounded-lg bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/20 tabular-nums">
                         {step.number}
                       </span>
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl gradient-primary text-white shadow-sm group-hover:scale-105 transition-transform duration-300">
-                        <step.icon className="h-5 w-5" />
+                      <div className="flex h-8 w-8 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-lg sm:rounded-xl gradient-primary text-white shadow-sm group-hover:scale-105 transition-transform duration-300">
+                        <step.icon className="h-4 w-4 sm:h-5 sm:w-5" />
                       </div>
                     </div>
 
-                    <h3 className="text-base font-bold text-foreground group-hover:text-cyan-500 transition-colors leading-snug">
+                    <h3 className="text-xs sm:text-base font-bold text-foreground group-hover:text-cyan-500 transition-colors leading-snug line-clamp-2">
                       {step.number} — {isEnglish ? step.title : step.titleBn}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-muted-foreground dark:text-slate-300 leading-relaxed">
+                    <p className="text-[11px] sm:text-sm text-muted-foreground dark:text-slate-300 leading-snug sm:leading-relaxed line-clamp-3 sm:line-clamp-none">
                       {isEnglish ? step.description : step.descriptionBn}
                     </p>
                   </div>
 
-                  <div className="pt-3 border-t border-border/60">
+                  <div className="pt-2 sm:pt-3 border-t border-border/60">
                     <Link
                       href={step.linkHref}
-                      className="inline-flex items-center text-xs font-semibold text-primary dark:text-cyan-400 hover:text-cyan-500 transition-colors group/link"
+                      className="inline-flex items-center justify-between w-full text-[10px] sm:text-xs font-semibold text-primary dark:text-cyan-400 hover:text-cyan-500 transition-colors group/link"
                     >
-                      <span>{isEnglish ? step.linkLabel : step.linkLabelBn}</span>
-                      <ArrowRight className="ml-1 h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />
+                      <span className="truncate">{isEnglish ? step.linkLabel : step.linkLabelBn}</span>
+                      <ArrowRight className="ml-1 h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0 transition-transform group-hover/link:translate-x-1" />
                     </Link>
                   </div>
                 </CardContent>
@@ -156,14 +156,14 @@ export function OurProcess() {
           ))}
         </motion.div>
 
-        <ScrollReveal className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button asChild size="lg" className="gradient-primary text-white rounded-2xl shadow-md shadow-cyan-500/20">
+        <ScrollReveal className="mt-7 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-4">
+          <Button asChild size="lg" className="gradient-primary text-white rounded-xl sm:rounded-2xl shadow-md shadow-cyan-500/20 text-xs sm:text-sm h-10 sm:h-11">
             <Link href="/contact">
               <span>{isEnglish ? "Request a Free Strategy Consultation" : "ফ্রি স্ট্র্যাটেজি কনসালটেশন নিন"}</span>
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
-          <Button asChild size="lg" variant="outline" className="rounded-2xl border-border hover:bg-secondary">
+          <Button asChild size="lg" variant="outline" className="rounded-xl sm:rounded-2xl border-border hover:bg-secondary text-xs sm:text-sm h-10 sm:h-11">
             <a
               href="https://wa.me/8801518961899?text=Hello%20Boosting%20Agency%20BD%2C%20I%20would%20like%20to%20discuss%20your%205-step%20marketing%20process%20for%20my%20business."
               target="_blank"
