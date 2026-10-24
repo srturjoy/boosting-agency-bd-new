@@ -32,22 +32,57 @@ export function FounderCeoSpotlight() {
 
   const websiteUrl = founder.website || "https://turjoy.boostingagencyofficial.site/"
 
+  const ambientParticles = [
+    { top: "12%", left: "6%", size: 4, delay: "0s", color: "bg-cyan-400/70" },
+    { top: "24%", right: "8%", size: 3, delay: "0.8s", color: "bg-sky-400/65" },
+    { top: "68%", left: "4%", size: 3.5, delay: "1.5s", color: "bg-purple-400/60" },
+    { top: "78%", right: "12%", size: 4, delay: "2.1s", color: "bg-cyan-300/70" },
+    { top: "42%", left: "44%", size: 3, delay: "1.2s", color: "bg-blue-400/60" },
+    { top: "18%", left: "52%", size: 3.5, delay: "2.6s", color: "bg-purple-300/55" },
+  ]
+
   return (
-    <div className="mx-auto max-w-7xl px-6 lg:px-8 mb-16">
+    <div className="mx-auto max-w-7xl px-6 lg:px-8 mb-14 relative z-10">
       <Card
+        data-leadership-ceo-node="true"
         itemScope
         itemType="https://schema.org/Person"
-        className="rounded-3xl border border-cyan-500/40 bg-gradient-to-br from-card via-card to-secondary/40 shadow-2xl overflow-hidden relative group"
+        className="leadership-ceo-node rounded-3xl border border-cyan-500/50 bg-gradient-to-br from-card via-card to-secondary/40 shadow-2xl overflow-visible relative group"
       >
         <meta itemProp="url" content="https://boostingagencyofficial.site/team/siddiqur-rahman-turjoy" />
         <meta itemProp="worksFor" content="Boosting Agency BD" />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/15 rounded-full blur-3xl pointer-events-none" />
+
+        {/* Ambient Background Layer (Clipped to Card Rounded Corners) */}
+        <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none z-0">
+          <div className="leadership-ceo-pulse-aura absolute -top-12 -right-12 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl" />
+          <div className="leadership-ceo-pulse-aura absolute -bottom-12 -left-12 w-80 h-80 bg-blue-500/15 rounded-full blur-3xl" style={{ animationDelay: "1.8s" }} />
+          <div className="leadership-ceo-pulse-aura absolute top-1/2 left-1/3 -translate-y-1/2 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl" style={{ animationDelay: "3.1s" }} />
+
+          {/* Top Electric-Blue Rim Accent */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-[2px] bg-gradient-to-r from-transparent via-cyan-400/80 to-transparent" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-[2px] bg-gradient-to-r from-transparent via-cyan-400/75 to-transparent" />
+
+          {/* Restrained Ambient Particles */}
+          {ambientParticles.map((p, idx) => (
+            <span
+              key={idx}
+              style={{
+                top: p.top,
+                left: p.left,
+                right: p.right,
+                width: `${p.size}px`,
+                height: `${p.size}px`,
+                animationDelay: p.delay,
+              }}
+              className={`leadership-ambient-particle absolute rounded-full ${p.color} shadow-[0_0_8px_rgba(34,211,238,0.65)]`}
+            />
+          ))}
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 p-6 sm:p-10 relative z-10">
           {/* Photo Column */}
           <div className="lg:col-span-5 flex flex-col justify-center">
-            <div className="aspect-[4/5] sm:aspect-square lg:aspect-[4/5] relative rounded-3xl overflow-hidden bg-slate-900 border border-border/80 shadow-2xl">
+            <div className="aspect-[4/5] sm:aspect-square lg:aspect-[4/5] relative rounded-3xl overflow-hidden bg-slate-900 border border-cyan-500/35 shadow-2xl">
               <img
                 src={photoUrl}
                 alt="Siddiqur Rahman Turjoy, Founder and CEO of Boosting Agency BD"
@@ -209,6 +244,16 @@ export function FounderCeoSpotlight() {
               </Button>
             </div>
           </div>
+        </div>
+
+        {/* Central Node Output Emitter Anchor for SVG Knowledge Network */}
+        <div
+          data-leadership-ceo-emitter="true"
+          aria-hidden="true"
+          className="pointer-events-none absolute -bottom-2.5 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center h-5 w-5 rounded-full bg-slate-950/90 border border-cyan-400/70 shadow-[0_0_16px_rgba(34,211,238,0.75)]"
+        >
+          <span className="h-2 w-2 rounded-full bg-cyan-300 animate-ping opacity-75 absolute" />
+          <span className="h-2 w-2 rounded-full bg-cyan-300 relative" />
         </div>
       </Card>
     </div>

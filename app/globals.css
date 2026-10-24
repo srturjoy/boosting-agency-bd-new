@@ -652,6 +652,140 @@ main section.bg-gradient-to-b.to-background {
   }
 }
 
+/* ============================================================
+   EXECUTIVE LEADERSHIP NETWORK ANIMATIONS (CEO -> TEAM)
+   ============================================================ */
 
+@keyframes leadership-ceo-border-pulse {
+  0%, 100% {
+    border-color: rgba(34, 211, 238, 0.48);
+    box-shadow:
+      0 20px 50px -12px rgba(6, 182, 212, 0.22),
+      0 0 24px -4px rgba(59, 130, 246, 0.18),
+      inset 0 1px 0 0 rgba(165, 243, 252, 0.28);
+  }
+  50% {
+    border-color: rgba(56, 189, 248, 0.85);
+    box-shadow:
+      0 24px 60px -10px rgba(6, 182, 212, 0.36),
+      0 0 32px -2px rgba(168, 85, 247, 0.22),
+      inset 0 1px 0 0 rgba(186, 230, 253, 0.48);
+  }
+}
 
+@keyframes leadership-light-pulse {
+  0%, 100% {
+    opacity: 0.22;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 0.42;
+    transform: scale(1.05);
+  }
+}
 
+@keyframes leadership-particle-float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(0.85);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate3d(8px, -14px, 0) scale(1.15);
+    opacity: 0.78;
+  }
+}
+
+.leadership-ceo-node {
+  animation: leadership-ceo-border-pulse 4.6s ease-in-out infinite;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.leadership-ceo-node:hover {
+  border-color: rgba(34, 211, 238, 0.95) !important;
+  box-shadow:
+    0 26px 65px -10px rgba(6, 182, 212, 0.42),
+    0 0 36px -2px rgba(168, 85, 247, 0.28),
+    inset 0 1px 0 0 rgba(186, 230, 253, 0.6) !important;
+}
+
+.leadership-ceo-pulse-aura {
+  animation: leadership-light-pulse 5.2s ease-in-out infinite;
+}
+
+.leadership-ambient-particle {
+  animation: leadership-particle-float 4.2s ease-in-out infinite;
+}
+
+/* Team Member Card Network Activation & Hover States */
+[data-leadership-team-node] {
+  transition:
+    transform 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.38s ease,
+    box-shadow 0.38s ease !important;
+}
+
+[data-leadership-receptor] {
+  opacity: 0.28;
+  transform: scaleX(0.35);
+  transition:
+    opacity 0.35s ease,
+    transform 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+[data-leadership-team-node][data-network-active="true"],
+[data-leadership-team-node]:hover {
+  border-color: rgba(34, 211, 238, 0.85) !important;
+  box-shadow:
+    0 16px 38px -8px rgba(6, 182, 212, 0.32),
+    0 0 20px -3px rgba(168, 85, 247, 0.22),
+    inset 0 1px 0 0 rgba(165, 243, 252, 0.38) !important;
+  transform: translateY(-4px);
+}
+
+[data-leadership-team-node][data-network-active="true"] [data-leadership-receptor],
+[data-leadership-team-node]:hover [data-leadership-receptor] {
+  opacity: 1;
+  transform: scaleX(1);
+  box-shadow: 0 0 14px rgba(34, 211, 238, 0.85);
+}
+
+[data-leadership-role] {
+  transition: color 0.35s ease, text-shadow 0.35s ease, border-color 0.35s ease, background-color 0.35s ease;
+}
+
+[data-leadership-team-node][data-network-active="true"] [data-leadership-role],
+[data-leadership-team-node]:hover [data-leadership-role] {
+  color: #22d3ee !important;
+  text-shadow: 0 0 12px rgba(34, 211, 238, 0.38);
+}
+
+[data-leadership-expertise] {
+  transition: color 0.35s ease, border-color 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+[data-leadership-team-node][data-network-active="true"] [data-leadership-expertise],
+[data-leadership-team-node]:hover [data-leadership-expertise] {
+  border-color: rgba(34, 211, 238, 0.55) !important;
+  color: #67e8f9;
+}
+
+.light [data-leadership-team-node][data-network-active="true"] [data-leadership-role],
+.light [data-leadership-team-node]:hover [data-leadership-role] {
+  color: #0284c7 !important;
+  text-shadow: 0 0 10px rgba(14, 165, 233, 0.22);
+}
+
+.light [data-leadership-team-node][data-network-active="true"] [data-leadership-expertise],
+.light [data-leadership-team-node]:hover [data-leadership-expertise] {
+  color: #0369a1;
+  border-color: rgba(14, 165, 233, 0.5) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leadership-ceo-node,
+  .leadership-ceo-pulse-aura,
+  .leadership-ambient-particle {
+    animation: none !important;
+  }
+}

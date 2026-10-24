@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight, Target, Eye, Lightbulb, Users, Award } from "lucide-react"
 import { TeamCarousel } from "@/components/about/team-carousel"
 import { FounderCeoSpotlight } from "@/components/about/founder-ceo-spotlight"
+import { LeadershipNetworkContainer } from "@/components/about/leadership-network"
 import { TEAM_MEMBERS } from "@/data/team"
 import { useLanguage } from "@/lib/language-context"
 
@@ -239,35 +240,37 @@ export default function AboutPage() {
 
       {/* Executive Leadership & Team Section */}
       <section id="team" className="py-14 lg:py-20 bg-secondary/30 overflow-hidden">
-        {/* CEO & Founder Spotlight on TOP as requested */}
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-10">
-            <p className="text-sm font-semibold text-primary uppercase tracking-wide">
-              {isEnglish ? "Executive Leadership" : "নির্বাহী নেতৃত্ব"}
-            </p>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-              {isEnglish ? "Founder & CEO" : "প্রতিষ্ঠাতা ও প্রধান নির্বাহী কর্মকর্তা"}
-            </h2>
+        <LeadershipNetworkContainer>
+          {/* CEO & Founder Spotlight on TOP as requested */}
+          <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+            <div className="mx-auto max-w-2xl text-center mb-10">
+              <p className="text-sm font-semibold text-primary uppercase tracking-wide">
+                {isEnglish ? "Executive Leadership" : "নির্বাহী নেতৃত্ব"}
+              </p>
+              <h2 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+                {isEnglish ? "Founder & CEO" : "প্রতিষ্ঠাতা ও প্রধান নির্বাহী কর্মকর্তা"}
+              </h2>
+            </div>
           </div>
-        </div>
 
-        <FounderCeoSpotlight />
+          <FounderCeoSpotlight />
 
-        {/* Then the specialist team below */}
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-12 pt-10 border-t border-border/70">
-            <p className="text-sm font-semibold text-primary uppercase tracking-wide">{t("ourTeam")}</p>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-              {t("meetExperts")}
-            </h2>
-            <p className="mt-3 text-sm text-muted-foreground dark:text-slate-300">
-              {isEnglish 
-                ? "Our specialized growth engineers, media buyers, and marketing technologists."
-                : "আমাদের বিশেষায়িত গ্রোথ ইঞ্জিনিয়ার, মিডিয়া বায়ার ও মার্কেটিং টেকনোলজিস্ট টিম।"}
-            </p>
+          {/* Then the specialist team below */}
+          <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+            <div className="mx-auto max-w-2xl text-center mb-10 px-6 py-4 rounded-2xl bg-background/85 backdrop-blur-md border border-cyan-500/20 shadow-sm">
+              <p className="text-sm font-semibold text-primary uppercase tracking-wide">{t("ourTeam")}</p>
+              <h2 className="mt-1.5 text-2xl sm:text-4xl font-bold tracking-tight text-foreground text-balance">
+                {t("meetExperts")}
+              </h2>
+              <p className="mt-2 text-xs sm:text-sm text-muted-foreground dark:text-slate-300">
+                {isEnglish 
+                  ? "Our specialized growth engineers, media buyers, and marketing technologists."
+                  : "আমাদের বিশেষায়িত গ্রোথ ইঞ্জিনিয়ার, মিডিয়া বায়ার ও মার্কেটিং টেকনোলজিস্ট টিম।"}
+              </p>
+            </div>
           </div>
-        </div>
-        <TeamCarousel />
+          <TeamCarousel />
+        </LeadershipNetworkContainer>
       </section>
 
       {/* CTA Section */}

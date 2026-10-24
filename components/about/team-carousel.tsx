@@ -36,7 +36,7 @@ export function TeamCarousel() {
 
   const scrollRef = useRef<HTMLDivElement>(null)
   const [isAutoScroll, setIsAutoScroll] = useState(true)
-  const [viewMode, setViewMode] = useState<"carousel" | "grid">("carousel")
+  const [viewMode, setViewMode] = useState<"carousel" | "grid">("grid")
   const isHoveredRef = useRef(false)
   const pointerStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
 
@@ -210,12 +210,14 @@ export function TeamCarousel() {
       {viewMode === "carousel" ? (
         <div 
           ref={scrollRef}
-          className="flex gap-6 overflow-x-auto px-6 py-4 scrollbar-none select-none"
+          data-leadership-scroll-container="true"
+          className="flex gap-6 overflow-x-auto px-6 py-4 scrollbar-none select-none relative z-10"
           style={{ scrollBehavior: "auto" }}
         >
           {duplicatedTeam.map((member, index) => (
             <Card 
               key={`${member.id}-${index}`} 
+              data-leadership-team-node={member.id}
               itemScope
               itemType="https://schema.org/Person"
               onPointerDown={handlePointerDown}
@@ -234,6 +236,12 @@ export function TeamCarousel() {
             >
               <meta itemProp="url" content={`https://boostingagencyofficial.site/team/${member.id}`} />
               <meta itemProp="worksFor" content="Boosting Agency BD" />
+              {/* Top Energy Receptor Bar */}
+              <div
+                data-leadership-receptor="true"
+                aria-hidden="true"
+                className="pointer-events-none absolute top-0 left-1/4 right-1/4 h-[2.5px] z-20 rounded-full bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+              />
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-cyan-500/15 rounded-full blur-2xl" />
               </div>
@@ -268,7 +276,7 @@ export function TeamCarousel() {
                   </h3>
 
                   {/* Role */}
-                  <p itemProp="jobTitle" className="text-xs font-semibold text-cyan-600 dark:text-cyan-400 mt-1">
+                  <p data-leadership-role="true" itemProp="jobTitle" className="text-xs font-semibold text-cyan-600 dark:text-cyan-400 mt-1">
                     {isEnglish ? member.role : (member.roleBn || member.role)}
                   </p>
                   
@@ -278,7 +286,7 @@ export function TeamCarousel() {
                   </p>
 
                   {/* Expertise / Titles */}
-                  <p className="text-[11px] text-slate-500 dark:text-slate-300 leading-relaxed font-medium mt-2 line-clamp-1">
+                  <p data-leadership-expertise="true" className="text-[11px] text-slate-500 dark:text-slate-300 leading-relaxed font-medium mt-2 line-clamp-1">
                     {isEnglish ? member.titles : (member.titlesBn || member.titles)}
                   </p>
                 </div>
@@ -300,11 +308,12 @@ export function TeamCarousel() {
         </div>
       ) : (
         /* RENDER VIEW 2: RESPONSIVE GRID (4 SPECIALIST EXPERTS) */
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6">
             {SPECIALIST_MEMBERS.map((member) => (
               <Card 
                 key={member.id} 
+                data-leadership-team-node={member.id}
                 itemScope
                 itemType="https://schema.org/Person"
                 onClick={() => handleNavigateMember(member.id)}
@@ -317,10 +326,16 @@ export function TeamCarousel() {
                 role="button"
                 tabIndex={0}
                 aria-label={`View dedicated page of ${isEnglish ? member.name : (member.nameBn || member.name)}`}
-                className="rounded-3xl border-border/70 hover:border-cyan-500/80 transition-all duration-300 card-3d hover:shadow-2xl hover:shadow-cyan-500/20 bg-card overflow-hidden relative group cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-cyan-500/50 flex flex-col justify-between"
+                className="rounded-2xl sm:rounded-3xl border-border/70 hover:border-cyan-500/80 transition-all duration-300 card-3d hover:shadow-2xl hover:shadow-cyan-500/20 bg-card overflow-hidden relative group cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-cyan-500/50 flex flex-col justify-between"
               >
                 <meta itemProp="url" content={`https://boostingagencyofficial.site/team/${member.id}`} />
                 <meta itemProp="worksFor" content="Boosting Agency BD" />
+                {/* Top Energy Receptor Bar */}
+                <div
+                  data-leadership-receptor="true"
+                  aria-hidden="true"
+                  className="pointer-events-none absolute top-0 left-1/4 right-1/4 h-[2.5px] z-20 rounded-full bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+                />
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                   <div className="absolute -top-10 -right-10 w-32 h-32 bg-cyan-500/15 rounded-full blur-2xl" />
                 </div>
@@ -341,25 +356,25 @@ export function TeamCarousel() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none" />
                 </div>
 
-                <CardContent className="p-5 relative flex flex-col flex-grow justify-between">
+                <CardContent className="p-3.5 sm:p-5 relative flex flex-col flex-grow justify-between">
                   <div>
                     {/* Name */}
-                    <h3 itemProp="name" className="text-base font-bold text-foreground group-hover:text-cyan-500 transition-colors">
+                    <h3 itemProp="name" className="text-xs sm:text-base font-bold text-foreground group-hover:text-cyan-500 transition-colors leading-snug">
                       {isEnglish ? member.name : (member.nameBn || member.name)}
                     </h3>
 
                     {/* Role */}
-                    <p itemProp="jobTitle" className="text-xs font-semibold text-cyan-600 dark:text-cyan-400 mt-1">
+                    <p data-leadership-role="true" itemProp="jobTitle" className="text-[11px] sm:text-xs font-semibold text-cyan-600 dark:text-cyan-400 mt-1 line-clamp-1">
                       {isEnglish ? member.role : (member.roleBn || member.role)}
                     </p>
                     
                     {/* Card Description */}
-                    <p itemProp="description" className="text-xs text-muted-foreground leading-relaxed mt-2 line-clamp-2">
+                    <p itemProp="description" className="text-[11px] sm:text-xs text-muted-foreground leading-snug sm:leading-relaxed mt-1.5 sm:mt-2 line-clamp-2">
                       {isEnglish ? member.description : (member.descriptionBn || member.description)}
                     </p>
 
                     {/* Expertise / Titles */}
-                    <p className="text-[11px] text-slate-500 dark:text-slate-300 leading-relaxed font-medium mt-1.5 line-clamp-1">
+                    <p data-leadership-expertise="true" className="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-300 leading-relaxed font-medium mt-1.5 line-clamp-1">
                       {isEnglish ? member.titles : (member.titlesBn || member.titles)}
                     </p>
                   </div>

@@ -8,6 +8,7 @@ import { ArrowRight, Users, ShieldCheck } from "lucide-react"
 import { TEAM_MEMBERS } from "@/data/team"
 import { useLanguage } from "@/lib/language-context"
 import { ScrollReveal, fadeInUp, staggerContainer } from "@/components/ui/motion"
+import { LeadershipNetworkContainer } from "@/components/about/leadership-network"
 
 export function TeamPreview() {
   const { language } = useLanguage()
@@ -16,7 +17,7 @@ export function TeamPreview() {
   return (
     <section id="team-preview" className="py-10 sm:py-14 lg:py-20 bg-secondary/30 relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <ScrollReveal className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-7 sm:mb-12 text-center md:text-left">
+        <ScrollReveal className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-7 sm:mb-10 text-center md:text-left">
           <div className="max-w-2xl mx-auto md:mx-0">
             <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 text-[11px] sm:text-xs font-semibold mb-2.5 sm:mb-3 border border-cyan-500/20">
               <Users className="h-3.5 w-3.5" />
@@ -44,78 +45,132 @@ export function TeamPreview() {
           </div>
         </ScrollReveal>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.05 }}
-          variants={staggerContainer}
-          className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-5"
-        >
-          {TEAM_MEMBERS.map((member) => {
-            const photoUrl = member.defaultImages[0]?.url || `/images/team/${member.id}.webp`
-            const displayName = isEnglish
-              ? member.preferredName
-                ? `${member.name} (${member.preferredName})`
-                : member.name
-              : member.preferredNameBn
-                ? `${member.nameBn || member.name} (${member.preferredNameBn})`
-                : member.nameBn || member.name
+        <LeadershipNetworkContainer className="pt-6 lg:pt-9">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.05 }}
+            variants={staggerContainer}
+            className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 sm:gap-5"
+          >
+            {TEAM_MEMBERS.map((member) => {
+              const isCeo = member.id === "siddiqur-rahman-turjoy"
+              const photoUrl = member.defaultImages[0]?.url || `/images/team/${member.id}.webp`
+              const displayName = isEnglish
+                ? member.preferredName
+                  ? `${member.name} (${member.preferredName})`
+                  : member.name
+                : member.preferredNameBn
+                  ? `${member.nameBn || member.name} (${member.preferredNameBn})`
+                  : member.nameBn || member.name
 
-            return (
-              <motion.div key={member.id} variants={fadeInUp} className="h-full">
-                <Card
-                  itemScope
-                  itemType="https://schema.org/Person"
-                  className="group h-full rounded-xl sm:rounded-3xl border border-border/75 hover:border-cyan-500/70 bg-card card-3d hover:shadow-xl hover:shadow-cyan-500/15 transition-all duration-300 flex flex-col justify-between overflow-hidden"
+              return (
+                <motion.div
+                  key={member.id}
+                  variants={fadeInUp}
+                  className={
+                    isCeo
+                      ? "col-span-2 lg:col-span-1 max-w-xs sm:max-w-sm lg:max-w-none mx-auto w-full mb-5 lg:mb-0 h-full"
+                      : "h-full"
+                  }
                 >
-                  <meta itemProp="url" content={`https://boostingagencyofficial.site/team/${member.id}`} />
-                  <meta itemProp="worksFor" content="Boosting Agency BD" />
-                  <div className="aspect-[4/4] relative overflow-hidden bg-slate-900">
-                    <img
-                      src={photoUrl}
-                      alt={`${displayName} — ${isEnglish ? member.role : member.roleBn || member.role} at Boosting Agency BD`}
-                      title={`${member.name} — ${member.role} | Boosting Agency BD`}
-                      itemProp="image"
-                      width={800}
-                      height={800}
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
-                    <div className="absolute bottom-2 left-2 right-2 sm:bottom-3 sm:left-3 sm:right-3">
-                      <span className="inline-flex items-center gap-1 max-w-full px-1.5 py-0.5 sm:px-2 sm:py-0.5 rounded-md bg-cyan-500/20 backdrop-blur-md text-cyan-300 border border-cyan-500/30 text-[9px] sm:text-[10px] font-semibold">
-                        <ShieldCheck className="h-2.5 w-2.5 sm:h-3 sm:w-3 shrink-0" />
-                        <span itemProp="jobTitle" className="truncate">{isEnglish ? member.role : member.roleBn || member.role}</span>
-                      </span>
-                    </div>
-                  </div>
+                  <Card
+                    data-leadership-ceo-node={isCeo ? "true" : undefined}
+                    data-leadership-team-node={!isCeo ? member.id : undefined}
+                    itemScope
+                    itemType="https://schema.org/Person"
+                    className={`group h-full rounded-xl sm:rounded-3xl border bg-card card-3d transition-all duration-300 flex flex-col justify-between overflow-visible relative ${
+                      isCeo
+                        ? "leadership-ceo-node border-cyan-500/55 shadow-xl shadow-cyan-500/15"
+                        : "border-border/75 hover:border-cyan-500/70 hover:shadow-xl hover:shadow-cyan-500/15"
+                    }`}
+                  >
+                    <meta itemProp="url" content={`https://boostingagencyofficial.site/team/${member.id}`} />
+                    <meta itemProp="worksFor" content="Boosting Agency BD" />
 
-                  <CardContent className="p-3 sm:p-5 flex flex-col flex-1 justify-between gap-2 sm:gap-3">
-                    <div>
-                      <h3 itemProp="name" className="text-xs sm:text-base font-bold text-foreground group-hover:text-cyan-500 transition-colors leading-snug line-clamp-1 sm:line-clamp-2">
-                        {displayName}
-                      </h3>
-                      <p itemProp="description" className="mt-1 sm:mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-snug sm:leading-relaxed line-clamp-2">
-                        {isEnglish ? member.description : member.descriptionBn || member.description}
-                      </p>
+                    {/* Top Energy Receptor Bar on Team Cards */}
+                    {!isCeo && (
+                      <div
+                        data-leadership-receptor="true"
+                        aria-hidden="true"
+                        className="pointer-events-none absolute top-0 left-1/4 right-1/4 h-[2.5px] z-20 rounded-full bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+                      />
+                    )}
+
+                    {/* Ambient Glow & Restrained Particles on CEO Node */}
+                    {isCeo && (
+                      <>
+                        <div className="pointer-events-none absolute inset-0 rounded-xl sm:rounded-3xl overflow-hidden z-0">
+                          <div className="leadership-ceo-pulse-aura absolute -top-8 -right-8 w-36 h-36 bg-cyan-500/20 rounded-full blur-2xl" />
+                          <div className="leadership-ceo-pulse-aura absolute -bottom-8 -left-8 w-32 h-32 bg-purple-500/15 rounded-full blur-2xl" style={{ animationDelay: "1.6s" }} />
+                          <span className="leadership-ambient-particle absolute top-3 left-3 w-1.5 h-1.5 rounded-full bg-cyan-300/80 shadow-[0_0_6px_rgba(34,211,238,0.8)]" />
+                          <span className="leadership-ambient-particle absolute top-6 right-4 w-1 h-1 rounded-full bg-purple-300/75" style={{ animationDelay: "1.1s" }} />
+                          <span className="leadership-ambient-particle absolute bottom-10 right-5 w-1.5 h-1.5 rounded-full bg-sky-300/75" style={{ animationDelay: "2.2s" }} />
+                        </div>
+                        <div
+                          data-leadership-ceo-emitter="true"
+                          aria-hidden="true"
+                          className="pointer-events-none absolute -bottom-2 left-1/2 -translate-x-1/2 z-20 flex lg:hidden items-center justify-center h-4 w-4 rounded-full bg-slate-950/90 border border-cyan-400/70 shadow-[0_0_12px_rgba(34,211,238,0.75)]"
+                        >
+                          <span className="h-1.5 w-1.5 rounded-full bg-cyan-300" />
+                        </div>
+                      </>
+                    )}
+
+                    <div className="aspect-[4/4] relative overflow-hidden rounded-t-xl sm:rounded-t-3xl bg-slate-900 z-10">
+                      <img
+                        src={photoUrl}
+                        alt={`${displayName} — ${isEnglish ? member.role : member.roleBn || member.role} at Boosting Agency BD`}
+                        title={`${member.name} — ${member.role} | Boosting Agency BD`}
+                        itemProp="image"
+                        width={800}
+                        height={800}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+                      <div className="absolute bottom-2 left-2 right-2 sm:bottom-3 sm:left-3 sm:right-3">
+                        <span
+                          data-leadership-role={!isCeo ? "true" : undefined}
+                          className="inline-flex items-center gap-1 max-w-full px-1.5 py-0.5 sm:px-2 sm:py-0.5 rounded-md bg-cyan-500/20 backdrop-blur-md text-cyan-300 border border-cyan-500/30 text-[9px] sm:text-[10px] font-semibold"
+                        >
+                          <ShieldCheck className="h-2.5 w-2.5 sm:h-3 sm:w-3 shrink-0" />
+                          <span itemProp="jobTitle" className="truncate">{isEnglish ? member.role : member.roleBn || member.role}</span>
+                        </span>
+                      </div>
                     </div>
 
-                    <div className="pt-2 sm:pt-3 border-t border-border/60">
-                      <Link
-                        href={`/team/${member.id}`}
-                        className="inline-flex items-center justify-between w-full text-[11px] sm:text-xs font-semibold text-primary dark:text-cyan-400 hover:text-cyan-500 transition-colors"
-                      >
-                        <span>{isEnglish ? "View Profile" : "প্রোফাইল দেখুন"}</span>
-                        <ArrowRight className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0 transition-transform group-hover:translate-x-1" />
-                      </Link>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            )
-          })}
-        </motion.div>
+                    <CardContent className="p-3 sm:p-5 flex flex-col flex-1 justify-between gap-2 sm:gap-3 relative z-10">
+                      <div>
+                        <h3 itemProp="name" className="text-xs sm:text-base font-bold text-foreground group-hover:text-cyan-500 transition-colors leading-snug line-clamp-1 sm:line-clamp-2">
+                          {displayName}
+                        </h3>
+                        <p
+                          data-leadership-expertise={!isCeo ? "true" : undefined}
+                          itemProp="description"
+                          className="mt-1 sm:mt-1.5 text-[11px] sm:text-xs text-muted-foreground leading-snug sm:leading-relaxed line-clamp-2"
+                        >
+                          {isEnglish ? member.description : member.descriptionBn || member.description}
+                        </p>
+                      </div>
+
+                      <div className="pt-2 sm:pt-3 border-t border-border/60">
+                        <Link
+                          href={`/team/${member.id}`}
+                          className="inline-flex items-center justify-between w-full text-[11px] sm:text-xs font-semibold text-primary dark:text-cyan-400 hover:text-cyan-500 transition-colors"
+                        >
+                          <span>{isEnglish ? "View Profile" : "প্রোফাইল দেখুন"}</span>
+                          <ArrowRight className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0 transition-transform group-hover:translate-x-1" />
+                        </Link>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              )
+            })}
+          </motion.div>
+        </LeadershipNetworkContainer>
       </div>
     </section>
   )
