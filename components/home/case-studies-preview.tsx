@@ -18,7 +18,7 @@ const caseStudies = [
     clientBn: "ফ্যাশন রিটেইলার - স্টাইলমার্ট বিডি",
     description: "Transformed a struggling e-commerce store into a market leader with 450% revenue growth through strategic multi-channel advertising campaigns and conversion optimization.",
     descriptionBn: "কৌশলগত মাল্টি-চ্যানেল বিজ্ঞাপন ক্যাম্পেইন এবং কনভার্সন অপ্টিমাইজেশনের মাধ্যমে একটি সংগ্রামরত ই-কমার্স স্টোরকে ৪৫০% রেভিনিউ বৃদ্ধি সহ মার্কেট লিডারে রূপান্তরিত করা হয়েছে।",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+    image: "/images/case-studies/ecommerce-growth.webp",
     results: [
       { label: "Revenue Increase", labelBn: "রেভিনিউ বৃদ্ধি", value: "+450%" },
       { label: "ROAS", labelBn: "রোয়াস", value: "5.2x" },
@@ -79,7 +79,7 @@ const caseStudies = [
     clientBn: "টেক স্টার্টআপ - ক্লাউডসিঙ্ক প্রো",
     description: "Built a scalable lead generation engine that delivers 2,000+ qualified leads monthly through integrated multi-channel digital marketing and marketing automation.",
     descriptionBn: "সমন্বিত মাল্টি-চ্যানেল ডিজিটাল মার্কেটিং এবং মার্কেটিং অটোমেশনের মাধ্যমে মাসিক ২,০০০+ কোয়ালিফাইড লিড সরবরাহকারী একটি স্কেলেবল লিড জেনারেশন ইঞ্জিন তৈরি করা হয়েছে।",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+    image: "/images/case-studies/saas-leads.webp",
     results: [
       { label: "Leads/Month", labelBn: "লিড/মাস", value: "2,000+" },
       { label: "Cost Per Lead", labelBn: "প্রতি লিড খরচ", value: "-65%" },
@@ -140,7 +140,7 @@ const caseStudies = [
     clientBn: "রেস্টুরেন্ট চেইন - টেস্ট অফ বেঙ্গল",
     description: "Established complete local search dominance across 15 locations, achieving top 3 rankings for 50+ local keywords and driving 200% increase in foot traffic.",
     descriptionBn: "১৫টি লোকেশন জুড়ে সম্পূর্ণ লোকাল সার্চ আধিপত্য প্রতিষ্ঠা করা হয়েছে, ৫০+ লোকাল কীওয়ার্ডে টপ ৩ র‌্যাংকিং অর্জন এবং ফুট ট্রাফিক ২০০% বৃদ্ধি করা হয়েছে।",
-    image: "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=600&h=400&fit=crop",
+    image: "/images/case-studies/local-seo.webp",
     results: [
       { label: "Keyword Rankings", labelBn: "কীওয়ার্ড র‌্যাংকিং", value: "Top 3" },
       { label: "Foot Traffic", labelBn: "ফুট ট্রাফিক", value: "+200%" },
@@ -269,6 +269,8 @@ export function CaseStudiesPreview() {
                     alt={isEnglish ? study.title : study.titleBn}
                     width={600}
                     height={400}
+                    loading="lazy"
+                    decoding="async"
                     className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute top-2.5 left-2.5 sm:top-4 sm:left-4 z-10">

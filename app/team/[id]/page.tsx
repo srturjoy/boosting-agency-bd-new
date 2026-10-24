@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
         ? (member.defaultImages[0].url.startsWith("http") 
             ? member.defaultImages[0].url 
             : `https://boostingagencyofficial.site${member.defaultImages[0].url}`)
-        : "https://boostingagencyofficial.site/logo.png")
+        : "https://boostingagencyofficial.site/logo.webp")
 
   const cleanName = member.name.replace(/[\(\)]/g, "").trim()
   const nameParts = cleanName.split(/\s+/)
@@ -190,7 +190,7 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
           "@id": "https://boostingagencyofficial.site/#organization",
           "name": "Boosting Agency BD",
           "url": "https://boostingagencyofficial.site/",
-          "logo": "https://boostingagencyofficial.site/logo.png"
+          "logo": "https://boostingagencyofficial.site/logo.webp"
         },
         "alumniOf": {
           "@type": "EducationalOrganization",
@@ -338,7 +338,7 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
           "@id": "https://boostingagencyofficial.site/#organization",
           "name": "Boosting Agency BD",
           "url": "https://boostingagencyofficial.site/",
-          "logo": "https://boostingagencyofficial.site/logo.png"
+          "logo": "https://boostingagencyofficial.site/logo.webp"
         },
         "address": {
           "@type": "PostalAddress",

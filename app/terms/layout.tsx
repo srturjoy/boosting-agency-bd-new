@@ -17,11 +17,11 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://boostingagencyofficial.site/logo.png",
-        width: 1200,
-        height: 1200,
+        url: "https://boostingagencyofficial.site/logo.webp",
+        width: 512,
+        height: 512,
         alt: "Boosting Agency BD Official Logo",
-        type: "image/png",
+        type: "image/webp",
       },
     ],
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "Terms & Conditions, Billing, Refund & Privacy Policies | Boosting Agency BD",
     description:
       "Official service terms, payment rules, refund policies, and data protection standards of Boosting Agency BD.",
-    images: ["https://boostingagencyofficial.site/logo.png"],
+    images: ["https://boostingagencyofficial.site/logo.webp"],
   },
 }
 

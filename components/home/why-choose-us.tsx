@@ -141,10 +141,12 @@ export function WhyChooseUs() {
               transition={{ duration: 0.4, ease: [0.25, 0.4, 0.25, 1] }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
+                src="/images/about/team-collaboration.webp"
                 alt={isEnglish ? "Team collaboration in modern office" : "আধুনিক অফিসে টিম সহযোগিতা"}
                 width={800}
                 height={600}
+                loading="lazy"
+                decoding="async"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />

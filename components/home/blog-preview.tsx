@@ -14,7 +14,7 @@ const posts = [
     titleBn: "২০২৪ সালে কার্যকর ১০টি ফেসবুক বিজ্ঞাপন কৌশল",
     excerpt: "Learn the proven Facebook advertising strategies that top brands are using to maximize their ROI and reach their target audience effectively.",
     excerptBn: "শীর্ষ ব্র্যান্ডগুলি তাদের ROI সর্বাধিক করতে এবং তাদের টার্গেট অডিয়েন্সে কার্যকরভাবে পৌঁছাতে যে প্রমাণিত ফেসবুক বিজ্ঞাপন কৌশল ব্যবহার করছে তা শিখুন।",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop",
+    image: "/images/blog/fb-ads-strategies.webp",
     date: "Mar 15, 2024",
     dateBn: "১৫ মার্চ, ২০২৪",
     readTime: "8 min read",
@@ -28,7 +28,7 @@ const posts = [
     titleBn: "২০২৪ সালে SEO এর সম্পূর্ণ গাইড",
     excerpt: "Everything you need to know about search engine optimization, from keyword research to technical SEO and link building.",
     excerptBn: "সার্চ ইঞ্জিন অপ্টিমাইজেশন সম্পর্কে আপনার যা জানা দরকার সবকিছু, কীওয়ার্ড রিসার্চ থেকে টেকনিক্যাল SEO এবং লিংক বিল্ডিং পর্যন্ত।",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+    image: "/images/blog/demand-gen-seo.webp",
     date: "Mar 10, 2024",
     dateBn: "১০ মার্চ, ২০২৪",
     readTime: "12 min read",
@@ -42,7 +42,7 @@ const posts = [
     titleBn: "কিভাবে AI ডিজিটাল মার্কেটিংকে রূপান্তরিত করছে",
     excerpt: "Discover how artificial intelligence is revolutionizing the way businesses approach marketing and customer engagement.",
     excerptBn: "আবিষ্কার করুন কিভাবে কৃত্রিম বুদ্ধিমত্তা ব্যবসাগুলি মার্কেটিং এবং গ্রাহক এনগেজমেন্টে যেভাবে অ্যাপ্রোচ করে তা বিপ্লব ঘটাচ্ছে।",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+    image: "/images/blog/google-ai-max-2026.webp",
     date: "Mar 5, 2024",
     dateBn: "৫ মার্চ, ২০২৪",
     readTime: "6 min read",
@@ -100,6 +100,8 @@ export function BlogPreview() {
                     alt={isEnglish ? post.title : post.titleBn}
                     width={600}
                     height={400}
+                    loading="lazy"
+                    decoding="async"
                     className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity duration-300" />

@@ -97,7 +97,7 @@ export default async function BlogPostPage({ params }: Props) {
       "url": "https://boostingagencyofficial.site",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://boostingagencyofficial.site/logo.png",
+        "url": "https://boostingagencyofficial.site/logo.webp",
       },
     },
     "mainEntityOfPage": {

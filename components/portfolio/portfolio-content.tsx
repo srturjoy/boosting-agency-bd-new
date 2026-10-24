@@ -56,7 +56,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-1",
     matchKey: "592261293_122206722236514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_592261293_122206722236514031_4358856224825328988_n_jpg_64830.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_592261293_122206722236514031_4358856224825328988_n_jpg_64830.webp",
     title: "Promotional Offer Messaging Campaign",
     campaignName: "কাল প্রতি অর্ডার এ ৫ হাজার ফ্রি — Engagement Campaign",
     category: "Promotional Retail Offer",
@@ -81,7 +81,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-2",
     matchKey: "591629386_122206722914514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_591629386_122206722914514031_214039811972614365_n_jpg_64836.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_591629386_122206722914514031_214039811972614365_n_jpg_64836.webp",
     title: "New Engagement Messaging Lead Campaign",
     campaignName: "New engagement ad — Messaging Campaign",
     category: "Direct-to-Consumer Lead Gen",
@@ -106,7 +106,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-3",
     matchKey: "592258780_122206723376514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_592258780_122206723376514031_949721135675756771_n_jpg_73978.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_592258780_122206723376514031_949721135675756771_n_jpg_73978.webp",
     title: "High-Efficiency $35 Budget Messaging Campaign",
     campaignName: "New engagement campaign ($35 Budget)",
     category: "E-Commerce Inbox Sales",
@@ -131,7 +131,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-4",
     matchKey: "469059355_122130042656514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_469059355_122130042656514031_369102855538254387_n_jpg_63750.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_469059355_122130042656514031_369102855538254387_n_jpg_63750.webp",
     title: "Rishat Ridi Leather — Messaging Campaign",
     campaignName: "Rishat ridi leather",
     category: "Leather & Footwear Brand",
@@ -156,7 +156,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-5",
     matchKey: "514027894_122175761390514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_514027894_122175761390514031_1004080647476241184_n_jpg_34292.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_514027894_122175761390514031_1004080647476241184_n_jpg_34292.webp",
     title: "High-Volume Retail Inbox Lead Campaign",
     campaignName: "Retail Messaging Lead Campaign",
     category: "Fashion & Retail",
@@ -181,7 +181,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-6",
     matchKey: "516531500_122177199812514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_516531500_122177199812514031_6905019251829299086_n_jpg_141864.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_516531500_122177199812514031_6905019251829299086_n_jpg_141864.webp",
     title: "Rishat Leather — 47-Campaign Account Summary",
     campaignName: "Rishat Leather Multi-Campaign Portfolio",
     category: "Footwear & Leather Portfolio",
@@ -208,7 +208,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-7",
     matchKey: "517278887_122177854142514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_517278887_122177854142514031_8042573549680543604_n_jpg_128733.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_517278887_122177854142514031_8042573549680543604_n_jpg_128733.webp",
     title: "Multi-Client Active Messaging & Engagement Suite",
     campaignName: "12 Active Messaging & Engagement Campaigns",
     category: "Multi-Category Active Campaigns",
@@ -233,7 +233,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-8",
     matchKey: "518354575_122179825526514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_518354575_122179825526514031_8241287023402131388_n_jpg_116660.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_518354575_122179825526514031_8241287023402131388_n_jpg_116660.webp",
     title: "Multi-Campaign Messaging & Reach Dashboard",
     campaignName: "Active Messaging Lead Portfolio",
     category: "E-Commerce & Service Brands",
@@ -259,7 +259,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-9",
     matchKey: "599962407_122209675322514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_599962407_122209675322514031_7704999519092585729_n_jpg_96553.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_599962407_122209675322514031_7704999519092585729_n_jpg_96553.webp",
     title: "Ultra-Low Cost $20 Messaging Campaign",
     campaignName: "Lifetime Budget $20 Messaging Ad",
     category: "Consumer Product Lead Gen",
@@ -285,7 +285,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-10",
     matchKey: "600416344_122209675166514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_600416344_122209675166514031_1986049422276954564_n_jpg_97395.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_600416344_122209675166514031_1986049422276954564_n_jpg_97395.webp",
     title: "$40 Lifetime Budget Messaging Campaign",
     campaignName: "Completed $40 Messaging Lead Ad",
     category: "Retail & Direct Orders",
@@ -311,7 +311,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-11",
     matchKey: "600664670_122209832786514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_600664670_122209832786514031_2278875621983301162_n_jpg_92230.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_600664670_122209832786514031_2278875621983301162_n_jpg_92230.webp",
     title: "Rapid Inbox Lead Generation Campaign",
     campaignName: "$20 Rapid Lead Generation Ad",
     category: "Viral Product Promotion",
@@ -337,7 +337,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-12",
     matchKey: "602334305_122209832576514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_602334305_122209832576514031_3361030893700368438_n_jpg_131719.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_602334305_122209832576514031_3361030893700368438_n_jpg_131719.webp",
     title: "Money89 10$ — Micro-Budget Lead Campaign",
     campaignName: "Money89 10$",
     category: "Fashion & Apparel",
@@ -363,7 +363,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-13",
     matchKey: "603012010_122210986682514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_603012010_122210986682514031_7572243519308252920_n_jpg_129167.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_603012010_122210986682514031_7572243519308252920_n_jpg_129167.webp",
     title: "Active Menswear & Apparel Messaging Campaign",
     campaignName: "Active $74 Lifetime Budget Apparel Ad",
     category: "Menswear & Clothing",
@@ -389,7 +389,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-14",
     matchKey: "603787489_122210986730514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_603787489_122210986730514031_6014978866424503527_n_jpg_137529.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_603787489_122210986730514031_6014978866424503527_n_jpg_137529.webp",
     title: "High-Volume $100 Budget Messaging Campaign",
     campaignName: "Active $100 Lifetime Budget Campaign",
     category: "Apparel & Retail Scaling",
@@ -415,7 +415,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-15",
     matchKey: "603849026_122210986592514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_603849026_122210986592514031_5792985738735537371_n_jpg_118072.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_603849026_122210986592514031_5792985738735537371_n_jpg_118072.webp",
     title: "জাপানি লাইট — Gadget Messaging Campaign",
     campaignName: "জাপানি লাইট-Message-ads 3",
     category: "Gadgets & Electronics",
@@ -441,7 +441,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-16",
     matchKey: "604618064_122210986904514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_604618064_122210986904514031_3110132742273449186_n_jpg_94489.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_604618064_122210986904514031_3110132742273449186_n_jpg_94489.webp",
     title: "Scaled $75 Budget Messaging Lead Campaign",
     campaignName: "Active $75 Lifetime Budget Campaign",
     category: "Online Retail & Apparel",
@@ -467,7 +467,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-17",
     matchKey: "605473441_122210986550514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_605473441_122210986550514031_4176941776262603287_n_jpg_129121.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_605473441_122210986550514031_4176941776262603287_n_jpg_129121.webp",
     title: "এলার্ম লক — Mamabazar24 Messaging Campaign",
     campaignName: "এলার্ম লক - Mamabazar24 Message Campaign",
     category: "Security & Hardware Gadgets",
@@ -493,7 +493,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-18",
     matchKey: "605708655_122210986862514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_605708655_122210986862514031_2726238510088191091_n_jpg_92230.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_605708655_122210986862514031_2726238510088191091_n_jpg_92230.webp",
     title: "Direct Response $20 Messaging Campaign",
     campaignName: "Direct Inbox Lead Campaign",
     category: "Consumer Goods",
@@ -519,7 +519,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-19",
     matchKey: "606389664_122210986634514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_606389664_122210986634514031_6570477245486508953_n_jpg_126250.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_606389664_122210986634514031_6570477245486508953_n_jpg_126250.webp",
     title: "Jamboo Light Metal — High-Volume Lead Campaign",
     campaignName: "Jamboo Light Metal",
     category: "Electronics & Lighting",
@@ -545,7 +545,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-20",
     matchKey: "625371417_122216943386514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_625371417_122216943386514031_6641575878736972195_n_jpg_63833.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_625371417_122216943386514031_6641575878736972195_n_jpg_63833.webp",
     title: "Rishat Newlo 25 — Leather Messaging Campaign",
     campaignName: "rishat newlo 25",
     category: "Leather & Footwear",
@@ -570,7 +570,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-21",
     matchKey: "626030571_122216943278514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_626030571_122216943278514031_4092817830625850002_n_jpg_66879.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_626030571_122216943278514031_4092817830625850002_n_jpg_66879.webp",
     title: "Rishat Ridi — Footwear Lead Campaign",
     campaignName: "Rishat Ridi",
     category: "Footwear & Retail",
@@ -595,7 +595,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-22",
     matchKey: "627189227_122216943248514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_627189227_122216943248514031_8284434465264696406_n_jpg_67201.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_627189227_122216943248514031_8284434465264696406_n_jpg_67201.webp",
     title: "Rishat Newlo 25 — Seasonal Footwear Campaign",
     campaignName: "rishat newlo 25 (Aug 2024 Report)",
     category: "Leather & Footwear",
@@ -620,7 +620,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-23",
     matchKey: "628053711_122216943314514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_628053711_122216943314514031_4860961609898335480_n_jpg_64125.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_628053711_122216943314514031_4860961609898335480_n_jpg_64125.webp",
     title: "Rishat Ridi Leather — Direct Inbox Campaign",
     campaignName: "Rishat ridi leather (Aug 2024 Report)",
     category: "Leather Goods",
@@ -645,7 +645,7 @@ const MESSAGE_LEAD_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "msg-24",
     matchKey: "628189254_122216943344514031",
     imageUrl:
-      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_628189254_122216943344514031_827828437086750959_n_jpg_64300.jpg",
+      "/images/campaigns/message-lead-campaigns/message-lead-campaigns_628189254_122216943344514031_827828437086750959_n_jpg_64300.webp",
     title: "Rishat Rp — High-Intent Messaging Campaign",
     campaignName: "Rishat Rp",
     category: "Footwear & Accessories",
@@ -673,7 +673,7 @@ const WEBSITE_PURCHASE_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "pur-1",
     matchKey: "650757177_122222877572514031",
     imageUrl:
-      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_650757177_122222877572514031_7591552409511033891_n_jpg_123754.jpg",
+      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_650757177_122222877572514031_7591552409511033891_n_jpg_123754.webp",
     title: "Unique Point Sales Campaign (CAPI + Pixel)",
     campaignName: "New Sales campaign unique point (4 Ad Sets, 10 Ads)",
     category: "E-Commerce Website Sales",
@@ -699,7 +699,7 @@ const WEBSITE_PURCHASE_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "pur-2",
     matchKey: "656818636_122224696070514031",
     imageUrl:
-      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_656818636_122224696070514031_3280436921714703977_n_jpg_92548.jpg",
+      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_656818636_122224696070514031_3280436921714703977_n_jpg_92548.webp",
     title: "Single-Day Flash Scaling Sales Campaign",
     campaignName: "New Sales Campaign (4 Ad Sets, 10 Ads)",
     category: "Direct Checkout E-Commerce",
@@ -725,7 +725,7 @@ const WEBSITE_PURCHASE_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "pur-3",
     matchKey: "657293649_122224698050514031",
     imageUrl:
-      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_657293649_122224698050514031_3224995908435152501_n_jpg_43694.jpg",
+      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_657293649_122224698050514031_3224995908435152501_n_jpg_43694.webp",
     title: "E-Commerce Direct Checkout Campaign",
     campaignName: "Website Conversion Campaign (6 Mar)",
     category: "Online Store Conversions",
@@ -750,7 +750,7 @@ const WEBSITE_PURCHASE_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "pur-4",
     matchKey: "657333974_122224696808514031",
     imageUrl:
-      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_657333974_122224696808514031_1817429351967677198_n_jpg_53000.jpg",
+      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_657333974_122224696808514031_1817429351967677198_n_jpg_53000.webp",
     title: "Low-CPA Micro-Budget Purchase Campaign",
     campaignName: "Micro-Budget Conversion Test (15 Mar 2026)",
     category: "E-Commerce Product Launch",
@@ -775,7 +775,7 @@ const WEBSITE_PURCHASE_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "pur-5",
     matchKey: "657391903_122224697672514031",
     imageUrl:
-      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_657391903_122224697672514031_8715767215055026999_n_jpg_67748.jpg",
+      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_657391903_122224697672514031_8715767215055026999_n_jpg_67748.webp",
     title: "Multi-Ad-Set Website Sales Campaign",
     campaignName: "Scaled Conversion Campaign (9 Mar 2026)",
     category: "E-Commerce Scaling",
@@ -800,7 +800,7 @@ const WEBSITE_PURCHASE_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "pur-6",
     matchKey: "657391903_122224697672514031_8715767215055026999_n__1__",
     imageUrl:
-      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_657391903_122224697672514031_8715767215055026999_n__1__jpg_6774.jpg",
+      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_657391903_122224697672514031_8715767215055026999_n__1__jpg_6774.webp",
     title: "High-Volume Daily Checkout Campaign",
     campaignName: "E-Commerce Sales Campaign (9 Mar 2026)",
     category: "Online Retail Sales",
@@ -825,7 +825,7 @@ const WEBSITE_PURCHASE_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "pur-7",
     matchKey: "658445757_122224698416514031",
     imageUrl:
-      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_658445757_122224698416514031_7438331536548449762_n_jpg_64239.jpg",
+      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_658445757_122224698416514031_7438331536548449762_n_jpg_64239.webp",
     title: "New Sales Ad Set — Benchmark-Beating CPA",
     campaignName: "New Sales Ad Set (14 Mar 2026)",
     category: "E-Commerce Conversion Ad Set",
@@ -850,7 +850,7 @@ const WEBSITE_PURCHASE_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "pur-8",
     matchKey: "703896729_122232124814514031",
     imageUrl:
-      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_703896729_122232124814514031_2008624678293446595_n_jpg_93322.jpg",
+      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_703896729_122232124814514031_2008624678293446595_n_jpg_93322.webp",
     title: "Unique Point Video Sales — Daily Snapshot",
     campaignName: "Test - Unique Point Sale New Video (1 Ad Set, 3 Ads)",
     category: "Video Commerce Sales",
@@ -876,7 +876,7 @@ const WEBSITE_PURCHASE_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "pur-9",
     matchKey: "705238146_122232125144514031",
     imageUrl:
-      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_705238146_122232125144514031_2742035857755383947_n_jpg_97895.jpg",
+      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_705238146_122232125144514031_2742035857755383947_n_jpg_97895.webp",
     title: "Unique Point Video Sales — 7-Day Scaling",
     campaignName: "Test - Unique Point Sale New Video (Last 7 Days)",
     category: "Scaled Video Commerce",
@@ -901,7 +901,7 @@ const WEBSITE_PURCHASE_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "pur-10",
     matchKey: "747334073_1488332569733528",
     imageUrl:
-      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_747334073_1488332569733528_9141966056937279092_n_jpg_151518.jpg",
+      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_747334073_1488332569733528_9141966056937279092_n_jpg_151518.webp",
     title: "MSAStorebd — Multi-Campaign Sales Overview",
     campaignName: "MSAStorebd Ad Account (lan 24 & New Sales 22)",
     category: "E-Commerce Account Overview",
@@ -927,7 +927,7 @@ const WEBSITE_PURCHASE_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "pur-11",
     matchKey: "748597799_28020160680921890",
     imageUrl:
-      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_748597799_28020160680921890_7813687782749355665_n_jpg_68978.jpg",
+      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_748597799_28020160680921890_7813687782749355665_n_jpg_68978.webp",
     title: "lan 24 — High-Performing Purchase Campaign",
     campaignName: "lan 24 (High Performing)",
     category: "Landing Page E-Commerce",
@@ -952,7 +952,7 @@ const WEBSITE_PURCHASE_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "pur-12",
     matchKey: "748829606_3186493041543045",
     imageUrl:
-      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_748829606_3186493041543045_2122049881093404436_n_jpg_83567.jpg",
+      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_748829606_3186493041543045_2122049881093404436_n_jpg_83567.webp",
     title: "New Sales 22 — 63% Lower CPA Purchase Campaign",
     campaignName: "New Sales 22",
     category: "E-Commerce Conversion Funnel",
@@ -977,7 +977,7 @@ const WEBSITE_PURCHASE_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "pur-13",
     matchKey: "748969736_1370757955014127",
     imageUrl:
-      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_748969736_1370757955014127_8930111228125870161_n_jpg_50324.jpg",
+      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_748969736_1370757955014127_8930111228125870161_n_jpg_50324.webp",
     title: "New Sales Copy — Fast Split-Test Campaign",
     campaignName: "New Sales campaign – Copy (2 Ad Sets, 2 Ads)",
     category: "Conversion Split Test",
@@ -1003,7 +1003,7 @@ const WEBSITE_PURCHASE_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "pur-14",
     matchKey: "749132986_2415265302332227",
     imageUrl:
-      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_749132986_2415265302332227_4783399223205638241_n_jpg_130423.jpg",
+      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_749132986_2415265302332227_4783399223205638241_n_jpg_130423.webp",
     title: "46-Campaign E-Commerce Account Summary",
     campaignName: "3 in 1 landing & Multi-Campaign Sales Summary",
     category: "Full E-Commerce Account",
@@ -1029,7 +1029,7 @@ const WEBSITE_PURCHASE_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "pur-15",
     matchKey: "749197955_1065357709779922",
     imageUrl:
-      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_749197955_1065357709779922_1570792922458747889_n_jpg_67482.jpg",
+      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_749197955_1065357709779922_1570792922458747889_n_jpg_67482.webp",
     title: "Unique Point Sales — Daily Conversion Run",
     campaignName: "New Sales campaign unique point (Yesterday: 18 Jul 2026)",
     category: "Daily Website Sales",
@@ -1054,7 +1054,7 @@ const WEBSITE_PURCHASE_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "pur-16",
     matchKey: "749315025_2076533886271372",
     imageUrl:
-      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_749315025_2076533886271372_2353768655858490844_n_jpg_63318.jpg",
+      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_749315025_2076533886271372_2353768655858490844_n_jpg_63318.webp",
     title: "New Sales Copy 2 — Conversion Ad Set",
     campaignName: "New Sales campaign – Copy 2 (2 Ad Sets)",
     category: "E-Commerce Checkout",
@@ -1080,7 +1080,7 @@ const WEBSITE_PURCHASE_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "pur-17",
     matchKey: "749329689_1679237933373742",
     imageUrl:
-      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_749329689_1679237933373742_8510395576206573493_n_jpg_61882.jpg",
+      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_749329689_1679237933373742_8510395576206573493_n_jpg_61882.webp",
     title: "New Sales Copy 3 — Compact Conversion Run",
     campaignName: "New Sales campaign – Copy 3 (2 Ad Sets)",
     category: "E-Commerce Checkout",
@@ -1106,7 +1106,7 @@ const WEBSITE_PURCHASE_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "pur-18",
     matchKey: "750020724_3536172703224686",
     imageUrl:
-      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_750020724_3536172703224686_8682389938618938520_n_jpg_78497.jpg",
+      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_750020724_3536172703224686_8682389938618938520_n_jpg_78497.webp",
     title: "3 in 1 Landing — Ultra-Low CPA Purchase Campaign",
     campaignName: "3 in 1 landing",
     category: "Landing Page Funnel",
@@ -1131,7 +1131,7 @@ const WEBSITE_PURCHASE_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "pur-19",
     matchKey: "751021704_2392641221259354",
     imageUrl:
-      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_751021704_2392641221259354_2647093322391690081_n_jpg_68327.jpg",
+      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_751021704_2392641221259354_2647093322391690081_n_jpg_68327.webp",
     title: "New Sales Copy — 2-Ad-Set Conversion Campaign",
     campaignName: "New Sales campaign – Copy (2 Ad Sets)",
     category: "Online Store Sales",
@@ -1157,7 +1157,7 @@ const WEBSITE_PURCHASE_CAMPAIGNS_DATA: RealCampaignItem[] = [
     id: "pur-20",
     matchKey: "842143274_1442158361193580",
     imageUrl:
-      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_842143274_1442158361193580_3784843313342543215_n_jpg_98398.jpg",
+      "/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_842143274_1442158361193580_3784843313342543215_n_jpg_98398.webp",
     title: "New Sales LE — Scaled E-Commerce Campaign",
     campaignName: "New Sales LE (1 Ad Set, 3 Ads)",
     category: "E-Commerce Conversion Scaling",
@@ -1274,7 +1274,7 @@ function BulkUploadCampaignSection({
                 loading="lazy"
                 decoding="async"
                 onError={(e) => {
-                  const backup = getCampaignBackupUrl(item.imageUrl)
+                  const backup = getCampaignBackupUrl(item.imageUrl, e.currentTarget.src)
                   if (backup && e.currentTarget.src !== backup) {
                     e.currentTarget.src = backup
                   }
@@ -1482,7 +1482,7 @@ function BulkUploadCampaignSection({
                       src={selectedCampaign.imageUrl}
                       alt={`${selectedCampaign.title} — ${selectedCampaign.results} at ${selectedCampaign.costPerResult}`}
                       onError={(e) => {
-                        const backup = getCampaignBackupUrl(selectedCampaign.imageUrl)
+                        const backup = getCampaignBackupUrl(selectedCampaign.imageUrl, e.currentTarget.src)
                         if (backup && e.currentTarget.src !== backup) {
                           e.currentTarget.src = backup
                         }

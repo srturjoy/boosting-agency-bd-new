@@ -270,16 +270,33 @@ export function HeroSection() {
   const isEnglish = language === "en"
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!heroRef.current) return
-      const rect = heroRef.current.getBoundingClientRect()
-      const x = (e.clientX - rect.left - rect.width / 2) / rect.width
-      const y = (e.clientY - rect.top - rect.height / 2) / rect.height
-      setMousePosition({ x, y })
+    if (
+      typeof window === "undefined" ||
+      window.innerWidth < 1024 ||
+      window.matchMedia("(pointer: coarse)").matches ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return
     }
 
-    window.addEventListener("mousemove", handleMouseMove)
-    return () => window.removeEventListener("mousemove", handleMouseMove)
+    let rafId = 0
+    const handleMouseMove = (e: MouseEvent) => {
+      if (rafId) return
+      rafId = window.requestAnimationFrame(() => {
+        rafId = 0
+        if (!heroRef.current) return
+        const rect = heroRef.current.getBoundingClientRect()
+        const x = (e.clientX - rect.left - rect.width / 2) / rect.width
+        const y = (e.clientY - rect.top - rect.height / 2) / rect.height
+        setMousePosition({ x, y })
+      })
+    }
+
+    window.addEventListener("mousemove", handleMouseMove, { passive: true })
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove)
+      if (rafId) window.cancelAnimationFrame(rafId)
+    }
   }, [])
 
   return (

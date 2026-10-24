@@ -1,37 +1,90 @@
-User-agent: Googlebot
-User-agent: Googlebot-Image
-User-agent: Google-Extended
-User-agent: Bingbot
-User-agent: Applebot
-User-agent: Applebot-Extended
-User-agent: GPTBot
-User-agent: ChatGPT-User
-User-agent: OAI-SearchBot
-User-agent: ClaudeBot
-User-agent: anthropic-ai
-User-agent: PerplexityBot
-User-agent: CCBot
-User-agent: cohere-ai
+# ==========================================================
+# Boosting Agency BD — Robots.txt
+# Primary Domain: https://boostingagencyofficial.site
+# Founder & CEO Portal: https://turjoy.boostingagencyofficial.site
+# Service Catalog Portal: https://service.boostingagencyofficial.site
+# ==========================================================
+
 User-agent: *
 Allow: /
-Allow: /turjoy-profile.json
-Allow: /llms.txt
-Allow: /llms-full.txt
-Allow: /sitemap.xml
-Allow: /site-knowledge.json
-Allow: /site-summary.json
-Allow: /images/
-Allow: /images/campaigns/
-Allow: /images/campaigns/message-lead-campaigns/
-Allow: /images/campaigns/website-purchase-campaigns/
-Allow: /images/team/siddiqur-rahman-turjoy.webp
-Allow: /team/
-Allow: /team/siddiqur-rahman-turjoy
+Allow: /services
+Allow: /services/
 Allow: /about
 Allow: /portfolio
-Allow: /favicon.ico
-Allow: /logo.png
-Allow: /api/site-knowledge
+Allow: /team
+Allow: /team/
+Allow: /blog
+Allow: /blog/
+Allow: /contact
+Allow: /terms
+Allow: /privacy
+Allow: /images/
+Allow: /hero/
+Disallow: /api/
+Disallow: /admin
+Disallow: /admin/
 
+# Explicit rules for Googlebot & Googlebot-Image (Full Indexing of Services, Team & Campaign WebP Images)
+User-agent: Googlebot
+Allow: /
+Allow: /services
+Allow: /services/
+Allow: /images/services/
+Allow: /about
+Allow: /portfolio
+Allow: /team
+Allow: /team/
+Allow: /images/team/
+Allow: /blog
+Allow: /blog/
+Allow: /contact
+Disallow: /api/
+Disallow: /admin
+
+User-agent: Googlebot-Image
+Allow: /images/services/
+Allow: /images/team/
+Allow: /team/
+Allow: /images/campaigns/
+Allow: /images/blog/
+Allow: /images/case-studies/
+Allow: /images/about/
+Allow: /hero/
+Allow: /
+
+# Explicit rules for AI Search & Answer Engines (GEO Optimization)
+User-agent: GPTBot
+Allow: /
+Disallow: /admin
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /admin
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /admin
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin
+
+# Sitemaps & Machine-Readable Knowledge Indexes
 Sitemap: https://boostingagencyofficial.site/sitemap.xml
-
+Host: https://boostingagencyofficial.site

@@ -53,7 +53,7 @@ export default function AboutPage() {
         "@id": "https://boostingagencyofficial.site/#organization",
         "name": "Boosting Agency BD",
         "url": "https://boostingagencyofficial.site/",
-        "logo": "https://boostingagencyofficial.site/logo.png",
+        "logo": "https://boostingagencyofficial.site/logo.webp",
         "founder": {
           "@type": "Person",
           "@id": "https://turjoy.boostingagencyofficial.site/#person",
@@ -166,10 +166,12 @@ export default function AboutPage() {
             <div className="relative">
               <div className="aspect-[4/3] overflow-hidden rounded-3xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
+                  src="/images/about/team-collaboration.webp"
                   alt={isEnglish ? "Boosting Agency BD team" : "বুস্টিং এজেন্সি বিডি টিম"}
                   width={800}
                   height={600}
+                  loading="lazy"
+                  decoding="async"
                   className="object-cover"
                 />
               </div>

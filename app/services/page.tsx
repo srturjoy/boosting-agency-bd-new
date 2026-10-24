@@ -21,7 +21,7 @@ export default function ServicesPage() {
         ? "Reach your target audience with precision-targeted social media advertising campaigns that drive real results."
         : "প্রকৃত ফলাফল চালানো সঠিক-টার্গেটেড সোশ্যাল মিডিয়া বিজ্ঞাপন ক্যাম্পেইন দিয়ে আপনার টার্গেট অডিয়েন্সে পৌঁছান।",
       icon: "social-ads-svg",
-      image: "https://cdn.prod.website-files.com/655e0fa544c67c1ee5ce01c7/655e0fa544c67c1ee5ce0f19_a-guide-to-facebook-and-instagram-ads-for-musicians-header.webp",
+      image: "/images/services/social-ads.webp",
       features: isEnglish ? [
         "Advanced audience targeting",
         "A/B testing and optimization",
@@ -48,7 +48,7 @@ export default function ServicesPage() {
         ? "Drive qualified traffic and conversions with expertly managed Google Ads campaigns across Search, Display, and YouTube."
         : "সার্চ, ডিসপ্লে এবং ইউটিউব জুড়ে দক্ষভাবে পরিচালিত গুগল বিজ্ঞাপন ক্যাম্পেইন দিয়ে যোগ্য ট্রাফিক এবং কনভার্সন চালান।",
       icon: Search,
-      image: "https://images.unsplash.com/photo-1553484771-371a605b060b?w=800&h=500&fit=crop",
+      image: "/images/services/google-ads.webp",
       features: isEnglish ? [
         "Search campaign optimization",
         "Display network advertising",
@@ -75,7 +75,7 @@ export default function ServicesPage() {
         ? "Improve your search rankings and drive organic traffic with our proven SEO strategies and techniques."
         : "আমাদের প্রমাণিত এসইও কৌশল এবং কৌশল দিয়ে আপনার সার্চ র‍্যাংকিং উন্নত করুন এবং অর্গানিক ট্রাফিক চালান।",
       icon: TrendingUp,
-      image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&h=500&fit=crop",
+      image: "/images/services/seo.webp",
       features: isEnglish ? [
         "Technical SEO audits",
         "On-page optimization",
@@ -102,7 +102,7 @@ export default function ServicesPage() {
         ? "Create stunning, high-converting websites that represent your brand and deliver exceptional user experiences."
         : "আশ্চর্যজনক, উচ্চ-রূপান্তরকারী ওয়েবসাইট তৈরি করুন যা আপনার ব্র্যান্ডের প্রতিনিধিত্ব করে এবং ব্যতিক্রমী ব্যবহারকারীর অভিজ্ঞতা প্রদান করে।",
       icon: Globe,
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=500&fit=crop",
+      image: "/images/services/web-design.webp",
       features: isEnglish ? [
         "Custom website design",
         "E-commerce development",
@@ -129,7 +129,7 @@ export default function ServicesPage() {
         ? "Comprehensive strategies to achieve your business goals through integrated digital marketing channels."
         : "সমন্বিত ডিজিটাল মার্কেটিং চ্যানেলের মাধ্যমে আপনার ব্যবসায়িক লক্ষ্য অর্জনের জন্য সম্পূর্ণ কৌশল।",
       icon: Lightbulb,
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop",
+      image: "/images/services/strategy.webp",
       features: isEnglish ? [
         "Market research & analysis",
         "Competitor analysis",
@@ -156,7 +156,7 @@ export default function ServicesPage() {
         ? "Build a memorable brand identity that resonates with your target audience and stands out from competitors."
         : "একটি স্মরণীয় ব্র্যান্ড পরিচয় তৈরি করুন যা আপনার টার্গেট অডিয়েন্সের সাথে অনুরণিত হয় এবং প্রতিযোগীদের থেকে আলাদা।",
       icon: Palette,
-      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=500&fit=crop",
+      image: "/images/services/branding.webp",
       features: isEnglish ? [
         "Logo design",
         "Brand identity systems",
@@ -183,7 +183,7 @@ export default function ServicesPage() {
         ? "Engaging content that tells your story and connects with your audience across all platforms."
         : "আকর্ষণীয় কন্টেন্ট যা আপনার গল্প বলে এবং সমস্ত প্ল্যাটফর্ম জুড়ে আপনার অডিয়েন্সের সাথে সংযুক্ত হয়।",
       icon: Video,
-      image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&h=500&fit=crop",
+      image: "/images/services/content.webp",
       features: isEnglish ? [
         "Video production",
         "Social media content",
@@ -210,7 +210,7 @@ export default function ServicesPage() {
         ? "Leverage AI to automate workflows, improve efficiency, and scale your business operations."
         : "ওয়ার্কফ্লো অটোমেট করতে, দক্ষতা উন্নত করতে এবং আপনার ব্যবসায়িক অপারেশন স্কেল করতে AI ব্যবহার করুন।",
       icon: Bot,
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop",
+      image: "/images/services/ai-automation.webp",
       features: isEnglish ? [
         "Chatbot development",
         "Marketing automation",
@@ -250,9 +250,8 @@ export default function ServicesPage() {
 
             {/* Premium Dedicated Service Website CTA Banner */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
               className="mt-10"
             >
               <a
@@ -312,9 +311,11 @@ export default function ServicesPage() {
               <motion.div
                 key={service.id}
                 id={service.id}
+                itemScope
+                itemType="https://schema.org/Service"
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true, amount: 0.05 }}
                 variants={staggerContainer}
                 className={`grid grid-cols-1 gap-12 lg:grid-cols-2 items-center ${
                   index % 2 === 1 ? "lg:flex-row-reverse" : ""
@@ -339,9 +340,9 @@ export default function ServicesPage() {
                         <service.icon className="h-6 w-6" />
                       </div>
                     ) : null}
-                    <h2 className="text-3xl font-bold text-foreground">{service.title}</h2>
+                    <h2 itemProp="name" className="text-3xl font-bold text-foreground">{service.title}</h2>
                   </div>
-                  <p className="text-lg text-muted-foreground dark:text-slate-300 leading-relaxed mb-6">
+                  <p itemProp="description" className="text-lg text-muted-foreground dark:text-slate-300 leading-relaxed mb-6">
                     {service.description}
                   </p>
                   <p className="text-foreground dark:text-slate-100 font-medium mb-6">
@@ -354,7 +355,7 @@ export default function ServicesPage() {
                     variants={staggerContainer}
                     className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8"
                   >
-                    {service.features.map((feature, featureIndex) => (
+                    {service.features.map((feature) => (
                       <motion.div 
                         key={feature} 
                         variants={fadeInUp}
@@ -383,8 +384,12 @@ export default function ServicesPage() {
                   >
                     <Image
                       src={service.image}
-                      alt={service.title}
+                      alt={`${service.title} — Boosting Agency BD`}
                       fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      loading={index === 0 ? "eager" : "lazy"}
+                      decoding="async"
+                      itemProp="image"
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

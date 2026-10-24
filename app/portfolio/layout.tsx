@@ -5,8 +5,23 @@ export const metadata: Metadata = {
   title: "Client Portfolio & Real Meta Ads Campaign Screenshots | Boosting Agency BD",
   description:
     "View 49+ verified client business pages and 44 real Meta Ads Manager campaign screenshots (Message Lead Campaigns and Website Purchase Campaigns) by Boosting Agency BD.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   alternates: {
     canonical: "https://boostingagencyofficial.site/portfolio",
+    languages: {
+      "en-US": "https://boostingagencyofficial.site/portfolio",
+      "bn-BD": "https://boostingagencyofficial.site/portfolio",
+      "x-default": "https://boostingagencyofficial.site/portfolio",
+    },
   },
   openGraph: {
     title: "Client Portfolio & Real Meta Ads Campaign Screenshots | Boosting Agency BD",
@@ -17,11 +32,11 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_650757177_122222877572514031_7591552409511033891_n_jpg_123754.jpg",
+        url: "https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_650757177_122222877572514031_7591552409511033891_n_jpg_123754.webp",
         width: 1200,
         height: 750,
         alt: "Real Meta Ads Campaign Results & Client Portfolio — Boosting Agency BD",
-        type: "image/jpeg",
+        type: "image/webp",
       },
     ],
   },
@@ -31,7 +46,7 @@ export const metadata: Metadata = {
     description:
       "View 49+ verified client business pages and 44 real Meta Ads Manager campaign screenshots by Boosting Agency BD.",
     images: [
-      "https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_650757177_122222877572514031_7591552409511033891_n_jpg_123754.jpg",
+      "https://boostingagencyofficial.site/images/campaigns/website-purchase-campaigns/website-purchase-campaigns_650757177_122222877572514031_7591552409511033891_n_jpg_123754.webp",
     ],
   },
 }

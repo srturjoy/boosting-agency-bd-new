@@ -90,18 +90,18 @@ export const metadata: Metadata = {
     description: 'Boosting Agency BD is Bangladesh’s premier digital marketing agency specializing in high-ROAS Facebook Boosting, Instagram Ads, Google Ads, SEO, Web Design, and AI Automation.',
     images: [
       {
-        url: 'https://boostingagencyofficial.site/logo.png',
-        width: 1200,
-        height: 1200,
+        url: 'https://boostingagencyofficial.site/logo.webp',
+        width: 512,
+        height: 512,
         alt: 'Boosting Agency BD Logo',
-        type: 'image/png',
+        type: 'image/webp',
       },
       {
-        url: 'https://boostingagencyofficial.site/hero/hero-slide-1.png',
-        width: 1200,
-        height: 630,
+        url: 'https://boostingagencyofficial.site/hero/hero-slide-1.webp',
+        width: 1080,
+        height: 1080,
         alt: 'Boosting Agency BD — Performance Marketing & Growth',
-        type: 'image/png',
+        type: 'image/webp',
       },
     ],
   },
@@ -109,7 +109,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Boosting Agency BD | Best Digital Marketing & Facebook Boosting Agency in Bangladesh',
     description: 'Boosting Agency BD is Bangladesh’s premier digital marketing agency. High-ROAS Facebook Ads, Google Ads, SEO, Web Design & AI Automation.',
-    images: ['https://boostingagencyofficial.site/hero/hero-slide-1.png'],
+    images: ['https://boostingagencyofficial.site/hero/hero-slide-1.webp'],
     creator: '@boostingagencybd',
     site: '@boostingagencybd',
   },
@@ -153,7 +153,7 @@ const jsonLd = {
       "publisher": {
         "@id": "https://boostingagencyofficial.site/#organization"
       },
-      "image": "https://boostingagencyofficial.site/logo.png",
+      "image": "https://boostingagencyofficial.site/logo.webp",
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
@@ -178,16 +178,17 @@ const jsonLd = {
       "logo": {
         "@type": "ImageObject",
         "@id": "https://boostingagencyofficial.site/#logo",
-        "url": "https://boostingagencyofficial.site/logo.png",
-        "contentUrl": "https://boostingagencyofficial.site/logo.png",
+        "url": "https://boostingagencyofficial.site/logo.webp",
+        "contentUrl": "https://boostingagencyofficial.site/logo.webp",
         "caption": "Boosting Agency BD Official Logo",
         "inLanguage": "en-US",
         "width": 512,
-        "height": 512
+        "height": 512,
+        "encodingFormat": "image/webp"
       },
       "image": [
-        "https://boostingagencyofficial.site/logo.png",
-        "https://boostingagencyofficial.site/favicon-512x512.png"
+        "https://boostingagencyofficial.site/logo.webp",
+        "https://boostingagencyofficial.site/logo.png"
       ],
       "description": "Boosting Agency BD is a digital marketing agency in Dhaka, Bangladesh providing Facebook & Instagram Ads, Google Ads, SEO, Web Design, Branding, and AI Automation services.",
       "termsOfService": "https://boostingagencyofficial.site/terms",
@@ -272,8 +273,8 @@ const jsonLd = {
       "@type": ["LocalBusiness", "ProfessionalService", "MarketingAgency"],
       "@id": "https://boostingagencyofficial.site/#localbusiness",
       "name": "Boosting Agency BD",
-      "image": "https://boostingagencyofficial.site/logo.png",
-      "logo": "https://boostingagencyofficial.site/logo.png",
+      "image": "https://boostingagencyofficial.site/logo.webp",
+      "logo": "https://boostingagencyofficial.site/logo.webp",
       "description": "Digital marketing agency in Dhaka, Bangladesh offering Facebook Ads, Google Ads, SEO, Web Design, Branding, and AI Automation services.",
       "address": {
         "@type": "PostalAddress",
@@ -538,11 +539,9 @@ export default function RootLayout({
         {/* Mobile Speed & Resource Hints */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://images.unsplash.com" />
-        <link rel="dns-prefetch" href="https://images.pexels.com" />
-        <link rel="dns-prefetch" href="https://cdn.prod.website-files.com" />
-        {/* Preload High-Impact Hero Slide for Rapid Mobile LCP */}
-        <link rel="preload" as="image" href="/hero/hero-slide-1.png" type="image/png" fetchPriority="high" />
+        {/* Preload High-Impact WebP Assets for Rapid Mobile LCP */}
+        <link rel="preload" as="image" href="/icon.webp" type="image/webp" fetchPriority="high" />
+        <link rel="preload" as="image" href="/hero/hero-slide-1.webp" type="image/webp" fetchPriority="high" />
       </head>
       <body className="font-sans antialiased">
         {/* Bangladesh Standard Time (Asia/Dhaka, UTC+6) Auto Theme: 5:00 PM - 7:00 AM Dark, 7:00 AM - 5:00 PM Light */}

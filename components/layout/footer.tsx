@@ -41,10 +41,12 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-flex items-center gap-3 group">
               <Image
-                src="/icon.png"
+                src="/icon.webp"
                 alt="Boosting Agency BD Logo"
                 width={44}
                 height={44}
+                loading="lazy"
+                decoding="async"
                 className="h-11 w-11 rounded-xl object-contain transition-transform duration-300 group-hover:scale-105"
               />
               <span className="text-2xl font-bold tracking-tight text-white">

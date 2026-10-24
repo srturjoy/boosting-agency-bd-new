@@ -4,35 +4,35 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
-// The 5 official high-resolution uploaded images (1254x1254)
+// The 5 official high-resolution uploaded images in ultra-fast WebP format
 const OFFICIAL_HERO_IMAGES = [
   {
     id: "hero-slide-1",
-    url: "/hero/hero-slide-1.png",
+    url: "/hero/hero-slide-1.webp",
     title: "Meta Ads & Creative AI Optimization",
     badge: "10X Growth",
   },
   {
     id: "hero-slide-2",
-    url: "/hero/hero-slide-2.png",
+    url: "/hero/hero-slide-2.webp",
     title: "Laser Targeted Audience Boosting",
     badge: "Audience AI",
   },
   {
     id: "hero-slide-3",
-    url: "/hero/hero-slide-3.png",
+    url: "/hero/hero-slide-3.webp",
     title: "High-ROI Performance Marketing",
     badge: "Scale 10X",
   },
   {
     id: "hero-slide-4",
-    url: "/hero/hero-slide-4.png",
+    url: "/hero/hero-slide-4.webp",
     title: "Conversion Tracking & Ad Creatives",
     badge: "Analytics",
   },
   {
     id: "hero-slide-5",
-    url: "/hero/hero-slide-5.png",
+    url: "/hero/hero-slide-5.webp",
     title: "E-Commerce Digital Revenue Scale",
     badge: "Revenue Boost",
   },
@@ -44,33 +44,21 @@ interface HeroImageCarouselProps {
 }
 
 export function HeroImageCarousel({ isHovering = false }: HeroImageCarouselProps) {
-  const [images, setImages] = useState<Array<{ id: string; url: string; title?: string; badge?: string }>>(
+  const [images] = useState<Array<{ id: string; url: string; title?: string; badge?: string }>>(
     OFFICIAL_HERO_IMAGES
   )
   const [currentIndex, setCurrentIndex] = useState<number>(0)
   const [isLocalHovered, setIsLocalHovered] = useState<boolean>(false)
 
-  // Fetch verified hero images from manifest if available, fallback to OFFICIAL_HERO_IMAGES
+  // Preload next slide in idle time so transitions are 100% instant
   useEffect(() => {
-    fetch("/hero-images.json")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.customImages && Array.isArray(data.customImages) && data.customImages.length > 0) {
-          setImages(
-            data.customImages.map((url: string, idx: number) => ({
-              id: `hero-slide-${idx + 1}`,
-              url,
-              title: OFFICIAL_HERO_IMAGES[idx]?.title || `Hero Slide ${idx + 1}`,
-              badge: OFFICIAL_HERO_IMAGES[idx]?.badge || "High Quality",
-            }))
-          )
-        }
-      })
-      .catch(() => {
-        // Fallback to official images
-        setImages(OFFICIAL_HERO_IMAGES)
-      })
-  }, [])
+    const nextIdx = (currentIndex + 1) % images.length
+    const nextUrl = images[nextIdx]?.url
+    if (!nextUrl || typeof window === "undefined") return
+    const preloadImg = new window.Image()
+    preloadImg.decoding = "async"
+    preloadImg.src = nextUrl
+  }, [currentIndex, images])
 
   // Auto-slide every 3.5s when not hovered
   useEffect(() => {
@@ -101,13 +89,13 @@ export function HeroImageCarousel({ isHovering = false }: HeroImageCarouselProps
           transition={{ duration: 0.45, ease: "easeInOut" }}
           className="absolute inset-0 w-full h-full"
         >
-          {/* Pure, crisp, high-definition image rendering */}
+          {/* Pure, crisp, high-definition WebP image rendering */}
           <img
             src={currentImage.url}
             alt={currentImage.title ? `${currentImage.title} — Boosting Agency BD` : "Boosting Agency BD"}
-            width={1254}
-            height={1254}
-            decoding="async"
+            width={1080}
+            height={1080}
+            decoding={currentIndex === 0 ? "sync" : "async"}
             fetchPriority={currentIndex === 0 ? "high" : "auto"}
             className="w-full h-full object-cover object-center select-none"
             style={{

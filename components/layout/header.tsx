@@ -105,7 +105,7 @@ export function Header() {
           <div className="flex flex-1">
             <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2.5 sm:gap-3 group">
               <Image
-                src="/icon.png"
+                src="/icon.webp"
                 alt="Boosting Agency BD Logo"
                 width={40}
                 height={40}
@@ -253,7 +253,7 @@ export function Header() {
                 onClick={handleCloseMobileMenu}
               >
                 <Image
-                  src="/icon.png"
+                  src="/icon.webp"
                   alt="Boosting Agency BD Logo"
                   width={32}
                   height={32}

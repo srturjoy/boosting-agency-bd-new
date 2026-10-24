@@ -5,8 +5,23 @@ export const metadata: Metadata = {
   title: "Digital Marketing Blog, Meta Ads & SEO Guides | Boosting Agency BD",
   description:
     "Read practical digital marketing guides, Facebook & Instagram Ads strategies, Conversion API tutorials, and SEO insights from Boosting Agency BD.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   alternates: {
     canonical: "https://boostingagencyofficial.site/blog",
+    languages: {
+      "en-US": "https://boostingagencyofficial.site/blog",
+      "bn-BD": "https://boostingagencyofficial.site/blog",
+      "x-default": "https://boostingagencyofficial.site/blog",
+    },
   },
   openGraph: {
     title: "Digital Marketing Blog, Meta Ads & SEO Guides | Boosting Agency BD",
@@ -17,11 +32,11 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://boostingagencyofficial.site/hero/hero-slide-1.png",
-        width: 1200,
-        height: 630,
+        url: "https://boostingagencyofficial.site/hero/hero-slide-1.webp",
+        width: 1080,
+        height: 1080,
         alt: "Digital Marketing Blog & Guides — Boosting Agency BD",
-        type: "image/png",
+        type: "image/webp",
       },
     ],
   },
@@ -30,7 +45,7 @@ export const metadata: Metadata = {
     title: "Digital Marketing Blog, Meta Ads & SEO Guides | Boosting Agency BD",
     description:
       "Read practical digital marketing guides, Facebook & Instagram Ads strategies, Conversion API tutorials, and SEO insights from Boosting Agency BD.",
-    images: ["https://boostingagencyofficial.site/hero/hero-slide-1.png"],
+    images: ["https://boostingagencyofficial.site/hero/hero-slide-1.webp"],
   },
 }
 

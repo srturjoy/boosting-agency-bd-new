@@ -119,16 +119,32 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
   body {
     @apply bg-background text-foreground;
+    overflow-x: clip;
+    -webkit-tap-highlight-color: transparent;
   }
   input::placeholder,
   textarea::placeholder {
     color: var(--muted-foreground);
     opacity: 0.85;
   }
-  html {
-    scroll-behavior: smooth;
+  img,
+  video,
+  svg,
+  canvas {
+    max-width: 100%;
+  }
+  a,
+  button,
+  [role="button"] {
+    touch-action: manipulation;
   }
 }
 
@@ -647,8 +663,13 @@ main section.bg-gradient-to-b.to-background {
   }
 
   .floating-bubble {
-    zoom: 0.6;
+    scale: 0.6;
     box-shadow: none !important;
+  }
+
+  /* Hide every 3rd background bubble on small screens to save mobile GPU/battery */
+  .floating-bubble:nth-child(3n) {
+    display: none;
   }
 }
 

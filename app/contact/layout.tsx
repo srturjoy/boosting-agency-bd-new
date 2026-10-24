@@ -5,8 +5,23 @@ export const metadata: Metadata = {
   title: "Contact Us & Book a Free Consultation | Boosting Agency BD",
   description:
     "Contact Boosting Agency BD in Mirpur, Dhaka-1216, Bangladesh. Call or message on WhatsApp at +880 1518 961899 for Facebook Ads, Google Ads, SEO, and Web Development consultations.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   alternates: {
     canonical: "https://boostingagencyofficial.site/contact",
+    languages: {
+      "en-US": "https://boostingagencyofficial.site/contact",
+      "bn-BD": "https://boostingagencyofficial.site/contact",
+      "x-default": "https://boostingagencyofficial.site/contact",
+    },
   },
   openGraph: {
     title: "Contact Us & Book a Free Consultation | Boosting Agency BD",
@@ -17,11 +32,11 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://boostingagencyofficial.site/hero/hero-slide-1.png",
-        width: 1200,
-        height: 630,
+        url: "https://boostingagencyofficial.site/hero/hero-slide-1.webp",
+        width: 1080,
+        height: 1080,
         alt: "Contact Boosting Agency BD — Dhaka, Bangladesh",
-        type: "image/png",
+        type: "image/webp",
       },
     ],
   },
@@ -30,7 +45,7 @@ export const metadata: Metadata = {
     title: "Contact Us & Book a Free Consultation | Boosting Agency BD",
     description:
       "Get in touch with Boosting Agency BD via WhatsApp (+880 1518 961899), phone, or our online inquiry form.",
-    images: ["https://boostingagencyofficial.site/hero/hero-slide-1.png"],
+    images: ["https://boostingagencyofficial.site/hero/hero-slide-1.webp"],
   },
 }
 
